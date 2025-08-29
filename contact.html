@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Contact - Chunran ZHENG</title>
+    <meta name="author" content="Chunran ZHENG">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index_clean.html">Chunran ZHENG</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="publication.html">Publications</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-content" style="padding-top: 40px;">
+      <h1 class="text-3xl font-bold mb-8 text-center">Contact Me</h1>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
+        <!-- WeChat -->
+        <div class="contact-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-weixin"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">WeChat</h3>
+          <p class="text-gray-600 mb-4">Add me on WeChat to connect</p>
+          <div class="w-32 h-32 bg-gray-200 mx-auto rounded-lg flex items-center justify-center mb-3">
+            <span class="text-gray-400">WeChat QR Code</span>
+          </div>
+          <p class="text-sm text-gray-500">Scan the QR code or search: zcr384942535</p>
+        </div>
+        
+        <!-- Email -->
+        <div class="contact-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-envelope-o"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Email</h3>
+          <p class="text-gray-600 mb-4">For academic inquiries and collaboration</p>
+          <a href="mailto:zhengcr@connect.hku.hk" class="text-blue-500 hover:underline mb-3 inline-block">zhengcr@connect.hku.hk</a>
+          <p class="text-sm text-gray-500">Please include your name and purpose</p>
+        </div>
+        
+        <!-- LinkedIn -->
+        <div class="contact-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-linkedin"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+          <p class="text-gray-600 mb-4">Professional networking</p>
+          <a href="https://www.linkedin.com/in/chunran-zheng-11b73b1a5/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline mb-3 inline-block">Chunran ZHENG</a>
+          <p class="text-sm text-gray-500">Feel free to add and leave a message</p>
+        </div>
+      </div>
+      
+      <!-- Other Platforms -->
+      <div class="mt-12 text-center max-w-2xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6">Other Platforms</h2>
+        <div class="flex justify-center space-x-6">
+          <a href="https://github.com/xuankuzcr" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://scholar.google.com/citations?hl=en&user=PZGoMNAAAAAJ" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fa fa-graduation-cap"></i>
+          </a>
+          <a href="https://www.zhihu.com/people/zheng-chun-ran" target="_blank" rel="noopener noreferrer nofollow" class="social-icon">
+              <i class="fa fa-comments-o"></i>
+          </a>
+        </div>
+      </div>
+    
+    </div>
+    
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+        // Toggle icon
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    </script>
+  </body>
+</html>

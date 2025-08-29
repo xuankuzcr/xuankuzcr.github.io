@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chunran ZHENG</title>
+  <meta name="author" content="Chunran ZHENG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 基础样式统一 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 文中超链接样式保留，不影响导航栏 */
+    body a:not(.nav-links a):not(.logo a) {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    body a:not(.nav-links a):not(.logo a):hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    /* 页面内容可滚动设置 */
+    html, body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* 隐藏滚动条 */
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    html, body {
+      scrollbar-width: none;
+    }
+
+    html {
+      -ms-overflow-style: none;
+    }
+
+    /* 以下为原有其他样式，保持不变 */
+    .section-title {
+      text-align: left;
+      /* margin-bottom: 1rem; */
+      color: #333;
+      font-size: 1.5rem;
+    }
+
+    .news-section {
+      max-width: 800px;
+      /* margin: 1.5rem auto; */
+      /* padding: 0 1rem; */
+    }
+
+    .news-scroll-container {
+      height: 280px;
+      overflow-y: auto;
+      padding: 0.8rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      scrollbar-width: thin;
+    }
+
+    .news-scroll-container::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .news-scroll-container::-webkit-scrollbar-thumb {
+      background-color: #9ca3af;
+      border-radius: 3px;
+    }
+
+    .news-scroll-container::-webkit-scrollbar-track {
+      background-color: #f3f4f6;
+    }
+
+    .zoom-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* ==== margin-bottom 调节名字与段落之间的距离 ==== */
+    .name {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+    }
+
+    .news-scroll-container a {
+      text-decoration: underline;
+    }
+
+    /* ==== margin-bottom 调节段落之间的距离 ==== */
+    .bio-text {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 5px; 
+    }
+
+    .contact-links {
+      font-size: 1.0rem;
+    }
+    /* ==== Featured Research：响应式媒体缩略图 ==== */
+.pub-row td:first-child {
+  width: 35%;
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.pub-row td:last-child {
+  width: 65%;
+  padding: 12px;
+  vertical-align: middle;
+}
+.pub-row p {
+    margin-top: 10px; /* 调整这个值来控制间距 */
+}
+
+/* 统一视频/图片外观与比例（默认 16:9；若你缩略图是 4:3，把 16 / 9 改成 4 / 3） */
+.featured-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;      /* 可选：圆角 */
+}
+
+/* 移动端：上下堆叠，媒体 100% 宽 */
+@media (max-width: 768px) {
+  .pub-row { display: block; }
+  .pub-row td { display: block; width: 100% !important; }
+  .pub-row td:first-child { margin-bottom: 12px; }
+}
+
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- 导航栏：当前在Home页，给Home添加active类 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index_clean.html">Chunran ZHENG</a>
+      </div>
+      <ul class="nav-links">
+        <!-- 关键：当前在Home页，给Home添加active类，实现蓝色加粗 -->
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 以下为原有页面内容，使用main-content类统一宽度 -->
+  <div class="main-content">
+    <table
+      style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0px">
+          <td style="padding:0px">
+            <table
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:2.5%;width:37%;max-width:37%">
+                    <a href="images/zhengchunran.jpg"><img
+                        style="width:100%;max-width:100%;object-fit: cover; border-radius: 4px;" alt="profile photo"
+                        src="images/zhengchunran.jpg" class="hoverZoomLink"></a>
+                  </td>
+                  <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <p class="name" style="text-align: center;">
+                      Chunran ZHENG | 郑纯然
+                    </p>
+                    <p class="bio-text">
+                    I obtained my B.Eng. degree in Automation with distinction from Xi'an Jiaotong University (XJTU) in July 2020.
+                     I am now a final-year Ph.D. candidate at the <a href="https://mars.hku.hk/">MaRS Lab</a>, The University of Hong Kong (HKU).
+                     Recently, I was selected as <strong style="color:#D9001B";>TopMinds (天才少年)</strong>  
+                     by Huawei and will soon join the <a href="https://www.huaweicloud.com/lab/embodied-ai/home.html">Huawei Cloud Physical Intelligence Lab</a>.
+                     </p>
+                      <p class="bio-text">
+                     My research interests center on <strong>spatial intelligence powered by LiDAR-vision fusion</strong>. 
+                     I have published 20 papers in leading journals and conferences, 
+                     including T-RO, IJRR, RA-L, ICRA, and IROS. Among these, I am first or co-first author on five papers, 
+                     two of which are in T-RO. For the full list, please visit my <a href="https://scholar.google.com/citations?hl=zh-CN&user=PZGoMNAAAAAJ">Google Scholar</a>📈.
+                     </p>
+                     <p class="bio-text">
+                     Beyond academia, I am passionate about open-source contributions. 
+                      My research code on GitHub has collectively accumulated over <strong>7.5k stars</strong>⭐. 
+                      In particular, my first-authored <strong>FAST-LIVO series</strong> alone has surpassed <strong>5.4k stars</strong>⭐, 
+                      <strong>setting trends in the field</strong> and becoming a <strong>widely adopted framework</strong> in both industry and academia.
+                    </p>
+
+                    <p class="contact-links" style="text-align:left; margin-top: 1rem;">
+                      <a href="mailto:zhengcr@connect.hku.hk">Email</a> &nbsp;/&nbsp;
+                      <a href="https://github.com/xuankuzcr">Github</a>&nbsp;/&nbsp;
+                      <a href="https://scholar.google.com/citations?hl=zh-CN&user=PZGoMNAAAAAJ">Scholar</a>
+                      &nbsp;/&nbsp;
+                      <a href="https://www.zhihu.com/people/zheng-chun-ran">Zhihu</a> &nbsp;/&nbsp;
+                      <a href="https://www.linkedin.com/in/chunran-zheng-11b73b1a5/">LinkedIn</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- ########## News部分 ########## -->
+            <section class="news-section">
+              <h2 id="news" class="section-title">News</h2>
+              <div class="news-scroll-container scrollbar-thin scrollbar-thumb-gray">
+                <ul class="list-disc list-inside space-y-3 text-gray-800">
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[06/2025]</span>
+                    <span class="text-red-500">📄</span>
+                    Two papers, <a href="https://arxiv.org/abs/2503.10170">GS-SDF</a> and <a href="Mesh-Learner">Mesh-Learner</a>, are accepted for presentation at <strong>IROS 2025</strong>.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[06/2025]</span>
+                    <span class="text-purple-500">🎉</span>
+                    Our paper "FAST-LIVO2 on ARM Platforms: LiDAR-Inertial-Visual Odometry with Efficient Memory and Computation" is accepted for publication in <strong>Robotics and Automation Letters (RA-L)</strong>
+                    <a href="https://arxiv.org/abs/2501.13876">[arXiv]</a>!
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[05/2025]</span>
+                    <span class="text-purple-500">🎉</span>
+                    Our paper "GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping" is accepted for publication in <strong>Transactions on Robotics (T-RO)</strong>
+                   <a href="https://arxiv.org/pdf/2501.08672v1">[arXiv]</a>!
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[03/2025]</span>
+                    <span class="text-purple-500">🔥</span>
+                    FAST-LIVO2 <strong>Ranks 4th</strong>🏆on <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=8860&topArticlesDate=March%202025">IEEE T-RO's Most Popular List</a>!
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[01/2025]</span>
+                    <span class="text-purple-500">📄</span>
+                    Three papers, <a href="https://www.arxiv.org/pdf/2409.05310">M2Mapping</a>, <a href="https://ieeexplore.ieee.org/document/10720786">iBTC</a>, and <a href="https://ieeexplore.ieee.org/document/10759717">LAMM</a>, are accepted for presentation at <strong>ICRA 2025</strong>.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[10/2024]</span>
+                    <span class="text-blue-500">🎉</span>
+                     Our paper "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry" is accepted for publication in <strong>Transactions on Robotics (T-RO)</strong>
+                    <a href="https://arxiv.org/pdf/2408.14035">[arXiv]</a>!
+                  </li>
+                     <!--<span class="text-purple-500">🎤📢🤝✅</span>-->
+                </ul>
+              </div>
+                <div class="text-sm text-gray-500 mb-4 flex items-center">
+                  <i class="fa fa-mouse-pointer mr-1"></i> Scroll to view more
+                </div>
+              <div id="image-zoom-modal" class="zoom-modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="zoomed-image">
+              </div>
+            </section>
+    </table>
+  </div>
+    <!-- ########## 结束：News部分 ########## -->
+
+  <!-- 图片放大功能脚本：补充移动端菜单图标切换逻辑 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('image-zoom-modal');
+      const modalImg = document.getElementById('zoomed-image');
+      const closeBtn = document.querySelector('.close-modal');
+
+      // 图片放大功能
+      const imgs = document.querySelectorAll('.hoverZoomLink');
+      imgs.forEach(img => {
+        img.addEventListener('click', function () {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+        });
+      });
+
+      // 关闭模态框
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // 移动端菜单切换：补充图标切换
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+        // 切换菜单图标（ bars ↔ times）
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- 以下原有内容均保持不变 -->
+  <table class="news-section"
+    style="border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:16px;width:100%;vertical-align:middle">
+          <h2 id="research" class="section-title">Featured Research</h2>
+          <p>
+            My research interests center on spatial intelligence powered by LiDAR-vision fusion, specifically including calibration, multi-sensor fusion, implicit-explicit combined 3D reconstruction, and semantic mapping.          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="news-section"
+    style="border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+
+             <!-- FAST-Calib-->
+        <tr class="pub-row"> 
+        <!-- 左栏：静态图片 -->
+        <td style="padding:12px;width:35%;vertical-align:middle">
+          <img
+            src="images/calib.jpg"
+            alt="FAST-Calib thumbnail"
+            style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:4px;"
+            loading="lazy"
+          >
+        </td>
+          <!-- 右栏：文字说明 -->
+          <td style="padding:12px;width:65%;vertical-align:middle">
+            <span class="papertitle">FAST-Calib: LiDAR-Camera Extrinsic Calibration in One Second</span>
+            <br>
+            <strong>Chunran Zheng</strong>, Fu Zhang
+            <br>
+            <em>In Revision</em>
+            <br>
+            <a href="https://arxiv.org/html/2507.17210v1">Paper</a>
+            /
+            <a href="https://github.com/hku-mars/FAST-Calib">Code</a>
+            <p></p>
+            <p>
+              An efficient target-based extrinsic calibration tool for LiDAR-camera systems (e.g., FAST-LIVO2), making extrinsic calibration as straightforward as intrinsic calibration.
+            </p>
+          </td>
+        </tr>
+
+
+   <!-- FAST-LIVO1 -->
+      <tr class="pub-row" >
+        <td style="padding:12px;width:35%;vertical-align:middle">
+          <video class="featured-thumb" muted autoplay loop playsinline
+                poster="images/fastlivo2_poster.jpg"
+                style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:4px;">
+            <source src="images/website_livo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </td>
+        <td style="padding:12px;width:65%;vertical-align:middle">
+          <span class="papertitle">FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual Odometry</span>
+          <br>
+          <strong>Chunran Zheng</strong>, Qingyan Zhu, Wei Xu, Xiyuan Liu, Qizhi Guo, Fu Zhang
+         <br>
+          <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2022
+          <br>
+          <a href="https://arxiv.org/pdf/2203.00893">Paper</a>
+          /
+          <a href="https://github.com/hku-mars/FAST-LIVO">Code</a>
+          /
+          <a href="https://www.bilibili.com/video/BV15q4y1i7sj/?spm_id_from=333.1387.upload.video_card.click">Bilibili</a>
+          /
+          <a href="https://www.youtube.com/watch?v=C6Pb_0W9E_g">YouTube</a>
+          <p></p>
+          <p>
+            A fast, sparse-direct LiDAR-inertial-visual odometry system built upon two tightly-coupled and direct odometry subsystems: a VIO subsystem and a LIO subsystem.
+        </td>
+      </tr>
+
+
+
+        <!-- FAST-LIVO2 -->
+      <tr class="pub-row">
+        <td style="padding:12px;width:35%;vertical-align:middle">
+          <video class="featured-thumb" muted autoplay loop playsinline
+                poster="images/fastlivo2_poster.jpg"
+                style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:4px;">
+            <source src="images/livo2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </td>
+        <td style="padding:12px;width:65%;vertical-align:middle">
+          <span class="papertitle">FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry</span>
+          <br>
+          <strong>Chunran Zheng</strong>, Wei Xu, et al
+          <br>
+          <em style="color:red">IEEE Transactions on Robotics (TRO)</em>, 2025
+          <br>
+          <a href="https://arxiv.org/pdf/2408.14035">Paper</a>
+          /
+          <a href="https://github.com/hku-mars/FAST-LIVO2">Code</a>
+          /
+          <a href="https://www.bilibili.com/video/BV1Ezxge7EEi/?spm_id_from=333.337.search-card.all.click">Bilibili</a>
+          /
+          <a href="https://www.youtube.com/watch?v=6dF2DzgbtlY">YouTube</a>
+          <p></p>
+          <p>
+            FAST-LIVO2 is a supercharged upgrade of FAST-LIVO, integrating visual and LiDAR data within a single unified voxel map. 
+            The system achieves pixel-level reconstruction and robust onboard state estimation, even under severe LiDAR degeneration. 
+            It further demonstrates its capability through diverse downstream applications, including textured mesh, 
+            3DGS, navigation, and airborne mapping, establishing a solid foundation for LiDAR-visual spatial AI.
+        </td>
+      </tr>
+    
+<!-- FAST-LIVO2 on arm-->
+<tr class="pub-row" >
+  <!-- 左栏：静态图片 -->
+  <td style="padding:12px;width:35%;vertical-align:middle">
+    <img
+      src="images/teaser_last_compressed.jpg"
+      alt="FAST-LIVO2 on ARM thumbnail"
+      style="width:auto;max-width:100%;display:block;object-fit:contain;border-radius:4px;margin:auto;"
+      loading="lazy"
+    />
+  </td>
+  <!-- 右栏：保持原有文字信息 -->
+  <td style="padding:12px;width:65%;vertical-align:middle">
+    <span class="papertitle">FAST-LIVO2 on ARM: State Estimation with Efficient Memory and Computation</span>
+    <br>
+    Bingyang Zhou, <strong>Chunran Zheng (co-first author)</strong>, Ziming Wang, Fangcheng Zhu, Yixi Cai, Fu Zhang
+    <br>
+    <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2025
+    <br>
+    <a href="https://arxiv.org/abs/2501.13876">Paper</a>
+    <p></p>
+    <p>
+      A lightweight adaptation of FAST-LIVO2 for ARM platforms (e.g., RK3588 and Orin NX).
+    </p>
+  </td>
+</tr>
+
+          <!-- GS-LIVO -->
+        <tr class="pub-row">
+          <!-- 左栏：直接播放视频 -->
+          <td style="padding:12px;width:35%;vertical-align:middle">
+            <video
+              class="featured-thumb"
+              muted autoplay loop playsinline
+              poster="images/gs_livo_poster.jpg"
+              style="width:100%;height:auto;display:block;aspect-ratio:1920/950;object-fit:cover;border-radius:4px;">
+              <source src="images/gs-livo-revise.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </td>
+
+          <!-- 右栏：文字内容 -->
+          <td style="padding:12px;width:65%;vertical-align:middle">
+            <span class="papertitle">GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping</span>
+            <br>
+            Sheng Hong, <strong>Chunran Zheng (co-first author)</strong>, Fu Zhang, Tong Qin, Shaojie Shen
+            <br>
+            <em style="color:red">IEEE Transactions on Robotics (TRO)</em>, 2025
+            <br>
+            <a href="https://arxiv.org/pdf/2501.08672v1">Paper</a>
+            /
+            <a href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">Code</a>
+            <p></p>
+            <p>
+              The first real-time Gaussian-based LIVO system enabling photorealistic and high-fidelity scene representation.            
+            </p>
+          </td>
+        </tr>
+          
+<!-- hand held-->
+<tr class="pub-row hover-row">
+  <!-- 左栏：图片 -->
+  <td style="padding:12px;width:35%;vertical-align:middle">
+    <img class="hover-img"
+         src="images/1.jpg"
+         style="width:95%;height:auto;display:block;aspect-ratio:1/1;
+                object-fit:contain;border-radius:4px;margin:auto;">
+  </td>
+
+  <!-- 右栏：文字保持不变 -->
+  <td style="padding:12px;width:65%;vertical-align:middle">
+    <span class="papertitle">LiDAR-Inertial-Visual Handhold and UAV Device</span>
+    <br>
+    <strong>Chunran Zheng</strong>, Sheng Hong, Tianyong Ye, Junjie He
+    <br>
+    <em>Open-source project</em>
+    <br>
+    <a href="https://github.com/xuankuzcr/LIV_handhold">Code</a>
+    <p></p>
+    <p>
+      Hardware-synchronized Handheld and UAV device for FAST-LIVO, delivering the first proven open-source solution for Modular 3D Scanner.    </p>
+  </td>
+</tr>
+
+<style>
+/* 默认显示 jpg */
+.hover-row .hover-img {
+  content: url("images/1.jpg");
+}
+/* 鼠标悬停在整行 <tr> 时切换为 gif */
+.hover-row:hover .hover-img {
+  content: url("images/1.gif");
+}
+</style>
+
+        
+    </tbody>
+  </table>
+
+<table class="news-section"
+  style="border:0px;width: 100%;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="width:100%;vertical-align:middle;padding-left: 15px;">
+        <h2 id="research" class="section-title">Academic Service</h2>
+        <p style="margin-bottom: 0.8rem; font-size: 1rem; font-weight: bold;">
+          Reviewer of:
+        </p>
+
+        <ul style="list-style-type: none; padding-left: 0; margin-top: 0;">
+          <!-- Journals -->
+          <li style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: #3b82f6; font-weight: bold;">•</span>
+            <strong>Journals:</strong>
+            <em>IEEE Transactions on Robotics</em> (<strong>T-RO</strong>),
+            <em>International Journal of Robotics Research</em> (<strong>IJRR</strong>),
+            <em>IEEE Robotics and Automation Letters</em> (<strong>RA-L</strong>),
+            <em>International Journal of Computer Vision</em> (<strong>IJCV</strong>),
+            <em>IEEE Transactions on Image Processing</em> (<strong>TIP</strong>)
+          </li>
+
+          <!-- Conferences -->
+          <li style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative;">
+            <span style="position: absolute; left: 0; color: #3b82f6; font-weight: bold;">•</span>
+            <strong>Conferences:</strong>
+            <em>IEEE International Conference on Robotics and Automation</em> (<strong>ICRA</strong>),
+            <em>IEEE/RSJ International Conference on Intelligent Robots and Systems</em> (<strong>IROS</strong>)
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+
+</html>

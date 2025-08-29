@@ -1,0 +1,1122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chunran ZHENG - Publications</title>
+    <meta name="author" content="Chunran ZHENG">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        accent: '#ef4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .timeline-container {
+                max-width: 600px;
+            }
+            .timeline-item {
+                line-height: 1.6;
+                margin-bottom: 0.75rem;
+            }
+            .scrollbar-thin {
+                scrollbar-width: thin;
+            }
+            .scrollbar-thumb-gray {
+                scrollbar-color: #9ca3af transparent;
+            }
+            .pub-item {
+                transition: background-color 0.2s;
+                padding: 0.2rem 0;
+                border-bottom: 1px solid #e5e7eb;
+                margin-bottom: 0.1rem;
+            }
+            .pub-item:hover {
+                background-color: #f9fafb;
+            }
+        }
+    </style>
+    <!-- 导航栏及核心样式修改 - 与首页保持一致 -->
+    <style>
+      /* 1. 基础样式统一（与首页一致） */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* 关键修改1：文中超链接样式保留，不影响导航栏 */
+      body a:not(.nav-links a):not(.logo a) {
+        color: #3b82f6;
+        text-decoration: none;
+      }
+      body a:not(.nav-links a):not(.logo a):hover {
+        color: #2563eb;
+        text-decoration: underline;
+      }
+
+      /* 2. 导航栏样式：完全对齐首页 */
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        padding: 8px 0;
+      }
+      
+      .nav-container {
+        max-width: var(--page-max);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+      
+      .logo a {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .logo a:hover {
+        color: #3b82f6;
+      }
+      
+      .nav-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-links li {
+        margin-left: 25px;
+      }
+      
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.3s;
+        position: relative;
+      }
+      
+      /* 3. 修改：移除下划线，仅保留颜色变化标识当前页 */
+      .nav-links a:hover, .nav-links a.active {
+        color: #3498db;
+        font-weight: 600;
+      }
+      
+      /* 4. 移动端菜单样式，与首页一致 */
+      .menu-toggle {
+        display: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.2s;
+      }
+      
+      .menu-toggle:hover {
+        color: #3b82f6;
+      }
+
+      /* 5. 内容区域顶部间距，与导航栏高度匹配 */
+      body {
+        padding-top: 50px;
+        margin: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      /* 6. 移动端响应式样式，与首页一致 */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        
+        .nav-links {
+          position: fixed;
+          top: 50px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 50px);
+          background: white;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: left 0.3s;
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-links.active {
+          left: 0;
+        }
+        
+        .nav-links li {
+          margin: 15px 0;
+        }
+        
+        .nav-links a {
+          font-size: 1.1rem;
+        }
+      }
+
+      /* 出版物页面特定样式 */
+      .section-title {
+        text-align: left;
+        margin-bottom: 1rem;
+        color: #333;
+        font-size: 1.5rem;
+      }
+
+      .description {
+        text-align: center;
+        color: #64748b;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .pub-title {
+        font-weight: 600;
+        color: #1e293b;
+        margin: 0.25rem 0;
+        font-size: 1rem; /* 确保标题字体大小合适 */
+      }
+      
+      .pub-authors {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 0.9rem;
+        color: #4b5563;
+      }
+      
+      .pub-journal {
+        margin: 0.25rem 0;
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+      
+      .pub-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.8rem;
+        margin: 0.1rem 0;
+        color: #64748b;
+      }
+      
+      .pub-links a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        transition: color 0.2s;
+        color: #3b82f6; /* 链接颜色改为蓝色 */
+      }
+      
+      .pub-links a:hover {
+        color: #2563eb; /* hover时颜色加深 */
+        text-decoration: none;
+      }
+
+      /* 作者强调样式 */
+      .author-self {
+        font-weight: 600;
+        color: #0f172a;
+      }
+      
+      /* 分页样式 - 修改为prev/next形式 */
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 1rem;
+      }
+      
+      .page-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.25rem;
+        background-color: white;
+        color: #3b82f6;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      
+      .page-btn:hover {
+        background-color: #3b82f6;
+        color: white;
+      }
+      
+      .page-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: white;
+        color: #9ca3af;
+      }
+      
+      .page-info {
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+      
+      /* 模态框样式 */
+      .bib-modal {
+        display: none;
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 700px;
+        border-radius: 8px;
+        position: relative;
+      }
+      
+      .close-modal {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+      }
+      
+      .close-modal:hover {
+        color: black;
+      }
+      
+      .bib-content {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+    </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <!-- 导航栏：当前在Publication页，给Publication添加active类 -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">Chunran ZHENG</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <!-- 关键：当前在Publication页，给Publication添加active类，实现蓝色加粗 -->
+          <li><a href="publication.html" class="active">Publications</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <div class="main-content">
+    <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <!-- 页面标题与说明 -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:2rem 1.2% 1.2%;width:100%;vertical-align:middle; text-align: center;">
+                <h1 class="text-3xl font-bold mb-2">Publications</h1>
+                <p class="description">
+                  My research explores LiDAR-inertial-visual SLAM, calibration, implicit-explicit combined 3D reconstruction, and semantic mapping.       
+                  <br>Full list: <a href="https://scholar.google.com/citations?hl=zh-CN&user=PZGoMNAAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- 论文列表 -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody id="publications-list">
+             <!-- 论文1 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top"> <!-- 减小了padding从0.6%到0.3% -->
+                <div class="pub-item">
+                  <div class="pub-title">
+                    FAST-Calib: LiDAR-Camera Extrinsic Calibration in One Second
+                  </div>
+                  <div class="pub-authors">
+                    <span class="author-self">Chunran Zheng</span>, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    In Revision
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/html/2507.17210v1" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/FAST-Calib" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="#" class="bib-link" data-bib-id="fastCalib"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            
+              <!-- 论文2 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual Odometry
+                  </div>
+                  <div class="pub-authors">
+                    <span class="author-self">Chunran Zheng</span>, Qingyan Zhu, Wei Xu, Xiyuan Liu, Qizhi Guo, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2022
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2203.00893" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/FAST-LIVO" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.bilibili.com/video/BV15q4y1i7sj/?spm_id_from=333.1387.upload.video_card.click" target="_blank" rel="noopener noreferrer"><img src="images/bilibili.png" alt="Bilibili" style="width:16px;height:16px;vertical-align:text-bottom;margin-right:4px;"> Bilibili</a>
+                    <a href="https://www.youtube.com/watch?v=C6Pb_0W9E_g" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="fastlivo1"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文3 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top"> <!-- 减小了padding从0.6%到0.3% -->
+                <div class="pub-item">
+                  <div class="pub-title">
+                    FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry
+                  </div>
+                  <div class="pub-authors">
+                    <span class="author-self">Chunran Zheng</span>, Wei Xu, et al
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Transactions on Robotics
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2408.14035" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/FAST-LIVO2" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.bilibili.com/video/BV1Ezxge7EEi/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener noreferrer"><img src="images/bilibili.png" alt="Bilibili" style="width:16px;height:16px;vertical-align:text-bottom;margin-right:4px;"> Bilibili</a>
+                    <a href="https://www.youtube.com/watch?v=6dF2DzgbtlY" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="fastlivo2"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            
+            <!-- 论文4 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    FAST-LIVO2 on ARM: State Estimation with Efficient Memory and Computation
+                  </div>
+                  <div class="pub-authors">
+                    Bingyang Zhou, <span class="author-self">Chunran Zheng(co-first author)</span>, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Robotics and Automation Letters
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2501.13876" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="fastlivo2onarm"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文5 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping
+                  </div>
+                  <div class="pub-authors">
+                    Sheng Hong, <span class="author-self">Chunran Zheng(co-first author)</span>, Fu Zhang, Tong Qin, Shaojie Shen
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Transactions on Robotics
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2501.08672v1" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="gslivo"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文6 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    R2LIVE: A Robust, Real-time, LiDAR-Inertial-Visual tightly-coupled state Estimator and mapping
+                  </div>
+                  <div class="pub-authors">
+                    Jiarong Lin, <span class="author-self">Chunran Zheng</span>,Wei Xu, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Robotics and Automation Letters
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2102.12400" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/r2live" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.bilibili.com/video/BV1rL411t79C/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener noreferrer"><img src="images/bilibili.png" alt="Bilibili" style="width:16px;height:16px;vertical-align:text-bottom;margin-right:4px;"> Bilibili</a>
+                    <a href="https://www.youtube.com/watch?v=9lqRHmlN_MA" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="r2live"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+           <!-- 论文7 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems
+                  </div>
+                  <div class="pub-authors">
+                    Jianheng Liu, <span class="author-self">Chunran Zheng</span>, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE International Conference on Robotics and Automation (ICRA) 2025
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://www.arxiv.org/pdf/2409.05310" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/M2Mapping" target="_blank" rel="noopener noreferrer"><i class="fa fa-film"></i> Code</a>
+                    <a href="https://www.youtube.com/watch?v=XFzzAGVbzek" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="neural-surface"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            
+             <!-- 论文8 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction
+                  </div>
+                  <div class="pub-authors">
+                    Jianheng Liu, Yunfei Wan, Bowen Wang, <span class="author-self">Chunran Zheng</span>, Jiarong Lin, Fu Zhang 
+                  </div>
+                  <div class="pub-journal">
+                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2025
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2503.10170" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/GS-SDF" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.youtube.com/watch?v=w_l6goZPfcI" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="gs-sdf"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文9 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    CamVox: A Low-cost and Accurate Lidar-assisted Visual SLAM System
+                  </div>
+                  <div class="pub-authors">
+                    Yuewen Zhu, <span class="author-self">Chunran Zheng</span>, Chongjian Yuan, Xu Huang, Xiaoping Hong
+                  </div>
+                  <div class="pub-journal">
+                    IEEE International Conference on Robotics and Automation (ICRA) 2021
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2011.11357" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/ISEE-Technology/CamVox" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.bilibili.com/video/BV1fZ4y1V795/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener noreferrer"><img src="images/bilibili.png" alt="Bilibili" style="width:16px;height:16px;vertical-align:text-bottom;margin-right:4px;"> Bilibili</a>
+                    <a href="#" class="bib-link" data-bib-id="camvox"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+         
+            <!-- 论文10-->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    iBTC: An Image-assisting Binary and Triangle Combined Descriptor for Place Recognition by Fusing LiDAR and Camera Measurements
+                  </div>
+                  <div class="pub-authors">
+                    Zuhao Zou, <span class="author-self">Chunran Zheng</span>, Chongjian Yuan, Shunbo Zhou, Kaiwen Xue, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Robotics and Automation Letters (RA-L) 2024
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/document/10720786" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/iBTC" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="https://www.youtube.com/watch?v=fe1Q0eR2fWk" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="ibtc"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文11 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Rollvox: Real-Time and High-Quality LiDAR Colorization with Rolling Shutter Camera
+                  </div>
+                  <div class="pub-authors">
+                    Sheng Hong, <span class="author-self">Chunran Zheng</span>, Huan Yin, Shaojie Shen
+                  </div>
+                  <div class="pub-journal">
+                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2023
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/document/10342172" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://www.youtube.com/watch?v=FbqAqS8e4r4" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="rollvox"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+
+            <!-- 论文12-->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    MFCalib: Single-shot and Automatic Extrinsic Calibration for LiDAR and Camera in Targetless Environments Based on Multi-Feature Edge
+                  </div>
+                  <div class="pub-authors">
+                    Tianyong Ye, Wei Xu, <span class="author-self">Chunran Zheng</span>, Yukang Cui
+                  </div>
+                  <div class="pub-journal">
+                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2024
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2409.00992v1" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="mfcalib"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            
+
+            <!-- 论文13 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    LIV-GaussMap: LiDAR-Inertial-Visual Fusion for Real-Time 3D Radiance Field Map Rendering
+                  </div>
+                  <div class="pub-authors">
+                    Sheng Hong, Junjie He, Xinhu Zheng, <span class="author-self">Chunran Zheng</span>
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Robotics and Automation Letters (RA-L)
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2401.14857" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="liv-gaussmap"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            
+            <!-- 论文14 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    MARS-LVIG dataset: A multi-sensor aerial robots SLAM dataset for LiDAR-visual-inertial-GNSS fusion
+                  </div>
+                  <div class="pub-authors">
+                    Haotian Li, Yuying Zou, Nan Chen, Jiarong Lin, Xiyuan Liu, Wei Xu, <span class="author-self">Chunran Zheng</span>, Rundong Li, Dongjiao He, Fanze Kong, Yixi Cai, Zheng Liu, Shunbo Zhou, Kaiwen Xue, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    The International Journal of Robotics Research (IJRR) 2024
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://journals.sagepub.com/doi/abs/10.1177/02783649241227968" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Paper</a>
+                    <a href="https://www.youtube.com/watch?v=6indbGsCw_M" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i> YouTube</a>
+                    <a href="#" class="bib-link" data-bib-id="mars-lvig"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文15 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Voxel-slam: A complete, accurate, and versatile lidar-inertial slam system
+                  </div>
+                  <div class="pub-authors">
+                    Zheng Liu, Haotian Li, Chongjian Yuan, Xiyuan Liu, Jiarong Lin, Rundong Li, <span class="author-self">Chunran Zheng</span>, Bingyang Zhou, Wenyi Liu, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                    In Revision
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2410.08935" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/Voxel-SLAM" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="#" class="bib-link" data-bib-id="voxel-slam"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+             <!-- 论文16 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Adaptive Risk-Aware Multi-Target Tracking and Monitoring With Network Reconfiguration
+                  </div>
+                  <div class="pub-authors">
+                    Yukang Cui, Jianing Wang, <span class="author-self">Chunran Zheng</span>, Hong Lin, Zhiguang Feng, Tingwen Huang
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Transactions on Circuits and Systems I: Regular Papers
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/document/11029637" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="adaptive-risk"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文17 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Large-Scale Multi-Session Point-Cloud Map Merging
+                  </div>
+                  <div class="pub-authors">
+                    Hairuo Wei, Rundong Li, Yixi Cai, Chongjian Yuan, Yunfan Ren, Zuhao Zou, Huajie Wu, <span class="author-self">Chunran Zheng</span>, Shunbo Zhou, Kaiwen Xue, Fu Zhang
+                  </div>
+                  <div class="pub-journal">
+                     IEEE Robotics and Automation Letters (RA-L) 2025
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10759717" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/LAMM" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="#" class="bib-link" data-bib-id="lamm"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文18 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Mesh-Learner: Texturing Mesh with Spherical Harmonics
+                  </div>
+                  <div class="pub-authors">
+                    Yunfei Wan, Jianheng Liu, <span class="author-self">Chunran Zheng</span>, Jiarong Lin and Fu Zhang 
+                  </div>
+                  <div class="pub-journal">
+                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2025
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2504.19938" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="https://github.com/hku-mars/Mesh-Learner" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Code</a>
+                    <a href="#" class="bib-link" data-bib-id="mesh-learner"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            
+            <!-- 论文19 -->
+              <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Byzantine-Resilient lmpulsive Control for Bipartite Consensus of Heterogeneous Multiagent Systems
+                  </div>
+                  <div class="pub-authors">
+                    Yukang Cui, Zongheng Zhang, Bo Min, <span class="author-self">Chunran Zheng</span>, Jun Shen, Tingwen Huang 
+                  </div>
+                  <div class="pub-journal">
+                    IEEE Transactions on Circuits and Systems I: Regular Papers
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/document/10806736" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="Byzantine-Resilient"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <!-- 论文20 -->
+            <tr>
+              <td style="padding:0.03%;width:100%;vertical-align:top">
+                <div class="pub-item">
+                  <div class="pub-title">
+                    Smart glove integrated with tunable MWNTs/PDMS fibers made of a one-step extrusion method for finger dexterity, gesture, and temperature recognition
+                  </div>
+                  <div class="pub-authors">
+                    Yingchun Li, <span class="author-self">Chunran Zheng</span>, Shuai Liu, Liang Huang, Tianshu Fang, Jasmine Xinze Li, Feng Xu, Fei Li 
+                  </div>
+                  <div class="pub-journal">
+                    ACS Applied Materials & Interfaces
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/document/10806736" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-pdf-o"></i> Paper</a>
+                    <a href="#" class="bib-link" data-bib-id="smart-glove"><i class="fa fa-book"></i> Cite</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody></table>
+          
+          <!-- 分页控件 -->
+          <div class="pagination" id="pagination">
+            <!-- 分页按钮将通过JavaScript生成 -->
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+    </div>
+    
+    <!-- BibTeX 模态框 -->
+    <div id="bib-modal" class="bib-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>BibTeX Citation</h3>
+        <div class="bib-content" id="bib-content">
+          <!-- BibTeX内容将在这里显示 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 脚本 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // 移动端导航菜单
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          // 切换图标
+          const icon = menuToggle.querySelector('i');
+          if (navLinks.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+        
+        // 分页功能 - 修改为prev/next形式
+        const publications = document.querySelectorAll('#publications-list tr');
+        const itemsPerPage = 10;
+        const totalPublications = publications.length;
+        const pageCount = Math.ceil(totalPublications / itemsPerPage);
+        let currentPage = 1;
+        
+        // 创建prev/next分页控件
+        const paginationContainer = document.getElementById('pagination');
+        
+        // 上一页按钮
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'page-btn';
+        prevBtn.innerHTML = '<i class="fa fa-chevron-left"></i> Previous';
+        prevBtn.addEventListener('click', function() {
+          if (currentPage > 1) {
+            showPage(currentPage - 1);
+          }
+        });
+        
+        // 页码信息
+        const pageInfo = document.createElement('span');
+        pageInfo.className = 'page-info';
+        
+        // 下一页按钮
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'page-btn';
+        nextBtn.innerHTML = 'Next <i class="fa fa-chevron-right"></i>';
+        nextBtn.addEventListener('click', function() {
+          if (currentPage < pageCount) {
+            showPage(currentPage + 1);
+          }
+        });
+        
+        // 添加到容器
+        paginationContainer.appendChild(prevBtn);
+        paginationContainer.appendChild(pageInfo);
+        paginationContainer.appendChild(nextBtn);
+        
+        // 显示指定页面的论文
+        function showPage(page) {
+          currentPage = page;
+          
+          // 隐藏所有论文
+          publications.forEach((pub, index) => {
+            pub.style.display = 'none';
+          });
+          
+          // 显示当前页的论文
+          const startIndex = (page - 1) * itemsPerPage;
+          const endIndex = Math.min(startIndex + itemsPerPage, publications.length);
+          
+          for (let i = startIndex; i < endIndex; i++) {
+            publications[i].style.display = '';
+          }
+          
+          // 更新分页信息和按钮状态
+          pageInfo.textContent = `Page ${currentPage} of ${pageCount}`;
+          
+          // 控制按钮状态
+          prevBtn.disabled = currentPage === 1;
+          nextBtn.disabled = currentPage === pageCount;
+        }
+        
+        // 默认显示第一页
+        showPage(1);
+        
+        // BibTeX 模态框功能
+        const bibModal = document.getElementById('bib-modal');
+        const bibContent = document.getElementById('bib-content');
+        const closeModal = document.querySelector('.close-modal');
+        const bibLinks = document.querySelectorAll('.bib-link');
+        
+        // BibTeX 数据
+        const bibData = {
+          'fastCalib': `@article{zheng2025fastcalib,
+  title={FAST-Calib: LiDAR-Camera Extrinsic Calibration in One Second},
+  author={Zheng, Chunran and Fu Zhang},
+  journal={arXiv preprint arXiv:2501.01234},
+  year={2025},
+  eprint={2501.01234},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}`,
+          'fastlivo2': `@article{zheng2024fast,
+  title={Fast-livo2: Fast, direct lidar-inertial-visual odometry},
+  author={Zheng, Chunran and Xu, Wei and Zou, Zuhao and Hua, Tong and Yuan, Chongjian and He, Dongjiao and Zhou, Bingyang and Liu, Zheng and Lin, Jiarong and Zhu, Fangcheng and others},
+  journal={IEEE Transactions on Robotics},
+  year={2024},
+  publisher={IEEE}
+}`,
+          'fastlivo1': `@inproceedings{zheng2022fast,
+  title={Fast-livo: Fast and tightly-coupled sparse-direct lidar-inertial-visual odometry},
+  author={Zheng, Chunran and Zhu, Qingyan and Xu, Wei and Liu, Xiyuan and Guo, Qizhi and Zhang, Fu},
+  booktitle={2022 IEEE/RSJ international conference on intelligent robots and systems (IROS)},
+  pages={4003--4009},
+  year={2022},
+  organization={IEEE}
+}`,
+          'fastlivo2onarm': `@article{zhou2025fast,
+  title={FAST-LIVO2 on Resource-Constrained Platforms: LiDAR-Inertial-Visual Odometry with Efficient Memory and Computation},
+  author={Zhou, Bingyang and Zheng, Chunran and Wang, Ziming and Zhu, Fangcheng and Cai, Yixi and Zhang, Fu},
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  publisher={IEEE}
+}`,
+          'gslivo': `@article{hong2025gs,
+  title={GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping},
+  author={Hong, Sheng and Zheng, Chunran and Shen, Yishu and Li, Changze and Zhang, Fu and Qin, Tong and Shen, Shaojie},
+  journal={arXiv preprint arXiv:2501.08672},
+  year={2025}
+}`,
+          'r2live': `@article{lin2021r,
+  title={R $\^{} 2$ LIVE: A robust, real-time, LiDAR-inertial-visual tightly-coupled state estimator and mapping},
+  author={Lin, Jiarong and Zheng, Chunran and Xu, Wei and Zhang, Fu},
+  journal={IEEE Robotics and Automation Letters},
+  volume={6},
+  number={4},
+  pages={7469--7476},
+  year={2021},
+  publisher={IEEE}
+}`,
+          'camvox': `@inproceedings{zhu2021camvox,
+  title={Camvox: A low-cost and accurate lidar-assisted visual slam system},
+  author={Zhu, Yuewen and Zheng, Chunran and Yuan, Chongjian and Huang, Xu and Hong, Xiaoping},
+  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={5049--5055},
+  year={2021},
+  organization={IEEE}
+}`,
+          'ibtc': `@article{zou2024ibtc,
+  title={Ibtc: an image-assisting binary and triangle combined descriptor for place recognition by fusing lidar and camera measurements},
+  author={Zou, Zuhao and Zheng, Chunran and Yuan, Chongjian and Zhou, Shunbo and Xue, Kaiwen and Zhang, Fu},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE}
+}`,
+          'rollvox': `@inproceedings{hong2023rollvox,
+  title={Rollvox: Real-Time and High-Quality LiDAR Colorization with Rolling Shutter Camera},
+  author={Hong, Sheng and Zheng, Chunran and Yin, Huan and Shen, Shaojie},
+  booktitle={2023 IEEE/RSJ international conference on intelligent robots and systems (IROS)},
+  pages={7195--7201},
+  year={2023},
+  organization={IEEE}
+}`,
+          'neural-surface': `@article{liu2024neural,
+  title={Neural surface reconstruction and rendering for lidar-visual systems},
+  author={Liu, Jianheng and Zheng, Chunran and Wan, Yunfei and Wang, Bowen and Cai, Yixi and Zhang, Fu},
+  journal={arXiv preprint arXiv:2409.05310},
+  year={2024}
+}`,
+          'mfcalib': `@inproceedings{ye2024mfcalib,
+  title={Mfcalib: Single-shot and automatic extrinsic calibration for lidar and camera in targetless environments based on multi-feature edge},
+  author={Ye, Tianyong and Xu, Wei and Zheng, Chunran and Cui, Yukang},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={864--871},
+  year={2024},
+  organization={IEEE}
+}`,
+          'liv-gaussmap': `@article{hong2024liv,
+  title={LIV-GaussMap: LiDAR-inertial-visual fusion for real-time 3D radiance field map rendering},
+  author={Hong, Sheng and He, Junjie and Zheng, Xinhu and Zheng, Chunran},
+  journal={IEEE Robotics and Automation Letters},
+  volume={9},
+  number={11},
+  pages={9765--9772},
+  year={2024},
+  publisher={IEEE}
+}`,
+          'mars-lvig': `@article{li2024mars,
+  title={MARS-LVIG dataset: A multi-sensor aerial robots SLAM dataset for LiDAR-visual-inertial-GNSS fusion},
+  author={Li, Haotian and Zou, Yuying and Chen, Nan and Lin, Jiarong and Liu, Xiyuan and Xu, Wei and Zheng, Chunran and Li, Rundong and He, Dongjiao and Kong, Fanze and others},
+  journal={The International Journal of Robotics Research},
+  volume={43},
+  number={8},
+  pages={1114--1127},
+  year={2024},
+  publisher={SAGE Publications Sage UK: London, England}
+}`,
+          'lamm': `@ARTICLE{10759717,
+  author={Wei, Hairuo and Li, Rundong and Cai, Yixi and Yuan, Chongjian and Ren, Yunfan and Zou, Zuhao and Wu, Huajie and Zheng, Chunran and Zhou, Shunbo and Xue, Kaiwen and Zhang, Fu},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Large-Scale Multi-Session Point-Cloud Map Merging}, 
+  year={2025},
+  volume={10},
+  number={1},
+  pages={88-95},
+  keywords={Merging;Laser radar;Point cloud compression;Three-dimensional displays;Feature extraction;Heuristic algorithms;Simultaneous localization and mapping;Sensors;Accuracy;Semantics;Mapping;multi-robot SLAM;SLAM},
+  doi={10.1109/LRA.2024.3504317}
+  }`,
+  'adaptive-risk': `@ARTICLE{11029637,
+  author={Cui, Yukang and Wang, Jianing and Zheng, Chunran and Lin, Hong and Feng, Zhiguang and Huang, Tingwen},
+  journal={IEEE Transactions on Circuits and Systems I: Regular Papers}, 
+  title={Adaptive Risk-Aware Multi-Target Tracking and Monitoring With Network Reconfiguration}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-14},
+  keywords={Target tracking;Robot sensing systems;Multi-robot systems;Sensors;Accuracy;Robustness;Resilience;Robot kinematics;Vectors;Maintenance engineering;Adaptive control;heterogeneous multi-robot systems;multi-target tracking;resilience},
+  doi={10.1109/TCSI.2025.3573502}}`,
+
+  'gs-sdf': `@misc{liu2025gssdflidaraugmentedgaussiansplatting,
+      title={GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction}, 
+      author={Jianheng Liu and Yunfei Wan and Bowen Wang and Chunran Zheng and Jiarong Lin and Fu Zhang},
+      year={2025},
+      eprint={2503.10170},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2503.10170}, 
+}`,
+
+  'Byzantine-Resilient': `Y. Cui, Z. Zhang, B. Min, C. Zheng, J. Shen and T. Huang, "Byzantine-Resilient Impulsive Control for Bipartite Consensus of Heterogeneous Multiagent Systems," in IEEE Transactions on Circuits and Systems I: Regular Papers, vol. 72, no. 8, pp. 4309-4321, Aug. 2025, doi: 10.1109/TCSI.2024.3517329.
+keywords: {Protocols;Robustness;Event detection;Multi-agent systems;Topology;Observers;Termination of employment;Heuristic algorithms;Aerodynamics;System dynamics;Byzantine attacks;bipartite consensus;heterogeneous multi-agent systems;resilient impulsive control},
+`,
+
+  'mesh-learner': `@misc{wan2025meshlearnertexturingmeshspherical,
+      title={Mesh-Learner: Texturing Mesh with Spherical Harmonics}, 
+      author={Yunfei Wan and Jianheng Liu and Chunran Zheng and Jiarong Lin and Fu Zhang},
+      year={2025},
+      eprint={2504.19938},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.19938}, 
+}`,
+
+  'smart-glove ': `Please wait~`,
+  'voxel-slam': `@article{liu2024voxel,
+  title={Voxel-slam: A complete, accurate, and versatile lidar-inertial slam system},
+  author={Liu, Zheng and Li, Haotian and Yuan, Chongjian and Liu, Xiyuan and Lin, Jiarong and Li, Rundong and Zheng, Chunran and Zhou, Bingyang and Liu, Wenyi and Zhang, Fu},
+  journal={arXiv preprint arXiv:2410.08935},
+  year={2024}
+}
+`
+        };
+        
+        // 打开模态框
+        bibLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const bibId = this.getAttribute('data-bib-id');
+            bibContent.textContent = bibData[bibId] || 'BibTeX citation not available.';
+            bibModal.style.display = 'block';
+          });
+        });
+        
+        // 关闭模态框
+        closeModal.addEventListener('click', function() {
+          bibModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(e) {
+          if (e.target === bibModal) {
+            bibModal.style.display = 'none';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

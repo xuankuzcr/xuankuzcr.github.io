@@ -1,0 +1,492 @@
+/* =========================
+   Base Reset and Typography
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 全站最大内容宽度：想再宽只改这里 */
+  --page-max: 1000px;
+  --page-sidepad: 20px; /* 与导航栏一致的左右内边距 */
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding-top: 50px; /* 给导航栏留空间 */
+}
+
+/* =========================
+   Navigation Bar
+   ========================= */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+/* 统一三页导航容器宽度与左右内边距 */
+.nav-container {
+  max-width: var(--page-max) !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--page-sidepad) !important;
+  padding-right: var(--page-sidepad) !important;
+}
+
+/* 全局内容容器样式 - 确保所有页面主内容宽度一致 */
+.main-content {
+  max-width: var(--page-max) !important;
+  margin: 0 auto;
+  padding-left: var(--page-sidepad) !important;
+  padding-right: var(--page-sidepad) !important;
+  width: 100%;
+}
+
+/* 移动端适配 - 确保不需要左右滚动 */
+@media (max-width: 768px) {
+  :root {
+    --page-sidepad: 15px; /* 移动端减少内边距 */
+  }
+
+  /* 确保表格在移动端不溢出 */
+  table {
+    display: block;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+.logo a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo a:hover {
+  color: #3b82f6;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+/* 桌面端统一导航字体为 1rem */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem !important;
+  transition: color 0.3s, font-weight 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.menu-toggle:hover {
+  color: #3b82f6;
+}
+
+/* 移动端响应式菜单 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* 移动端字体略大更易点按（保持你原先的 1.1rem） */
+  .nav-links a {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* =========================
+   Publication / Shared Sections
+   ========================= */
+.section-title {
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.description {
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 论文条目更紧凑 */
+.pub-item {
+  transition: background-color 0.2s;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.pub-item:hover { background-color: #f9fafb; }
+
+.pub-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.pub-authors {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.pub-journal {
+  margin: 0.25rem 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  color: #64748b;
+}
+.pub-links a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.pub-links a:hover {
+  color: #3b82f6;
+  text-decoration: none;
+}
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollbar-thumb-gray::-webkit-scrollbar-thumb {
+    background-color: #718096;
+    border-radius: 3px;
+}
+.news-scroll-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+}
+.scroll-indicator {
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+}
+.news-wrapper {
+    position: relative;
+    margin-top: 1rem;
+}
+/* 固定缩略图容器的比例和尺寸 */
+.video-thumbnail{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* 统一 16:9，可改 4/3 或 1/1 */
+  background: #000;
+  overflow: hidden;
+}
+
+/* 兼容旧浏览器：没有 aspect-ratio 时用 padding hack */
+.video-thumbnail::before{
+  content: "";
+  display: block;
+  padding-top: 56.25%;    /* 16:9 = 9/16 = 56.25% */
+}
+.video-thumbnail > *{
+  position: absolute;
+  inset: 0;
+}
+
+/* 确保封面图填满而不变形 */
+.video-thumbnail img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;   /* 或 16 / 9，看你原始图片比例 */
+  object-fit: cover;
+  border-radius: 4px;    /* 可选，美化圆角 */
+}
+.author-self { font-weight: 600; color: #0f172a; }
+
+/* =========================
+   Home (Index) Specific
+   ========================= */
+/* 首页 News 区域统一到 --page-max，并与导航同侧边距 */
+.news-section {
+  max-width: var(--page-max) !important;
+  margin: 1.5rem auto;
+  padding-left: var(--page-sidepad) !important;
+  padding-right: var(--page-sidepad) !important;
+}
+
+/* =========================
+   Contact Page
+   ========================= */
+/* Contact 页面主容器统一到 --page-max，并与导航同侧边距 */
+.contact-content {
+  max-width: var(--page-max) !important;
+  margin: 0 auto;
+  padding-left: var(--page-sidepad) !important;
+  padding-right: var(--page-sidepad) !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* =========================
+   Global Container Overrides
+   ========================= */
+/* 覆盖首页/出版页那些用内联 max-width:*** 的表格容器，让它们与导航同侧边距 */
+table[style*="max-width:800px"],
+table[style*="max-width: 800px"],
+table[style*="max-width:var(--page-max)"] {
+  max-width: var(--page-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  /* 关键：加同样的左右内边距，避免看起来“偏左/不对齐” */
+  padding-left: var(--page-sidepad) !important;
+  padding-right: var(--page-sidepad) !important;
+}
+
+/* 避免 table 的内部单元格再额外撑偏视觉位置（保持已有内边距即可） */
+
+/* =========================
+   Community Page Styles
+   ========================= */
+.video-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-0.25rem);
+}
+
+.video-thumbnail {
+  position: relative;
+  padding-bottom: 56.25%;
+  background-color: #f3f4f6;
+  overflow: hidden;
+}
+.video-thumbnail { background: transparent !important; }
+.video-thumbnail img { filter: none !important; }
+.video-thumbnail::before,
+.video-thumbnail::after { content: none !important; display: none !important; }
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+  border-bottom: 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-answer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  color: #6b7280;
+  display: none;
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+/* =========================
+   Contact Page Styles
+   ========================= */
+.contact-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* =========================
+   Index Page Styles
+   ========================= */
+.timeline-container {
+  max-width: 600px;
+}
+
+.timeline-item {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray {
+  scrollbar-color: #9ca3af transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+.scrollbar-thumb-gray::-webkit-scrollbar-thumb {
+    background-color: #718096;
+    border-radius: 3px;
+}
+.news-scroll-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    position: relative;
+}
+.scroll-indicator-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 30px;
+}
+/* =========================
+   Publication Page Styles
+   ========================= */
+/* 确保页面内容可滚动 */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 隐藏 Chrome、Edge、Opera 等 Blink 内核浏览器滚动条 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* 隐藏 Firefox 滚动条 */
+html, body {
+  scrollbar-width: none;
+}
+
+/* 隐藏 IE/Edge 旧版滚动条 */
+html {
+  -ms-overflow-style: none;
+}
+
+.pub-item {
+  transition: background-color 0.2s;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pub-item:hover {
+  background-color: #f9fafb;
+}
