@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. 项目总览 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=33fe0fa7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. 研究方法地图（LiDAR × Vision × Inertial）" href="../methodology/research_map.html" />
+    <link rel="prev" title="LiDAR × Vision Fusion Research Wiki" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0e7490" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            LiDAR-Vision Fusion Wiki
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">研究总览</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 项目总览</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. 一句话目标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. 项目状态总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#engineering-research">1.3. 研究主线（Engineering + Research）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">1.4. 我关心的核心问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">1.5. 快速入口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">1.6. 研究资产索引</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../methodology/research_map.html">2. 研究方法地图（LiDAR × Vision × Inertial）</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../methodology/research_map.html#id1">2.1. 1) 系统分层</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../methodology/research_map.html#id2">2.2. 2) 关键技术轴</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../methodology/research_map.html#a">2.2.1. A. 实时性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methodology/research_map.html#b">2.2.2. B. 一致性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methodology/research_map.html#c">2.2.3. C. 成本可控</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methodology/research_map.html#d">2.2.4. D. 可扩展性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../methodology/research_map.html#id3">2.3. 3) 未来融合方向</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">已完成与进行中项目</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fast-livo1.html">1. FAST-LIVO1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id1">1.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id2">1.2. 关键贡献（我的视角）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id3">1.3. 复盘</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fast-livo2.html">2. FAST-LIVO2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo2.html#id1">2.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo2.html#id2">2.2. 核心升级点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo2.html#id3">2.3. 我关注的后续问题</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fast-calib.html">3. FAST-Calib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fast-calib.html#id1">3.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-calib.html#id2">3.2. 价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-calib.html#id3">3.3. 下一步可做</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="global-lvba.html">4. Global-LVBA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="global-lvba.html#id1">4.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global-lvba.html#id2">4.2. 核心价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global-lvba.html#id3">4.3. 研究启发</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liv-handheld.html">5. LIV-Handheld</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="liv-handheld.html#id1">5.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liv-handheld.html#id2">5.2. 价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liv-handheld.html#id3">5.3. 下一步</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="camvox.html">6. CamVox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="camvox.html#id1">6.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camvox.html#id2">6.2. 价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="camvox.html#id3">6.3. 后续可挖掘</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liv-gaussmap.html">7. LIV-GaussMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="liv-gaussmap.html#id1">7.1. 我对它的定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liv-gaussmap.html#id2">7.2. 研究意义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="liv-gaussmap.html#id3">7.3. 当前挑战</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">未来计划</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/umi.html">1. UMI 研究计划（未来主线）</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/umi.html#id1">1.1. 为什么做 UMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/umi.html#id2">1.2. 目标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/umi.html#id3">1.3. 技术路线（初版）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/umi.html#id4">1.4. 和现有项目的关系</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap/next-steps.html">2. 未来 6-12 个月执行路线</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/next-steps.html#p0-1-2">2.1. P0（1-2个月）：基建与整理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/next-steps.html#p1-3-6">2.2. P1（3-6个月）：突破方向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/next-steps.html#p2-6-12">2.3. P2（6-12个月）：系统化产出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap/next-steps.html#id2">2.4. 每周维护建议</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单"  style="background: #0e7490" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LiDAR-Vision Fusion Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>项目总览</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/projects/overview.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">1. </span>项目总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<div class="hero-panel compact">
+  <p class="hero-kicker">Personal Wiki · LiDAR × Vision × IMU</p>
+  <h2>激光视觉融合路线图</h2>
+  <p>这个页面用于快速回答三个问题：<strong>我做过什么</strong>、<strong>现在卡在哪</strong>、<strong>下一步要把系统带到哪里</strong>。</p>
+</div>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>一句话目标<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<blockquote>
+<div><p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复用”，并逐步接入 UMI/具身学习的数据闭环。</p>
+</div></blockquote>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>项目状态总览<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>方向</p></th>
+<th class="head"><p>项目</p></th>
+<th class="head"><p>状态</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>状态估计主线</p></td>
+<td><p>FAST-LIVO1</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>方法与工程基线</p></td>
+</tr>
+<tr class="row-odd"><td><p>状态估计主线</p></td>
+<td><p>FAST-LIVO2</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>主力系统版本</p></td>
+</tr>
+<tr class="row-even"><td><p>标定与工程化</p></td>
+<td><p>FAST-Calib</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>快速外参标定</p></td>
+</tr>
+<tr class="row-odd"><td><p>全局优化后端</p></td>
+<td><p>Global-LVBA</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>长程一致性补强</p></td>
+</tr>
+<tr class="row-even"><td><p>采集平台</p></td>
+<td><p>LIV-Handheld</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>采集与同步平台</p></td>
+</tr>
+<tr class="row-odd"><td><p>低成本路线</p></td>
+<td><p>CamVox</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>成本-性能折中参考</p></td>
+</tr>
+<tr class="row-even"><td><p>表示升级</p></td>
+<td><p>LIV-GaussMap</p></td>
+<td><p>🧪 进行中</p></td>
+<td><p>融合 + 高保真表示</p></td>
+</tr>
+<tr class="row-odd"><td><p>全局绝对约束</p></td>
+<td><p>激光视觉 RTK 融合</p></td>
+<td><p>✅ 已完成</p></td>
+<td><p>全局参考补强</p></td>
+</tr>
+<tr class="row-even"><td><p>具身扩展</p></td>
+<td><p>UMI</p></td>
+<td><p>🧭 规划中</p></td>
+<td><p>示教与策略学习闭环</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="engineering-research">
+<h2><span class="section-number">1.3. </span>研究主线（Engineering + Research）<a class="headerlink" href="#engineering-research" title="此标题的永久链接"></a></h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <h4>Phase A · 前端融合跑通</h4>
+    <p>FAST-LIVO1/2：建立稳定实时估计主线，保证高频可用。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase B · 部署成本降低</h4>
+    <p>FAST-Calib + LIV-Handheld：降低标定与采集门槛，提升复现效率。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase C · 全局一致性增强</h4>
+    <p>Global-LVBA + LiDAR-Visual-RTK：补强长程收敛，服务大尺度重访。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase D · 表示与任务扩展</h4>
+    <p>LIV-GaussMap + UMI：让地图不仅用于定位，也服务示教与操作学习。</p>
+  </div>
+</div>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.4. </span>我关心的核心问题<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<ol class="arabic simple">
+<li><p>如何在真实场景中同时做到 <strong>精度、鲁棒性、实时性</strong>？</p></li>
+<li><p>如何让系统具备 <strong>可部署、可维护、可复制</strong> 的工程品质？</p></li>
+<li><p>如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？</p></li>
+<li><p>如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？</p></li>
+</ol>
+</section>
+<section id="id5">
+<h2><span class="section-number">1.5. </span>快速入口<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="fast-livo1.html"><span class="std std-doc">FAST-LIVO1</span></a></p></li>
+<li><p><a class="reference internal" href="fast-livo2.html"><span class="std std-doc">FAST-LIVO2</span></a></p></li>
+<li><p><a class="reference internal" href="fast-calib.html"><span class="std std-doc">FAST-Calib</span></a></p></li>
+<li><p><a class="reference internal" href="global-lvba.html"><span class="std std-doc">Global-LVBA</span></a></p></li>
+<li><p><a class="reference internal" href="liv-handheld.html"><span class="std std-doc">LIV-Handheld</span></a></p></li>
+<li><p><a class="reference internal" href="camvox.html"><span class="std std-doc">CamVox</span></a></p></li>
+<li><p><a class="reference internal" href="liv-gaussmap.html"><span class="std std-doc">LIV-GaussMap</span></a></p></li>
+<li><p><a class="reference internal" href="liv-rtk-fusion.html"><span class="std std-doc">激光视觉 RTK 融合</span></a></p></li>
+<li><p><a class="reference internal" href="../roadmap/umi.html"><span class="std std-doc">UMI 研究计划</span></a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h2><span class="section-number">1.6. </span>研究资产索引<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>主页：<a class="reference external" href="https://github.com/xuankuzcr/xuankuzcr.github.io">https://github.com/xuankuzcr/xuankuzcr.github.io</a></p></li>
+<li><p>FAST-LIVO: <a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
+<li><p>FAST-LIVO2: <a class="reference external" href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a></p></li>
+<li><p>FAST-Calib: <a class="reference external" href="https://github.com/hku-mars/FAST-Calib">https://github.com/hku-mars/FAST-Calib</a></p></li>
+<li><p>Global-LVBA: <a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p></li>
+<li><p>LIV-Handheld: <a class="reference external" href="https://github.com/xuankuzcr/LIV_handhold">https://github.com/xuankuzcr/LIV_handhold</a></p></li>
+<li><p>CamVox: <a class="reference external" href="https://github.com/ISEE-Technology/CamVox">https://github.com/ISEE-Technology/CamVox</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../index.html" class="btn btn-neutral float-left" title="LiDAR × Vision Fusion Research Wiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../methodology/research_map.html" class="btn btn-neutral float-right" title="2. 研究方法地图（LiDAR × Vision × Inertial）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

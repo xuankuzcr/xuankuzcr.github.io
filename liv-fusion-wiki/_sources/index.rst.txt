@@ -1,0 +1,100 @@
+=======================================
+LiDAR × Vision Fusion Research Wiki
+=======================================
+
+.. raw:: html
+
+    <div class="hero-panel">
+      <p class="hero-kicker">Chunran · Engineering + Research</p>
+      <h2>激光视觉融合知识库</h2>
+      <p>参考工业 wiki 的清晰导航结构，同时保持个人研究笔记的轻量与迭代速度。<br>聚焦：<strong>可部署融合系统</strong>、<strong>全局一致优化</strong>、<strong>低成本长期运行</strong>、<strong>面向 UMI 的数据闭环</strong>。</p>
+    </div>
+
+.. raw:: html
+
+    <div class="quick-grid">
+      <a class="quick-card" href="projects/fast-livo1.html">
+        <span class="badge done">已完成</span>
+        <h3>FAST-LIVO1</h3>
+        <p>LIVO 主线基础里程碑</p>
+      </a>
+      <a class="quick-card" href="projects/fast-livo2.html">
+        <span class="badge done">已完成</span>
+        <h3>FAST-LIVO2</h3>
+        <p>主力系统版本，强调稳与快</p>
+      </a>
+      <a class="quick-card" href="projects/fast-calib.html">
+        <span class="badge done">已完成</span>
+        <h3>FAST-Calib</h3>
+        <p>部署门槛降低的标定工具链</p>
+      </a>
+      <a class="quick-card" href="projects/global-lvba.html">
+        <span class="badge done">已完成</span>
+        <h3>Global-LVBA</h3>
+        <p>后端全局一致性补强</p>
+      </a>
+      <a class="quick-card" href="projects/liv-handheld.html">
+        <span class="badge done">已完成</span>
+        <h3>LIV-Handheld</h3>
+        <p>可复制的数据采集平台</p>
+      </a>
+      <a class="quick-card" href="projects/camvox.html">
+        <span class="badge done">已完成</span>
+        <h3>CamVox</h3>
+        <p>低成本可用路线参考</p>
+      </a>
+      <a class="quick-card" href="projects/liv-gaussmap.html">
+        <span class="badge ongoing">进行中</span>
+        <h3>LIV-GaussMap</h3>
+        <p>几何系统向可渲染表示延展</p>
+      </a>
+      <a class="quick-card" href="projects/liv-rtk-fusion.html">
+        <span class="badge done">已完成</span>
+        <h3>LiDAR-Visual-RTK</h3>
+        <p>引入绝对约束的全局补强</p>
+      </a>
+      <a class="quick-card" href="roadmap/umi.html">
+        <span class="badge plan">未来主线</span>
+        <h3>UMI</h3>
+        <p>示教采集 + 操作学习闭环</p>
+      </a>
+    </div>
+
+研究主线
+--------
+
+1. **实时融合前端**：FAST-LIVO1/2
+2. **可部署系统工程**：FAST-Calib + LIV-Handheld
+3. **全局一致后端**：Global-LVBA + RTK 约束
+4. **场景表示升级**：LIV-GaussMap
+5. **具身扩展路线**：UMI + VLA + Diffusion Policy
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 研究总览
+    :numbered:
+
+    projects/overview.md
+    methodology/research_map.md
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 已完成与进行中项目
+    :numbered:
+
+    projects/fast-livo1.md
+    projects/fast-livo2.md
+    projects/fast-calib.md
+    projects/global-lvba.md
+    projects/liv-handheld.md
+    projects/camvox.md
+    projects/liv-gaussmap.md
+    projects/liv-rtk-fusion.md
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 未来计划
+    :numbered:
+
+    roadmap/umi.md
+    roadmap/next-steps.md
