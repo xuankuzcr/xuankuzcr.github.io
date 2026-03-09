@@ -55,20 +55,12 @@ LiDAR × Vision × Embodied Research Wiki
     projects/liv-gaussmap.md
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 具身智能项目库 · 数据与策略闭环
+    :maxdepth: 2
+    :caption: 具身智能项目库
 
     embodied/overview.md
-    embodied/liv-umi.md
-    embodied/umi-slam.md
-    embodied/data-replay-qc.md
-    embodied/dp-training-eval.md
-
-.. toctree::
-    :maxdepth: 1
-    :caption: 具身智能项目库 · XLErobot复现
-
-    embodied/xlerobot-reproduction.md
+    embodied/data-policy-loop.md
+    embodied/xlerobot-track.md
 
 .. toctree::
     :hidden:
