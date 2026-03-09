@@ -24,11 +24,6 @@ LiDAR × Vision × Embodied Research Wiki
         <h3>数据与策略闭环</h3>
         <p>LIV-UMI、UMI-SLAM、数据质检、DP 训练评测、XLErobot 复现。</p>
       </a>
-      <a class="quick-card" href="media/video-hub.html">
-        <span class="badge plan">媒体中心</span>
-        <h3>效果图与视频</h3>
-        <p>项目效果图、B站复现视频、对外演示入口。</p>
-      </a>
     </div>
 
 研究主线
@@ -71,13 +66,8 @@ LiDAR × Vision × Embodied Research Wiki
     embodied/xlerobot-reproduction.md
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 媒体与演示
-
-    media/video-hub.md
-
-.. toctree::
     :hidden:
 
+    media/video-hub.md
     roadmap/umi.md
     roadmap/next-steps.md
