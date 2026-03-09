@@ -3,91 +3,40 @@
 <div class="hero-panel compact">
   <p class="hero-kicker">LIVO Baseline · Real-time · Deployable</p>
   <h2>FAST-LIVO1：实时激光视觉惯性紧耦合里程计</h2>
-  <p>从“实验室可运行”走向“真实场景可部署”的关键里程碑。</p>
+  <p>建立从“实验室可运行”到“真实场景可部署”的第一代工程基线。</p>
 </div>
 
+## 1) 项目定位
+
 - **类型**：LiDAR-Inertial-Visual Odometry
-- **阶段**：已完成 / 代表作
-- **代码**：<https://github.com/hku-mars/FAST-LIVO>
-- **论文**：<https://arxiv.org/abs/2203.00893>
+- **状态**：✅ 已完成（代表作）
+- **主线位置**：Phase A（前端融合贯通）
+- **核心价值**：把 LiDAR + Camera + IMU 紧耦合链路打通，形成后续 FAST-LIVO2 的可复用起点。
 
-## 一句话价值
+## 2) 核心亮点
 
-FAST-LIVO1 建立了稳定可复现的 LIVO 工程基线，为后续 FAST-LIVO2、全局优化和具身扩展提供了可持续演进起点。
+- 多传感器紧耦合状态估计（LiDAR × Vision × IMU）
+- 兼顾实时性与精度的工程实现
+- 具备跨平台部署潜力（x86 / ARM）
+- 为后续全局优化与表示扩展提供稳定前端输入
 
-## 核心亮点
+## 3) 结果证据（建议看图 + 视频）
 
-- LiDAR + Camera + IMU 的高频紧耦合融合链路
-- 在实时性与精度之间保持工程可用平衡
-- 面向部署的参数组织和运行流程
-- 可直接对接后续全局优化与表示模块
+- 系统流程图（Framework）
+- 退化场景效果图（LiDAR / 视觉挑战）
+- 轨迹与点云结果图（对比或典型片段）
+- Demo 视频：建议放 90 秒总览 + 完整复现实验
 
-## 支持平台（卡片化展示建议）
+## 4) 复现入口（不在本页展开教程）
 
-- ✅ 通用 x86
-- ✅ Radxa ROCK5B+
-- ✅ OrangePi 5 Ultra
-- ✅ NVIDIA Jetson Orin Nano Super
-- ✅ NVIDIA Jetson AGX Orin
-- ✅ D-Robotics RDK X5
+- GitHub（README）：<https://github.com/hku-mars/FAST-LIVO>
+- 论文：<https://arxiv.org/abs/2203.00893>
+- B站建议检索关键词：`FAST-LIVO 复现`、`LIVO SLAM 复现`
 
-## 传感器支持
+> 详细环境配置、运行命令、参数说明请直接看 GitHub README 与 B站复现视频。
 
-- ✅ LiDAR + Camera + IMU（硬同步优先）
-- ✅ AC1（示例）
-- ✅ 可扩展到同类时空同步传感器组合
+## 5) 关联项目
 
-## 复现入口（最小可用）
-
-### 环境依赖
-
-- Ubuntu 16.04 ~ 20.04
-- ROS（推荐 Noetic）
-- PCL >= 1.6 / Eigen >= 3.3.4 / OpenCV >= 3.2
-- Sophus（README 指定版本）、Vikit、livox_ros_driver
-
-### 编译
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/hku-mars/FAST-LIVO
-cd ../
-catkin_make
-source ~/catkin_ws/devel/setup.bash
-```
-
-### Benchmark 运行
-
-```bash
-roslaunch fast_livo mapping_avia_ntu.launch
-rosbag play YOUR_DOWNLOADED.bag
-```
-
-### 私有数据运行
-
-```bash
-roslaunch fast_livo mapping_avia.launch
-rosbag play YOUR_DOWNLOADED.bag
-```
-
-### 常见问题
-
-1. 轨迹漂移明显：先查时间同步、外参、IMU噪声参数。
-2. 实时性不足：调大 `point_filter_num`、调整滤波参数。
-3. 视觉模块不稳：按光照调整 `outlier_threshold`，检查时间对齐。
-
-## 结果展示（建议放图与视频）
-
-- 图1：系统流程图（Framework）
-- 图2：退化场景结果图
-- 图3：轨迹/点云效果图
-- 视频A：90秒对外总览
-- 视频B：完整复现实验（B站）
-
-> B站复现视频链接建议按“总览 / 复现 / 对比实验”三类整理。
-
-## 相关资源
-
-- GitHub：<https://github.com/hku-mars/FAST-LIVO>
-- Paper：<https://arxiv.org/abs/2203.00893>
-- 个人主页仓库：<https://github.com/xuankuzcr/xuankuzcr.github.io>
+- 下一阶段： [FAST-LIVO2](fast-livo2.md)
+- 后端补强： [Global-LVBA](global-lvba.md)
+- 工程部署支持： [FAST-Calib](fast-calib.md)、[LIV-Handheld](liv-handheld.md)

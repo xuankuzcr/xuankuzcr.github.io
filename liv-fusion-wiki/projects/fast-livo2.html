@@ -83,26 +83,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fast-livo1.html">FAST-LIVO1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id1">一句话价值</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id2">核心亮点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id3">支持平台（卡片化展示建议）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id4">传感器支持</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id5">复现入口（最小可用）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id6">环境依赖</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id7">编译</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#benchmark">Benchmark 运行</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id8">私有数据运行</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id9">常见问题</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id10">结果展示（建议放图与视频）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id11">相关资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id1">1) 项目定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id2">2) 核心亮点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id3">3) 结果证据（建议看图 + 视频）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id4">4) 复现入口（不在本页展开教程）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id5">5) 关联项目</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAST-LIVO2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">我对它的定位</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">核心升级点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">我关注的后续问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1) 项目定位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2) 核心亮点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3) 结果证据（建议看图 + 视频）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4) 复现入口（不在本页展开教程）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">5) 关联项目</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="camvox.html">CamVox</a><ul>
@@ -194,29 +187,55 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="fast-livo2">
 <h1>FAST-LIVO2<a class="headerlink" href="#fast-livo2" title="此标题的永久链接"></a></h1>
+<div class="hero-panel compact">
+  <p class="hero-kicker">Mainline System · Robust · Efficient</p>
+  <h2>FAST-LIVO2：主力激光视觉惯性融合系统</h2>
+  <p>在 FAST-LIVO1 基础上，进一步强化鲁棒性、效率与工程可用性。</p>
+</div>
+<section id="id1">
+<h2>1) 项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：Fast, Direct LiDAR-Inertial-Visual Odometry</p></li>
-<li><p><strong>阶段</strong>：已完成 / 主力系统</p></li>
-<li><p><strong>链接</strong>：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a></p></li>
+<li><p><strong>状态</strong>：✅ 已完成（主力系统）</p></li>
+<li><p><strong>主线位置</strong>：Phase A → Phase C 过渡（前端稳态 + 全局能力衔接）</p></li>
+<li><p><strong>核心价值</strong>：从“可用”走向“可持续稳定部署”。</p></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>FAST-LIVO2 是从“能跑”到“更稳、更快、更工程化”的关键版本。</p>
 </section>
 <section id="id2">
-<h2>核心升级点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>2) 核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>视觉与 LiDAR 在统一体素地图中深度融合</p></li>
-<li><p>更好的资源利用（尤其对边缘设备友好）</p></li>
-<li><p>在复杂动态场景中鲁棒性更强</p></li>
+<li><p>相比 FAST-LIVO1，进一步提升复杂场景鲁棒性</p></li>
+<li><p>更强的资源利用效率，对边缘设备更友好</p></li>
+<li><p>视觉与 LiDAR 融合更紧密，整体系统稳定性更高</p></li>
+<li><p>更适合作为后续全局优化与长期运行主线</p></li>
 </ul>
 </section>
 <section id="id3">
-<h2>我关注的后续问题<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<h2>3) 结果证据（建议看图 + 视频）<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>全局一致性与后端重优化如何更自然衔接？</p></li>
-<li><p>在低成本传感器组合下能否保持稳定上限？</p></li>
-<li><p>如何与 lifelong SLAM / UMI 数据闭环对接？</p></li>
+<li><p>多场景效果图（室内 / 室外 / 动态干扰）</p></li>
+<li><p>典型轨迹与地图结果图</p></li>
+<li><p>与上一代版本的对比展示（稳定性 / 速度 /质量）</p></li>
+<li><p>Demo 视频：总览版 + 复现实验版</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>4) 复现入口（不在本页展开教程）<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>GitHub（README）：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a></p></li>
+<li><p>B站建议检索关键词：<code class="docutils literal notranslate"><span class="pre">FAST-LIVO2</span> <span class="pre">复现</span></code>、<code class="docutils literal notranslate"><span class="pre">激光视觉融合</span> <span class="pre">复现</span></code></p></li>
+</ul>
+<blockquote>
+<div><p>详细安装、运行、参数配置请以 GitHub README 和 B站复现教程为准。</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h2>5) 关联项目<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>上一代基线： <a class="reference internal" href="fast-livo1.html"><span class="std std-doc">FAST-LIVO1</span></a></p></li>
+<li><p>后端优化： <a class="reference internal" href="global-lvba.html"><span class="std std-doc">Global-LVBA</span></a></p></li>
+<li><p>标定与部署： <a class="reference internal" href="fast-calib.html"><span class="std std-doc">FAST-Calib</span></a></p></li>
+<li><p>表示扩展： <a class="reference internal" href="liv-gaussmap.html"><span class="std std-doc">LIV-GaussMap</span></a></p></li>
 </ul>
 </section>
 </section>
