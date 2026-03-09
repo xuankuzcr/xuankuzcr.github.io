@@ -1,35 +1,71 @@
 # 项目总览
 
 <div class="hero-panel compact">
-  <p class="hero-kicker">Personal Wiki · LiDAR × Vision × IMU</p>
-  <h2>激光视觉融合路线图</h2>
-  <p>这个页面用于快速回答三个问题：<strong>我做过什么</strong>、<strong>现在卡在哪</strong>、<strong>下一步要把系统带到哪里</strong>。</p>
+  <p class="hero-kicker">Personal Wiki · SLAM × Reconstruction × Embodied</p>
+  <h2>研究作品路线图</h2>
+  <p>这个页面回答三个问题：<strong>我做过什么</strong>、<strong>当前重点是什么</strong>、<strong>下一步怎么走</strong>。</p>
 </div>
 
 ## 一句话目标
 
-> 把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复用”，并逐步接入 UMI/具身学习的数据闭环。
+把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并延展到 UMI / 具身学习闭环。
 
-## 项目状态总览
+## 项目状态（卡片版）
 
-| 方向 | 项目 | 状态 | 备注 |
-|---|---|---|---|
-| 状态估计主线 | FAST-LIVO1 | ✅ 已完成 | 方法与工程基线 |
-| 状态估计主线 | FAST-LIVO2 | ✅ 已完成 | 主力系统版本 |
-| 标定与工程化 | FAST-Calib | ✅ 已完成 | 快速外参标定 |
-| 全局优化后端 | Global-LVBA | ✅ 已完成 | 长程一致性补强 |
-| 采集平台 | LIV-Handheld | ✅ 已完成 | 采集与同步平台 |
-| 低成本路线 | CamVox | ✅ 已完成 | 成本-性能折中参考 |
-| 表示升级 | LIV-GaussMap | 🧪 进行中 | 融合 + 高保真表示 |
-| 全局绝对约束 | 激光视觉 RTK 融合 | ✅ 已完成 | 全局参考补强 |
-| 具身扩展 | UMI | 🧭 规划中 | 示教与策略学习闭环 |
+<div class="status-grid">
+  <div class="status-card">
+    <p class="status-title">FAST-LIVO1</p>
+    <span class="badge done">已完成</span>
+    <p>方法与工程基线，打通 LiDAR × Vision × IMU 融合主链路。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">FAST-LIVO2</p>
+    <span class="badge done">已完成</span>
+    <p>主力系统版本，强调稳、快与工程可用性。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">FAST-Calib</p>
+    <span class="badge done">已完成</span>
+    <p>快速标定工具链，降低部署门槛。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">Global-LVBA</p>
+    <span class="badge done">已完成</span>
+    <p>全局一致后端优化，补强长程收敛。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LIV-Handheld</p>
+    <span class="badge done">已完成</span>
+    <p>采集与同步平台，提升实验复现效率。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">CamVox</p>
+    <span class="badge done">已完成</span>
+    <p>低成本路线参考，平衡成本与性能。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LiDAR-Visual-RTK</p>
+    <span class="badge done">已完成</span>
+    <p>补全全局绝对参考，增强跨场景重访稳定性。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LIV-GaussMap</p>
+    <span class="badge ongoing">进行中</span>
+    <p>融合几何系统向高保真表示能力延展。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">UMI 主线</p>
+    <span class="badge plan">规划中</span>
+    <p>连接示教采集、数据质检、策略训练与评测闭环。</p>
+  </div>
+</div>
 
 ## 研究主线（Engineering + Research）
 
 <div class="timeline">
   <div class="timeline-item">
     <h4>Phase A · 前端融合跑通</h4>
-    <p>FAST-LIVO1/2：建立稳定实时估计主线，保证高频可用。</p>
+    <p>FAST-LIVO1/2：建立稳定实时估计主线，保障高频可用。</p>
   </div>
   <div class="timeline-item">
     <h4>Phase B · 部署成本降低</h4>
@@ -47,8 +83,8 @@
 
 ## 我关心的核心问题
 
-1. 如何在真实场景中同时做到 **精度、鲁棒性、实时性**？
-2. 如何让系统具备 **可部署、可维护、可复制** 的工程品质？
+1. 如何在真实场景中同时做到**精度、鲁棒性、实时性**？
+2. 如何让系统具备**可部署、可维护、可复制**的工程品质？
 3. 如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？
 4. 如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？
 
@@ -62,14 +98,14 @@
 - [CamVox](camvox.md)
 - [LIV-GaussMap](liv-gaussmap.md)
 - [激光视觉 RTK 融合](liv-rtk-fusion.md)
-- [UMI 研究计划](../roadmap/umi.md)
+- [具身项目总览](../embodied/overview.md)
 
 ## 研究资产索引
 
-- 主页：<https://github.com/xuankuzcr/xuankuzcr.github.io>
-- FAST-LIVO: <https://github.com/hku-mars/FAST-LIVO>
-- FAST-LIVO2: <https://github.com/hku-mars/FAST-LIVO2>
-- FAST-Calib: <https://github.com/hku-mars/FAST-Calib>
-- Global-LVBA: <https://github.com/xuankuzcr/Global-LVBA>
-- LIV-Handheld: <https://github.com/xuankuzcr/LIV_handhold>
-- CamVox: <https://github.com/ISEE-Technology/CamVox>
+- 个人主页：<https://github.com/xuankuzcr/xuankuzcr.github.io>
+- FAST-LIVO：<https://github.com/hku-mars/FAST-LIVO>
+- FAST-LIVO2：<https://github.com/hku-mars/FAST-LIVO2>
+- FAST-Calib：<https://github.com/hku-mars/FAST-Calib>
+- Global-LVBA：<https://github.com/xuankuzcr/Global-LVBA>
+- LIV-Handheld：<https://github.com/xuankuzcr/LIV_handhold>
+- CamVox：<https://github.com/ISEE-Technology/CamVox>

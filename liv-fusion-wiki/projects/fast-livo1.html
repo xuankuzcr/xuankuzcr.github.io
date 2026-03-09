@@ -22,7 +22,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="2. FAST-LIVO2" href="fast-livo2.html" />
-    <link rel="prev" title="2. 研究方法地图（LiDAR × Vision × Inertial）" href="../methodology/research_map.html" /> 
+    <link rel="prev" title="3. FAST-Calib" href="fast-calib.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +48,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. 项目总览</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#id2">1.1. 一句话目标</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html#id3">1.2. 项目状态总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id3">1.2. 项目状态（卡片版）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#engineering-research">1.3. 研究主线（Engineering + Research）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#id4">1.4. 我关心的核心问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overview.html#id5">1.5. 快速入口</a></li>
@@ -71,9 +71,20 @@
 <p class="caption" role="heading"><span class="caption-text">已完成与进行中项目</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. FAST-LIVO1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. 我对它的定位</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">1.2. 关键贡献（我的视角）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">1.3. 复盘</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. 一句话价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.2. 核心亮点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.3. 支持平台（卡片化展示建议）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">1.4. 传感器支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">1.5. 复现入口（最小可用）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">1.5.1. 环境依赖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">1.5.2. 编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#benchmark">1.5.3. Benchmark 运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">1.5.4. 私有数据运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">1.5.5. 常见问题</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">1.6. 结果展示（建议放图与视频）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">1.7. 相关资源</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fast-livo2.html">2. FAST-LIVO2</a><ul>
@@ -157,29 +168,112 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="fast-livo1">
 <h1><span class="section-number">1. </span>FAST-LIVO1<a class="headerlink" href="#fast-livo1" title="此标题的永久链接"></a></h1>
+<div class="hero-panel compact">
+  <p class="hero-kicker">LIVO Baseline · Real-time · Deployable</p>
+  <h2>FAST-LIVO1：实时激光视觉惯性紧耦合里程计</h2>
+  <p>从“实验室可运行”走向“真实场景可部署”的关键里程碑。</p>
+</div>
 <ul class="simple">
 <li><p><strong>类型</strong>：LiDAR-Inertial-Visual Odometry</p></li>
 <li><p><strong>阶段</strong>：已完成 / 代表作</p></li>
-<li><p><strong>链接</strong>：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
+<li><p><strong>代码</strong>：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
+<li><p><strong>论文</strong>：<a class="reference external" href="https://arxiv.org/abs/2203.00893">https://arxiv.org/abs/2203.00893</a></p></li>
 </ul>
 <section id="id1">
-<h2><span class="section-number">1.1. </span>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>FAST-LIVO1 是我在 LIVO 主线中的基础里程碑：验证了稀疏直接法与紧耦合融合在真实场景下的有效性。</p>
+<h2><span class="section-number">1.1. </span>一句话价值<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<p>FAST-LIVO1 建立了稳定可复现的 LIVO 工程基线，为后续 FAST-LIVO2、全局优化和具身扩展提供了可持续演进起点。</p>
 </section>
 <section id="id2">
-<h2><span class="section-number">1.2. </span>关键贡献（我的视角）<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2><span class="section-number">1.2. </span>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>打通 LiDAR + Visual + IMU 的高频融合链路</p></li>
-<li><p>形成可复现的工程实现与社区传播基础</p></li>
-<li><p>为后续 FAST-LIVO2 的系统级升级提供实证基础</p></li>
+<li><p>LiDAR + Camera + IMU 的高频紧耦合融合链路</p></li>
+<li><p>在实时性与精度之间保持工程可用平衡</p></li>
+<li><p>面向部署的参数组织和运行流程</p></li>
+<li><p>可直接对接后续全局优化与表示模块</p></li>
 </ul>
 </section>
 <section id="id3">
-<h2><span class="section-number">1.3. </span>复盘<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<h2><span class="section-number">1.3. </span>支持平台（卡片化展示建议）<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>优点：实时性和精度平衡优秀</p></li>
-<li><p>局限：长程一致性与资源约束场景还有优化空间</p></li>
-<li><p>可迁移经验：模块化接口与调参流程可直接复用于后续项目</p></li>
+<li><p>✅ 通用 x86</p></li>
+<li><p>✅ Radxa ROCK5B+</p></li>
+<li><p>✅ OrangePi 5 Ultra</p></li>
+<li><p>✅ NVIDIA Jetson Orin Nano Super</p></li>
+<li><p>✅ NVIDIA Jetson AGX Orin</p></li>
+<li><p>✅ D-Robotics RDK X5</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.4. </span>传感器支持<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>✅ LiDAR + Camera + IMU（硬同步优先）</p></li>
+<li><p>✅ AC1（示例）</p></li>
+<li><p>✅ 可扩展到同类时空同步传感器组合</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2><span class="section-number">1.5. </span>复现入口（最小可用）<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<section id="id6">
+<h3><span class="section-number">1.5.1. </span>环境依赖<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h3>
+<ul class="simple">
+<li><p>Ubuntu 16.04 ~ 20.04</p></li>
+<li><p>ROS（推荐 Noetic）</p></li>
+<li><p>PCL &gt;= 1.6 / Eigen &gt;= 3.3.4 / OpenCV &gt;= 3.2</p></li>
+<li><p>Sophus（README 指定版本）、Vikit、livox_ros_driver</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3><span class="section-number">1.5.2. </span>编译<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/catkin_ws/src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/hku-mars/FAST-LIVO
+<span class="nb">cd</span><span class="w"> </span>../
+catkin_make
+<span class="nb">source</span><span class="w"> </span>~/catkin_ws/devel/setup.bash
+</pre></div>
+</div>
+</section>
+<section id="benchmark">
+<h3><span class="section-number">1.5.3. </span>Benchmark 运行<a class="headerlink" href="#benchmark" title="此标题的永久链接"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>fast_livo<span class="w"> </span>mapping_avia_ntu.launch
+rosbag<span class="w"> </span>play<span class="w"> </span>YOUR_DOWNLOADED.bag
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h3><span class="section-number">1.5.4. </span>私有数据运行<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch<span class="w"> </span>fast_livo<span class="w"> </span>mapping_avia.launch
+rosbag<span class="w"> </span>play<span class="w"> </span>YOUR_DOWNLOADED.bag
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h3><span class="section-number">1.5.5. </span>常见问题<a class="headerlink" href="#id9" title="此标题的永久链接"></a></h3>
+<ol class="arabic simple">
+<li><p>轨迹漂移明显：先查时间同步、外参、IMU噪声参数。</p></li>
+<li><p>实时性不足：调大 <code class="docutils literal notranslate"><span class="pre">point_filter_num</span></code>、调整滤波参数。</p></li>
+<li><p>视觉模块不稳：按光照调整 <code class="docutils literal notranslate"><span class="pre">outlier_threshold</span></code>，检查时间对齐。</p></li>
+</ol>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">1.6. </span>结果展示（建议放图与视频）<a class="headerlink" href="#id10" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>图1：系统流程图（Framework）</p></li>
+<li><p>图2：退化场景结果图</p></li>
+<li><p>图3：轨迹/点云效果图</p></li>
+<li><p>视频A：90秒对外总览</p></li>
+<li><p>视频B：完整复现实验（B站）</p></li>
+</ul>
+<blockquote>
+<div><p>B站复现视频链接建议按“总览 / 复现 / 对比实验”三类整理。</p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h2><span class="section-number">1.7. </span>相关资源<a class="headerlink" href="#id11" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>GitHub：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
+<li><p>Paper：<a class="reference external" href="https://arxiv.org/abs/2203.00893">https://arxiv.org/abs/2203.00893</a></p></li>
+<li><p>个人主页仓库：<a class="reference external" href="https://github.com/xuankuzcr/xuankuzcr.github.io">https://github.com/xuankuzcr/xuankuzcr.github.io</a></p></li>
 </ul>
 </section>
 </section>
@@ -188,7 +282,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../methodology/research_map.html" class="btn btn-neutral float-left" title="2. 研究方法地图（LiDAR × Vision × Inertial）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="fast-calib.html" class="btn btn-neutral float-left" title="3. FAST-Calib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="fast-livo2.html" class="btn btn-neutral float-right" title="2. FAST-LIVO2" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

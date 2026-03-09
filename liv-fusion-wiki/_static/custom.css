@@ -119,6 +119,39 @@
   background: var(--lvf-plan);
 }
 
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+
+.status-card {
+  border: 1px solid var(--lvf-border);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+}
+
+.status-card p {
+  margin: 0;
+}
+
+.status-card .status-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.status-card .badge {
+  margin-bottom: 8px;
+}
+
+.status-card p:last-child {
+  color: var(--lvf-muted);
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
 .timeline {
   border-left: 3px solid #a7d9ef;
   margin: 12px 0 16px;
@@ -149,12 +182,6 @@
 .timeline-item p {
   margin: 0;
   color: var(--lvf-muted);
-}
-
-.rst-content table.docutils {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
 .note-card {

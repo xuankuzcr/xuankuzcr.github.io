@@ -22,7 +22,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="2. 研究方法地图（LiDAR × Vision × Inertial）" href="../methodology/research_map.html" />
-    <link rel="prev" title="LiDAR × Vision Fusion Research Wiki" href="../index.html" /> 
+    <link rel="prev" title="LiDAR × Vision × Embodied Research Wiki" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +48,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. 项目总览</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">1.1. 一句话目标</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. 项目状态总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. 项目状态（卡片版）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#engineering-research">1.3. 研究主线（Engineering + Research）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">1.4. 我关心的核心问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">1.5. 快速入口</a></li>
@@ -71,9 +71,20 @@
 <p class="caption" role="heading"><span class="caption-text">已完成与进行中项目</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="fast-livo1.html">1. FAST-LIVO1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id1">1.1. 我对它的定位</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id2">1.2. 关键贡献（我的视角）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id3">1.3. 复盘</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id1">1.1. 一句话价值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id2">1.2. 核心亮点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id3">1.3. 支持平台（卡片化展示建议）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id4">1.4. 传感器支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id5">1.5. 复现入口（最小可用）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id6">1.5.1. 环境依赖</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id7">1.5.2. 编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#benchmark">1.5.3. Benchmark 运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id8">1.5.4. 私有数据运行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fast-livo1.html#id9">1.5.5. 常见问题</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id10">1.6. 结果展示（建议放图与视频）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html#id11">1.7. 相关资源</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fast-livo2.html">2. FAST-LIVO2</a><ul>
@@ -158,81 +169,70 @@
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1><span class="section-number">1. </span>项目总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
 <div class="hero-panel compact">
-  <p class="hero-kicker">Personal Wiki · LiDAR × Vision × IMU</p>
-  <h2>激光视觉融合路线图</h2>
-  <p>这个页面用于快速回答三个问题：<strong>我做过什么</strong>、<strong>现在卡在哪</strong>、<strong>下一步要把系统带到哪里</strong>。</p>
+  <p class="hero-kicker">Personal Wiki · SLAM × Reconstruction × Embodied</p>
+  <h2>研究作品路线图</h2>
+  <p>这个页面回答三个问题：<strong>我做过什么</strong>、<strong>当前重点是什么</strong>、<strong>下一步怎么走</strong>。</p>
 </div>
 <section id="id2">
 <h2><span class="section-number">1.1. </span>一句话目标<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<blockquote>
-<div><p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复用”，并逐步接入 UMI/具身学习的数据闭环。</p>
-</div></blockquote>
+<p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并延展到 UMI / 具身学习闭环。</p>
 </section>
 <section id="id3">
-<h2><span class="section-number">1.2. </span>项目状态总览<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>方向</p></th>
-<th class="head"><p>项目</p></th>
-<th class="head"><p>状态</p></th>
-<th class="head"><p>备注</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>状态估计主线</p></td>
-<td><p>FAST-LIVO1</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>方法与工程基线</p></td>
-</tr>
-<tr class="row-odd"><td><p>状态估计主线</p></td>
-<td><p>FAST-LIVO2</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>主力系统版本</p></td>
-</tr>
-<tr class="row-even"><td><p>标定与工程化</p></td>
-<td><p>FAST-Calib</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>快速外参标定</p></td>
-</tr>
-<tr class="row-odd"><td><p>全局优化后端</p></td>
-<td><p>Global-LVBA</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>长程一致性补强</p></td>
-</tr>
-<tr class="row-even"><td><p>采集平台</p></td>
-<td><p>LIV-Handheld</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>采集与同步平台</p></td>
-</tr>
-<tr class="row-odd"><td><p>低成本路线</p></td>
-<td><p>CamVox</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>成本-性能折中参考</p></td>
-</tr>
-<tr class="row-even"><td><p>表示升级</p></td>
-<td><p>LIV-GaussMap</p></td>
-<td><p>🧪 进行中</p></td>
-<td><p>融合 + 高保真表示</p></td>
-</tr>
-<tr class="row-odd"><td><p>全局绝对约束</p></td>
-<td><p>激光视觉 RTK 融合</p></td>
-<td><p>✅ 已完成</p></td>
-<td><p>全局参考补强</p></td>
-</tr>
-<tr class="row-even"><td><p>具身扩展</p></td>
-<td><p>UMI</p></td>
-<td><p>🧭 规划中</p></td>
-<td><p>示教与策略学习闭环</p></td>
-</tr>
-</tbody>
-</table>
+<h2><span class="section-number">1.2. </span>项目状态（卡片版）<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="status-grid">
+  <div class="status-card">
+    <p class="status-title">FAST-LIVO1</p>
+    <span class="badge done">已完成</span>
+    <p>方法与工程基线，打通 LiDAR × Vision × IMU 融合主链路。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">FAST-LIVO2</p>
+    <span class="badge done">已完成</span>
+    <p>主力系统版本，强调稳、快与工程可用性。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">FAST-Calib</p>
+    <span class="badge done">已完成</span>
+    <p>快速标定工具链，降低部署门槛。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">Global-LVBA</p>
+    <span class="badge done">已完成</span>
+    <p>全局一致后端优化，补强长程收敛。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LIV-Handheld</p>
+    <span class="badge done">已完成</span>
+    <p>采集与同步平台，提升实验复现效率。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">CamVox</p>
+    <span class="badge done">已完成</span>
+    <p>低成本路线参考，平衡成本与性能。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LiDAR-Visual-RTK</p>
+    <span class="badge done">已完成</span>
+    <p>补全全局绝对参考，增强跨场景重访稳定性。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">LIV-GaussMap</p>
+    <span class="badge ongoing">进行中</span>
+    <p>融合几何系统向高保真表示能力延展。</p>
+  </div>
+  <div class="status-card">
+    <p class="status-title">UMI 主线</p>
+    <span class="badge plan">规划中</span>
+    <p>连接示教采集、数据质检、策略训练与评测闭环。</p>
+  </div>
+</div>
 </section>
 <section id="engineering-research">
 <h2><span class="section-number">1.3. </span>研究主线（Engineering + Research）<a class="headerlink" href="#engineering-research" title="此标题的永久链接"></a></h2>
 <div class="timeline">
   <div class="timeline-item">
     <h4>Phase A · 前端融合跑通</h4>
-    <p>FAST-LIVO1/2：建立稳定实时估计主线，保证高频可用。</p>
+    <p>FAST-LIVO1/2：建立稳定实时估计主线，保障高频可用。</p>
   </div>
   <div class="timeline-item">
     <h4>Phase B · 部署成本降低</h4>
@@ -251,8 +251,8 @@
 <section id="id4">
 <h2><span class="section-number">1.4. </span>我关心的核心问题<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <ol class="arabic simple">
-<li><p>如何在真实场景中同时做到 <strong>精度、鲁棒性、实时性</strong>？</p></li>
-<li><p>如何让系统具备 <strong>可部署、可维护、可复制</strong> 的工程品质？</p></li>
+<li><p>如何在真实场景中同时做到<strong>精度、鲁棒性、实时性</strong>？</p></li>
+<li><p>如何让系统具备<strong>可部署、可维护、可复制</strong>的工程品质？</p></li>
 <li><p>如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？</p></li>
 <li><p>如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？</p></li>
 </ol>
@@ -268,19 +268,19 @@
 <li><p><a class="reference internal" href="camvox.html"><span class="std std-doc">CamVox</span></a></p></li>
 <li><p><a class="reference internal" href="liv-gaussmap.html"><span class="std std-doc">LIV-GaussMap</span></a></p></li>
 <li><p><a class="reference internal" href="liv-rtk-fusion.html"><span class="std std-doc">激光视觉 RTK 融合</span></a></p></li>
-<li><p><a class="reference internal" href="../roadmap/umi.html"><span class="std std-doc">UMI 研究计划</span></a></p></li>
+<li><p><a class="reference internal" href="../embodied/overview.html"><span class="std std-doc">具身项目总览</span></a></p></li>
 </ul>
 </section>
 <section id="id6">
 <h2><span class="section-number">1.6. </span>研究资产索引<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>主页：<a class="reference external" href="https://github.com/xuankuzcr/xuankuzcr.github.io">https://github.com/xuankuzcr/xuankuzcr.github.io</a></p></li>
-<li><p>FAST-LIVO: <a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
-<li><p>FAST-LIVO2: <a class="reference external" href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a></p></li>
-<li><p>FAST-Calib: <a class="reference external" href="https://github.com/hku-mars/FAST-Calib">https://github.com/hku-mars/FAST-Calib</a></p></li>
-<li><p>Global-LVBA: <a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p></li>
-<li><p>LIV-Handheld: <a class="reference external" href="https://github.com/xuankuzcr/LIV_handhold">https://github.com/xuankuzcr/LIV_handhold</a></p></li>
-<li><p>CamVox: <a class="reference external" href="https://github.com/ISEE-Technology/CamVox">https://github.com/ISEE-Technology/CamVox</a></p></li>
+<li><p>个人主页：<a class="reference external" href="https://github.com/xuankuzcr/xuankuzcr.github.io">https://github.com/xuankuzcr/xuankuzcr.github.io</a></p></li>
+<li><p>FAST-LIVO：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a></p></li>
+<li><p>FAST-LIVO2：<a class="reference external" href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a></p></li>
+<li><p>FAST-Calib：<a class="reference external" href="https://github.com/hku-mars/FAST-Calib">https://github.com/hku-mars/FAST-Calib</a></p></li>
+<li><p>Global-LVBA：<a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p></li>
+<li><p>LIV-Handheld：<a class="reference external" href="https://github.com/xuankuzcr/LIV_handhold">https://github.com/xuankuzcr/LIV_handhold</a></p></li>
+<li><p>CamVox：<a class="reference external" href="https://github.com/ISEE-Technology/CamVox">https://github.com/ISEE-Technology/CamVox</a></p></li>
 </ul>
 </section>
 </section>
@@ -289,7 +289,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../index.html" class="btn btn-neutral float-left" title="LiDAR × Vision Fusion Research Wiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="LiDAR × Vision × Embodied Research Wiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../methodology/research_map.html" class="btn btn-neutral float-right" title="2. 研究方法地图（LiDAR × Vision × Inertial）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

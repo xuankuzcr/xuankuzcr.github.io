@@ -1,21 +1,93 @@
 # FAST-LIVO1
 
+<div class="hero-panel compact">
+  <p class="hero-kicker">LIVO Baseline · Real-time · Deployable</p>
+  <h2>FAST-LIVO1：实时激光视觉惯性紧耦合里程计</h2>
+  <p>从“实验室可运行”走向“真实场景可部署”的关键里程碑。</p>
+</div>
+
 - **类型**：LiDAR-Inertial-Visual Odometry
 - **阶段**：已完成 / 代表作
-- **链接**：<https://github.com/hku-mars/FAST-LIVO>
+- **代码**：<https://github.com/hku-mars/FAST-LIVO>
+- **论文**：<https://arxiv.org/abs/2203.00893>
 
-## 我对它的定位
+## 一句话价值
 
-FAST-LIVO1 是我在 LIVO 主线中的基础里程碑：验证了稀疏直接法与紧耦合融合在真实场景下的有效性。
+FAST-LIVO1 建立了稳定可复现的 LIVO 工程基线，为后续 FAST-LIVO2、全局优化和具身扩展提供了可持续演进起点。
 
-## 关键贡献（我的视角）
+## 核心亮点
 
-- 打通 LiDAR + Visual + IMU 的高频融合链路
-- 形成可复现的工程实现与社区传播基础
-- 为后续 FAST-LIVO2 的系统级升级提供实证基础
+- LiDAR + Camera + IMU 的高频紧耦合融合链路
+- 在实时性与精度之间保持工程可用平衡
+- 面向部署的参数组织和运行流程
+- 可直接对接后续全局优化与表示模块
 
-## 复盘
+## 支持平台（卡片化展示建议）
 
-- 优点：实时性和精度平衡优秀
-- 局限：长程一致性与资源约束场景还有优化空间
-- 可迁移经验：模块化接口与调参流程可直接复用于后续项目
+- ✅ 通用 x86
+- ✅ Radxa ROCK5B+
+- ✅ OrangePi 5 Ultra
+- ✅ NVIDIA Jetson Orin Nano Super
+- ✅ NVIDIA Jetson AGX Orin
+- ✅ D-Robotics RDK X5
+
+## 传感器支持
+
+- ✅ LiDAR + Camera + IMU（硬同步优先）
+- ✅ AC1（示例）
+- ✅ 可扩展到同类时空同步传感器组合
+
+## 复现入口（最小可用）
+
+### 环境依赖
+
+- Ubuntu 16.04 ~ 20.04
+- ROS（推荐 Noetic）
+- PCL >= 1.6 / Eigen >= 3.3.4 / OpenCV >= 3.2
+- Sophus（README 指定版本）、Vikit、livox_ros_driver
+
+### 编译
+
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/hku-mars/FAST-LIVO
+cd ../
+catkin_make
+source ~/catkin_ws/devel/setup.bash
+```
+
+### Benchmark 运行
+
+```bash
+roslaunch fast_livo mapping_avia_ntu.launch
+rosbag play YOUR_DOWNLOADED.bag
+```
+
+### 私有数据运行
+
+```bash
+roslaunch fast_livo mapping_avia.launch
+rosbag play YOUR_DOWNLOADED.bag
+```
+
+### 常见问题
+
+1. 轨迹漂移明显：先查时间同步、外参、IMU噪声参数。
+2. 实时性不足：调大 `point_filter_num`、调整滤波参数。
+3. 视觉模块不稳：按光照调整 `outlier_threshold`，检查时间对齐。
+
+## 结果展示（建议放图与视频）
+
+- 图1：系统流程图（Framework）
+- 图2：退化场景结果图
+- 图3：轨迹/点云效果图
+- 视频A：90秒对外总览
+- 视频B：完整复现实验（B站）
+
+> B站复现视频链接建议按“总览 / 复现 / 对比实验”三类整理。
+
+## 相关资源
+
+- GitHub：<https://github.com/hku-mars/FAST-LIVO>
+- Paper：<https://arxiv.org/abs/2203.00893>
+- 个人主页仓库：<https://github.com/xuankuzcr/xuankuzcr.github.io>

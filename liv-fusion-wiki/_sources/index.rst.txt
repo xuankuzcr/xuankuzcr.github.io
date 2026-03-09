@@ -1,73 +1,43 @@
 =======================================
-LiDAR × Vision Fusion Research Wiki
+LiDAR × Vision × Embodied Research Wiki
 =======================================
 
 .. raw:: html
 
     <div class="hero-panel">
-      <p class="hero-kicker">Chunran · Engineering + Research</p>
-      <h2>激光视觉融合知识库</h2>
-      <p>参考工业 wiki 的清晰导航结构，同时保持个人研究笔记的轻量与迭代速度。<br>聚焦：<strong>可部署融合系统</strong>、<strong>全局一致优化</strong>、<strong>低成本长期运行</strong>、<strong>面向 UMI 的数据闭环</strong>。</p>
+      <p class="hero-kicker">Chunran Zheng · Engineering + Research</p>
+      <h2>激光视觉融合与具身智能作品库</h2>
+      <p>这不是产品说明书，而是一个<strong>研究作品展示站</strong>：
+      用清晰结构展示路线、成果证据和复现入口，面向学生、工程团队与潜在合作方。</p>
     </div>
 
 .. raw:: html
 
     <div class="quick-grid">
-      <a class="quick-card" href="projects/fast-livo1.html">
-        <span class="badge done">已完成</span>
-        <h3>FAST-LIVO1</h3>
-        <p>LIVO 主线基础里程碑</p>
+      <a class="quick-card" href="projects/overview.html">
+        <span class="badge done">SLAM 主线</span>
+        <h3>SLAM 与三维重建</h3>
+        <p>FAST-LIVO1/2、FAST-Calib、Global-LVBA、LIV-GaussMap 等。</p>
       </a>
-      <a class="quick-card" href="projects/fast-livo2.html">
-        <span class="badge done">已完成</span>
-        <h3>FAST-LIVO2</h3>
-        <p>主力系统版本，强调稳与快</p>
+      <a class="quick-card" href="embodied/overview.html">
+        <span class="badge ongoing">具身方向</span>
+        <h3>数据与策略闭环</h3>
+        <p>LIV-UMI、UMI-SLAM、数据质检、DP 训练评测、XLErobot 复现。</p>
       </a>
-      <a class="quick-card" href="projects/fast-calib.html">
-        <span class="badge done">已完成</span>
-        <h3>FAST-Calib</h3>
-        <p>部署门槛降低的标定工具链</p>
-      </a>
-      <a class="quick-card" href="projects/global-lvba.html">
-        <span class="badge done">已完成</span>
-        <h3>Global-LVBA</h3>
-        <p>后端全局一致性补强</p>
-      </a>
-      <a class="quick-card" href="projects/liv-handheld.html">
-        <span class="badge done">已完成</span>
-        <h3>LIV-Handheld</h3>
-        <p>可复制的数据采集平台</p>
-      </a>
-      <a class="quick-card" href="projects/camvox.html">
-        <span class="badge done">已完成</span>
-        <h3>CamVox</h3>
-        <p>低成本可用路线参考</p>
-      </a>
-      <a class="quick-card" href="projects/liv-gaussmap.html">
-        <span class="badge ongoing">进行中</span>
-        <h3>LIV-GaussMap</h3>
-        <p>几何系统向可渲染表示延展</p>
-      </a>
-      <a class="quick-card" href="projects/liv-rtk-fusion.html">
-        <span class="badge done">已完成</span>
-        <h3>LiDAR-Visual-RTK</h3>
-        <p>引入绝对约束的全局补强</p>
-      </a>
-      <a class="quick-card" href="roadmap/umi.html">
-        <span class="badge plan">未来主线</span>
-        <h3>UMI</h3>
-        <p>示教采集 + 操作学习闭环</p>
+      <a class="quick-card" href="media/video-hub.html">
+        <span class="badge plan">媒体中心</span>
+        <h3>效果图与视频</h3>
+        <p>项目效果图、B站复现视频、对外演示入口。</p>
       </a>
     </div>
 
 研究主线
 --------
 
-1. **实时融合前端**：FAST-LIVO1/2
-2. **可部署系统工程**：FAST-Calib + LIV-Handheld
-3. **全局一致后端**：Global-LVBA + RTK 约束
-4. **场景表示升级**：LIV-GaussMap
-5. **具身扩展路线**：UMI + VLA + Diffusion Policy
+1. **前端融合贯通**：FAST-LIVO1 / FAST-LIVO2
+2. **部署成本降低**：FAST-Calib + LIV-Handheld
+3. **全局一致性增强**：Global-LVBA + LiDAR-Visual-RTK
+4. **表示与任务扩展**：LIV-GaussMap + UMI / XLErobot
 
 .. toctree::
     :maxdepth: 1
@@ -79,17 +49,36 @@ LiDAR × Vision Fusion Research Wiki
 
 .. toctree::
     :maxdepth: 1
-    :caption: 已完成与进行中项目
+    :caption: SLAM 与三维重建项目库
     :numbered:
 
+    projects/liv-handheld.md
+    projects/fast-calib.md
     projects/fast-livo1.md
     projects/fast-livo2.md
-    projects/fast-calib.md
-    projects/global-lvba.md
-    projects/liv-handheld.md
     projects/camvox.md
-    projects/liv-gaussmap.md
+    projects/global-lvba.md
     projects/liv-rtk-fusion.md
+    projects/liv-gaussmap.md
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 具身智能项目库
+    :numbered:
+
+    embodied/overview.md
+    embodied/liv-umi.md
+    embodied/umi-slam.md
+    embodied/data-replay-qc.md
+    embodied/dp-training-eval.md
+    embodied/xlerobot-reproduction.md
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 媒体与演示
+    :numbered:
+
+    media/video-hub.md
 
 .. toctree::
     :maxdepth: 1
