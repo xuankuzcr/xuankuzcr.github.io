@@ -42,15 +42,13 @@ LiDAR × Vision × Embodied Research Wiki
 .. toctree::
     :maxdepth: 1
     :caption: 研究总览
-    :numbered:
 
     projects/overview.md
     methodology/research_map.md
 
 .. toctree::
     :maxdepth: 1
-    :caption: SLAM 与三维重建项目库
-    :numbered:
+    :caption: slam与三维重建项目库
 
     projects/liv-handheld.md
     projects/fast-calib.md
@@ -64,7 +62,6 @@ LiDAR × Vision × Embodied Research Wiki
 .. toctree::
     :maxdepth: 1
     :caption: 具身智能项目库
-    :numbered:
 
     embodied/overview.md
     embodied/liv-umi.md
@@ -76,14 +73,11 @@ LiDAR × Vision × Embodied Research Wiki
 .. toctree::
     :maxdepth: 1
     :caption: 媒体与演示
-    :numbered:
 
     media/video-hub.md
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 未来计划
-    :numbered:
+    :hidden:
 
     roadmap/umi.md
     roadmap/next-steps.md
