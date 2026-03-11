@@ -1,5 +1,5 @@
 =======================================
-LiDAR × Vision × Embodied Research Wiki
+LiDAR-Vision Fusion Wiki
 =======================================
 
 .. raw:: html
@@ -28,15 +28,10 @@ LiDAR × Vision × Embodied Research Wiki
     </div>
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 研究总览
-
-    projects/overview.md
-
-.. toctree::
     :maxdepth: 2
     :caption: SLAM 与三维重建项目库
 
+    projects/overview.md
     projects/sensor-sync.md
     projects/livo-slam.md
     projects/backend-global.md
@@ -52,7 +47,3 @@ LiDAR × Vision × Embodied Research Wiki
 
 .. toctree::
     :hidden:
-
-    media/video-hub.md
-    roadmap/umi.md
-    roadmap/next-steps.md

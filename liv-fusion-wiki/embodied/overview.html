@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>具身智能项目总览 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+  <title>具身智能总览 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -19,7 +19,6 @@
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script src="../_static/translations.js?v=beaddf03"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="数据与策略闭环" href="data-policy-loop.html" />
     <link rel="prev" title="GS-LIVO" href="../projects/gs-livo.html" /> 
@@ -44,12 +43,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
-              <p class="caption" role="heading"><span class="caption-text">研究总览</span></p>
+              <p class="caption" role="heading"><span class="caption-text">首页</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../projects/overview.html">项目总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">LiDAR-Vision Fusion Wiki</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">SLAM 与三维重建项目库</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/overview.html">SLAM与重建总览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/sensor-sync.html">多传感器标定与同步</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/liv-handheld.html">LIV-Handheld</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projects/fast-calib.html">FAST-Calib</a></li>
@@ -74,7 +74,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">具身智能项目库</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">具身智能项目总览</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">具身智能总览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-policy-loop.html">数据与策略闭环</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="liv-umi.html">LIV-UMI 数采设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="umi-slam.html">UMI-SLAM</a></li>
@@ -103,7 +103,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">具身智能项目总览</li>
+      <li class="breadcrumb-item active">具身智能总览</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/embodied/overview.md" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -114,58 +114,76 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>具身智能项目总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<h1>具身智能总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
 <div class="hero-panel compact">
   <p class="hero-kicker">Embodied Intelligence · Data → Policy Loop</p>
   <h2>从融合感知到操作学习闭环</h2>
   <p>目标不是单点算法，而是可复现的数据—训练—评测系统能力。</p>
 </div>
 <section id="id2">
-<h2>主线结构（两部分）<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<section id="part-1">
-<h3>Part 1 · 数据与策略闭环<a class="headerlink" href="#part-1" title="此标题的永久链接"></a></h3>
-<ol class="arabic simple">
-<li><p><strong>LIV-UMI 数采设备</strong>：稳定采集多模态示教数据。</p></li>
-<li><p><strong>UMI-SLAM</strong>：为示教与回放提供可靠时空基座。</p></li>
-<li><p><strong>数据回放与质检</strong>：提高数据有效率和可复用性。</p></li>
-<li><p><strong>DP 模型训练与评测</strong>：形成策略模型迭代闭环。</p></li>
-</ol>
-</section>
-<section id="part-2-xlerobot">
-<h3>Part 2 · XLeRobot 复现<a class="headerlink" href="#part-2-xlerobot" title="此标题的永久链接"></a></h3>
-<ol class="arabic simple" start="5">
-<li><p><strong>机械结构&amp;电控</strong>：完成硬件系统搭建、板卡连接与整机联调。</p></li>
-<li><p><strong>遥操&amp;ACT</strong>：打通示教、训练、评测与真实机器人部署链路。</p></li>
-</ol>
-</section>
+<h2>项目状态（卡片版）<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<div class="status-grid">
+  <a class="status-card" href="liv-umi.html">
+    <p class="status-title">LIV-UMI 数采设备</p>
+    <span class="badge ongoing">进行中</span>
+    <p>搭建稳定的多模态示教采集入口，沉淀可复用硬件与流程。</p>
+  </a>
+  <a class="status-card" href="umi-slam.html">
+    <p class="status-title">UMI-SLAM</p>
+    <span class="badge ongoing">进行中</span>
+    <p>为示教、回放与策略训练提供可靠的时空基座。</p>
+  </a>
+  <a class="status-card" href="data-replay-qc.html">
+    <p class="status-title">数据回放与质检</p>
+    <span class="badge ongoing">进行中</span>
+    <p>建立数据回放、筛查和问题定位闭环，提高数据有效率。</p>
+  </a>
+  <a class="status-card" href="dp-training-eval.html">
+    <p class="status-title">DP 模型训练与评测</p>
+    <span class="badge ongoing">进行中</span>
+    <p>形成训练、验证和迭代的基础评测流程。</p>
+  </a>
+  <a class="status-card" href="xlerobot-mech-electrical.html">
+    <p class="status-title">机械结构&amp;电控</p>
+    <span class="badge ongoing">进行中</span>
+    <p>完成机器人硬件搭建、板卡连接与整机联调。</p>
+  </a>
+  <a class="status-card" href="xlerobot-teleop-act.html">
+    <p class="status-title">遥操&amp;ACT</p>
+    <span class="badge ongoing">进行中</span>
+    <p>打通示教、训练、评测与真实机器人部署链路。</p>
+  </a>
+</div>
 </section>
 <section id="id3">
-<h2>关键目标<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<h2>研究主线（Engineering + Research）<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <h4>Phase A · 示教采集入口搭建</h4>
+    <p>LIV-UMI：先把多模态示教采集系统搭起来，保证数据入口稳定、可复用。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase B · 时空基座与数据闭环</h4>
+    <p>UMI-SLAM + 数据回放与质检：建立示教、回放、问题定位和数据筛查的基础链路。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase C · 策略训练与评测流程</h4>
+    <p>DP 模型训练与评测：形成从数据整理到训练验证的基础评测闭环。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase D · 真实机器人落地</h4>
+    <p>机械结构&amp;电控 + 遥操&amp;ACT：把硬件联调、示教、训练和部署串成完整工程链路。</p>
+  </div>
+</div>
+</section>
+<section id="id4">
+<h2>关键目标<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p>提升示教数据质量与一致性</p></li>
 <li><p>缩短从采集到可训练数据的处理周期</p></li>
 <li><p>建立统一评测口径（成功率、稳定性、泛化）</p></li>
 <li><p>让研究成果可迁移到真实机器人平台</p></li>
 </ul>
-</section>
-<section id="id4">
-<h2>快速入口<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<section id="id5">
-<h3>数据与策略闭环<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="liv-umi.html"><span class="std std-doc">LIV-UMI 数采设备</span></a></p></li>
-<li><p><a class="reference internal" href="umi-slam.html"><span class="std std-doc">UMI-SLAM</span></a></p></li>
-<li><p><a class="reference internal" href="data-replay-qc.html"><span class="std std-doc">数据回放与质检</span></a></p></li>
-<li><p><a class="reference internal" href="dp-training-eval.html"><span class="std std-doc">DP 模型训练与评测</span></a></p></li>
-</ul>
-</section>
-<section id="xlerobot">
-<h3>XLeRobot 复现<a class="headerlink" href="#xlerobot" title="此标题的永久链接"></a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="xlerobot-mech-electrical.html"><span class="std std-doc">机械结构&amp;电控</span></a></p></li>
-<li><p><a class="reference internal" href="xlerobot-teleop-act.html"><span class="std std-doc">遥操&amp;ACT</span></a></p></li>
-</ul>
-</section>
 </section>
 </section>
 

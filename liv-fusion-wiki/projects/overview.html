@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>项目总览 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+  <title>SLAM与重建总览 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -19,8 +19,7 @@
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script src="../_static/translations.js?v=beaddf03"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="LiDAR × Vision × Embodied Research Wiki" href="../index.html" /> 
+    <link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="LiDAR-Vision Fusion Wiki" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,12 +41,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
-              <p class="caption" role="heading"><span class="caption-text">研究总览</span></p>
+              <p class="caption" role="heading"><span class="caption-text">首页</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">项目总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">LiDAR-Vision Fusion Wiki</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">SLAM 与三维重建项目库</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">SLAM与重建总览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sensor-sync.html">多传感器标定与同步</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="liv-handheld.html">LIV-Handheld</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-calib.html">FAST-Calib</a></li>
@@ -72,7 +72,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">具身智能项目库</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../embodied/overview.html">具身智能项目总览</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../embodied/overview.html">具身智能总览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../embodied/data-policy-loop.html">数据与策略闭环</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../embodied/liv-umi.html">LIV-UMI 数采设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../embodied/umi-slam.html">UMI-SLAM</a></li>
@@ -101,7 +101,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">项目总览</li>
+      <li class="breadcrumb-item active">SLAM与重建总览</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/projects/overview.md" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -112,15 +112,15 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>项目总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<h1>SLAM与重建总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
 <div class="hero-panel compact">
-  <p class="hero-kicker">Personal Wiki · SLAM × Reconstruction × Embodied</p>
-  <h2>研究作品路线图</h2>
-  <p>这个页面回答三个问题：<strong>我做过什么</strong>、<strong>当前重点是什么</strong>、<strong>下一步怎么走</strong>。</p>
+  <p class="hero-kicker">LiDAR-Vision Fusion · SLAM × Reconstruction</p>
+  <h2>几何融合系统路线图</h2>
+  <p>这个页面聚焦两类内容：<strong>SLAM 主线系统</strong>与<strong>三维重建表示方向</strong>。</p>
 </div>
 <section id="id2">
 <h2>一句话目标<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并延展到 UMI / 具身学习闭环。</p>
+<p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并持续扩展到全局优化与三维重建表示。</p>
 </section>
 <section id="id3">
 <h2>项目状态（卡片版）<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
@@ -170,11 +170,6 @@
     <span class="badge done">已完成</span>
     <p>公开可复现的 LiDAR-3DGS 工程入口与系统参考。</p>
   </a>
-  <a class="status-card" href="../embodied/overview.html">
-    <p class="status-title">UMI 主线</p>
-    <span class="badge plan">规划中</span>
-    <p>连接示教采集、数据质检、策略训练与评测闭环。</p>
-  </a>
 </div>
 </section>
 <section id="engineering-research">
@@ -194,18 +189,9 @@
   </div>
   <div class="timeline-item">
     <h4>Phase D · 表示与任务扩展</h4>
-    <p>LIV-GaussMap + GS-LIVO + UMI：让地图不仅用于定位，也服务示教与操作学习。</p>
+    <p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务高保真重建与场景表示。</p>
   </div>
 </div>
-</section>
-<section id="id4">
-<h2>我关心的核心问题<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
-<ol class="arabic simple">
-<li><p>如何在真实场景中同时做到<strong>精度、鲁棒性、实时性</strong>？</p></li>
-<li><p>如何让系统具备<strong>可部署、可维护、可复制</strong>的工程品质？</p></li>
-<li><p>如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？</p></li>
-<li><p>如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？</p></li>
-</ol>
 </section>
 <section id="id6">
 <h2>研究资产索引<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
@@ -226,7 +212,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../index.html" class="btn btn-neutral float-left" title="LiDAR × Vision × Embodied Research Wiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a></div>
+        <a href="../index.html" class="btn btn-neutral float-left" title="LiDAR-Vision Fusion Wiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a></div>
 
   <hr/>
 

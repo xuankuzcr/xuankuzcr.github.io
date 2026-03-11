@@ -1,14 +1,14 @@
-# 项目总览
+# SLAM与重建总览
 
 <div class="hero-panel compact">
-  <p class="hero-kicker">Personal Wiki · SLAM × Reconstruction × Embodied</p>
-  <h2>研究作品路线图</h2>
-  <p>这个页面回答三个问题：<strong>我做过什么</strong>、<strong>当前重点是什么</strong>、<strong>下一步怎么走</strong>。</p>
+  <p class="hero-kicker">LiDAR-Vision Fusion · SLAM × Reconstruction</p>
+  <h2>几何融合系统路线图</h2>
+  <p>这个页面聚焦两类内容：<strong>SLAM 主线系统</strong>与<strong>三维重建表示方向</strong>。</p>
 </div>
 
 ## 一句话目标
 
-把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并延展到 UMI / 具身学习闭环。
+把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并持续扩展到全局优化与三维重建表示。
 
 ## 项目状态（卡片版）
 
@@ -58,11 +58,6 @@
     <span class="badge done">已完成</span>
     <p>公开可复现的 LiDAR-3DGS 工程入口与系统参考。</p>
   </a>
-  <a class="status-card" href="../embodied/overview.md">
-    <p class="status-title">UMI 主线</p>
-    <span class="badge plan">规划中</span>
-    <p>连接示教采集、数据质检、策略训练与评测闭环。</p>
-  </a>
 </div>
 
 ## 研究主线（Engineering + Research）
@@ -82,16 +77,9 @@
   </div>
   <div class="timeline-item">
     <h4>Phase D · 表示与任务扩展</h4>
-    <p>LIV-GaussMap + GS-LIVO + UMI：让地图不仅用于定位，也服务示教与操作学习。</p>
+    <p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务高保真重建与场景表示。</p>
   </div>
 </div>
-
-## 我关心的核心问题
-
-1. 如何在真实场景中同时做到**精度、鲁棒性、实时性**？
-2. 如何让系统具备**可部署、可维护、可复制**的工程品质？
-3. 如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？
-4. 如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？
 
 ## 研究资产索引
 
