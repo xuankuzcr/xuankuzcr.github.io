@@ -139,10 +139,19 @@
 }
 
 .status-card {
+  display: block;
   border: 1px solid var(--lvf-border);
   border-radius: 12px;
   padding: 12px;
   background: #fff;
+  text-decoration: none !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-2px);
+  border-color: #9ed7ee;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .status-card p {

@@ -13,51 +13,56 @@
 ## 项目状态（卡片版）
 
 <div class="status-grid">
-  <div class="status-card">
+  <a class="status-card" href="fast-livo1.md">
     <p class="status-title">FAST-LIVO1</p>
     <span class="badge done">已完成</span>
     <p>方法与工程基线，打通 LiDAR × Vision × IMU 融合主链路。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="fast-livo2.md">
     <p class="status-title">FAST-LIVO2</p>
     <span class="badge done">已完成</span>
     <p>主力系统版本，强调稳、快与工程可用性。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="fast-calib.md">
     <p class="status-title">FAST-Calib</p>
     <span class="badge done">已完成</span>
     <p>快速标定工具链，降低部署门槛。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="global-lvba.md">
     <p class="status-title">Global-LVBA</p>
     <span class="badge done">已完成</span>
     <p>全局一致后端优化，补强长程收敛。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="liv-handheld.md">
     <p class="status-title">LIV-Handheld</p>
     <span class="badge done">已完成</span>
     <p>采集与同步平台，提升实验复现效率。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="camvox.md">
     <p class="status-title">CamVox</p>
     <span class="badge done">已完成</span>
     <p>低成本路线参考，平衡成本与性能。</p>
-  </div>
-  <div class="status-card">
-    <p class="status-title">LiDAR-Visual-RTK</p>
-    <span class="badge done">已完成</span>
-    <p>补全全局绝对参考，增强跨场景重访稳定性。</p>
-  </div>
-  <div class="status-card">
-    <p class="status-title">LIV-GaussMap</p>
+  </a>
+  <a class="status-card" href="liv-rtk-fusion.md">
+    <p class="status-title">RTK-Fusion</p>
     <span class="badge ongoing">进行中</span>
+    <p>补全全局绝对参考，增强跨场景重访稳定性。</p>
+  </a>
+  <a class="status-card" href="liv-gaussmap.md">
+    <p class="status-title">LIV-GaussMap</p>
+    <span class="badge done">已完成</span>
     <p>融合几何系统向高保真表示能力延展。</p>
-  </div>
-  <div class="status-card">
+  </a>
+  <a class="status-card" href="gs-livo.md">
+    <p class="status-title">GS-LIVO</p>
+    <span class="badge done">已完成</span>
+    <p>公开可复现的 LiDAR-3DGS 工程入口与系统参考。</p>
+  </a>
+  <a class="status-card" href="../embodied/overview.md">
     <p class="status-title">UMI 主线</p>
     <span class="badge plan">规划中</span>
     <p>连接示教采集、数据质检、策略训练与评测闭环。</p>
-  </div>
+  </a>
 </div>
 
 ## 研究主线（Engineering + Research）
@@ -73,11 +78,11 @@
   </div>
   <div class="timeline-item">
     <h4>Phase C · 全局一致性增强</h4>
-    <p>Global-LVBA + LiDAR-Visual-RTK：补强长程收敛，服务大尺度重访。</p>
+    <p>Global-LVBA + RTK-Fusion：补强长程收敛，服务大尺度重访。</p>
   </div>
   <div class="timeline-item">
     <h4>Phase D · 表示与任务扩展</h4>
-    <p>LIV-GaussMap + UMI：让地图不仅用于定位，也服务示教与操作学习。</p>
+    <p>LIV-GaussMap + GS-LIVO + UMI：让地图不仅用于定位，也服务示教与操作学习。</p>
   </div>
 </div>
 
@@ -90,7 +95,7 @@
 
 ## 快速入口
 
-### 多传感器时空同步
+### 多传感器标定与同步
 - [LIV-Handheld](liv-handheld.md)
 - [FAST-Calib](fast-calib.md)
 
@@ -99,9 +104,9 @@
 - [FAST-LIVO2](fast-livo2.md)
 - [CamVox](camvox.md)
 
-### 后端与全局融合
+### 后端优化
 - [Global-LVBA](global-lvba.md)
-- [激光视觉 RTK 融合](liv-rtk-fusion.md)
+- [RTK-Fusion](liv-rtk-fusion.md)
 
 ### LiDAR-3DGS
 - [LIV-GaussMap](liv-gaussmap.md)

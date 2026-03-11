@@ -31,8 +31,8 @@ LiDAR × Vision × Embodied Research Wiki
 
 1. **前端融合贯通**：FAST-LIVO1 / FAST-LIVO2
 2. **部署成本降低**：FAST-Calib + LIV-Handheld
-3. **全局一致性增强**：Global-LVBA + LiDAR-Visual-RTK
-4. **表示与任务扩展**：LIV-GaussMap + UMI / XLeRobot
+3. **全局一致性增强**：Global-LVBA + RTK-Fusion
+4. **表示与任务扩展**：LIV-GaussMap + GS-LIVO + UMI / XLeRobot
 
 .. toctree::
     :maxdepth: 1

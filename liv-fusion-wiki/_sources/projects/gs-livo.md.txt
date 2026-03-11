@@ -14,7 +14,3 @@ GS-LIVO 代表了从传统几何 SLAM 向高保真场景表示继续延展的一
 - 连接实时融合定位与 3DGS 场景表达
 - 为可视化展示、重建和后续具身任务提供更强表示能力
 - 为 LiDAR-3DGS 方向提供一个公开可参考的工程入口
-
-## 开源入口
-
-- GitHub：<https://github.com/HKUST-Aerial-Robotics/GS-LIVO>
