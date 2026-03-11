@@ -105,6 +105,7 @@
 
 ### LiDAR-3DGS
 - [LIV-GaussMap](liv-gaussmap.md)
+- [GS-LIVO](gs-livo.md)
 
 ### 关联方向
 - [具身项目总览](../embodied/overview.md)
@@ -118,3 +119,4 @@
 - Global-LVBA：<https://github.com/xuankuzcr/Global-LVBA>
 - LIV-Handheld：<https://github.com/xuankuzcr/LIV_handhold>
 - CamVox：<https://github.com/ISEE-Technology/CamVox>
+- GS-LIVO：<https://github.com/HKUST-Aerial-Robotics/GS-LIVO>

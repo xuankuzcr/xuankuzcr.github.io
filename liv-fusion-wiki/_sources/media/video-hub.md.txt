@@ -16,7 +16,7 @@
 - FAST-LIVO 系列
 - 标定与工程化（FAST-Calib / LIV-Handheld）
 - 全局优化与表示（Global-LVBA / LIV-GaussMap）
-- 具身方向（LIV-UMI / UMI-SLAM / XLErobot）
+- 具身方向（LIV-UMI / UMI-SLAM / XLeRobot）
 
 ## 链接入口（待填）
 

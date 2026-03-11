@@ -1,0 +1,20 @@
+# GS-LIVO
+
+- **类型**：LiDAR-Inertial-Visual Odometry + 3D Gaussian Splatting
+- **阶段**：开源项目 / 可复现参考
+- **开源链接**：<https://github.com/HKUST-Aerial-Robotics/GS-LIVO>
+
+## 我对它的定位
+
+GS-LIVO 代表了从传统几何 SLAM 向高保真场景表示继续延展的一条明确路线：
+先保证稳健的位姿与几何，再把这些结果服务到可渲染、可交互的 3D 表示。
+
+## 价值
+
+- 连接实时融合定位与 3DGS 场景表达
+- 为可视化展示、重建和后续具身任务提供更强表示能力
+- 为 LiDAR-3DGS 方向提供一个公开可参考的工程入口
+
+## 开源入口
+
+- GitHub：<https://github.com/HKUST-Aerial-Robotics/GS-LIVO>

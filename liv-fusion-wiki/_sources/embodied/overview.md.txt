@@ -15,9 +15,9 @@
 3. **数据回放与质检**：提高数据有效率和可复用性。
 4. **DP 模型训练与评测**：形成策略模型迭代闭环。
 
-### Part 2 · XLErobot 复现
+### Part 2 · XLeRobot 复现
 
-5. **XLErobot 复现**：检验系统在真实任务中的可迁移性与工程可维护性。
+5. **XLeRobot 复现**：检验系统在真实任务中的可迁移性与工程可维护性。
 
 ## 关键目标
 
@@ -34,5 +34,5 @@
 - [数据回放与质检](data-replay-qc.md)
 - [DP 模型训练与评测](dp-training-eval.md)
 
-### XLErobot 复现
-- [XLErobot 复现](xlerobot-reproduction.md)
+### XLeRobot 复现
+- [XLeRobot 复现](xlerobot-reproduction.md)

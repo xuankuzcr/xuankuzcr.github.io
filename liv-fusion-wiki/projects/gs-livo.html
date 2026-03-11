@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>后端与全局融合 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+  <title>GS-LIVO &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Global-LVBA" href="global-lvba.html" />
-    <link rel="prev" title="CamVox" href="camvox.html" /> 
+    <link rel="next" title="具身智能项目总览" href="../embodied/overview.html" />
+    <link rel="prev" title="LIV-GaussMap" href="liv-gaussmap.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -61,14 +61,14 @@
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">后端与全局融合</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="backend-global.html">后端与全局融合</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="global-lvba.html">Global-LVBA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="liv-rtk-fusion.html">激光视觉 RTK 融合</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lidar-3dgs.html">LiDAR-3DGS</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="lidar-3dgs.html">LiDAR-3DGS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="liv-gaussmap.html">LIV-GaussMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gs-livo.html">GS-LIVO</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GS-LIVO</a></li>
 </ul>
 </li>
 </ul>
@@ -102,9 +102,10 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">后端与全局融合</li>
+      <li class="breadcrumb-item"><a href="lidar-3dgs.html">LiDAR-3DGS</a></li>
+      <li class="breadcrumb-item active">GS-LIVO</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/projects/backend-global.md.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../_sources/projects/gs-livo.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -112,23 +113,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>后端与全局融合<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
-<p>本分支聚焦全局一致性、长程收敛与全局参考补强，服务大尺度建图与重访任务。</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="global-lvba.html">Global-LVBA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liv-rtk-fusion.html">激光视觉 RTK 融合</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="gs-livo">
+<h1>GS-LIVO<a class="headerlink" href="#gs-livo" title="此标题的永久链接"></a></h1>
+<ul class="simple">
+<li><p><strong>类型</strong>：LiDAR-Inertial-Visual Odometry + 3D Gaussian Splatting</p></li>
+<li><p><strong>阶段</strong>：开源项目 / 可复现参考</p></li>
+<li><p><strong>开源链接</strong>：<a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">https://github.com/HKUST-Aerial-Robotics/GS-LIVO</a></p></li>
 </ul>
-</div>
+<section id="id1">
+<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<p>GS-LIVO 代表了从传统几何 SLAM 向高保真场景表示继续延展的一条明确路线：先保证稳健的位姿与几何，再把这些结果服务到可渲染、可交互的 3D 表示。</p>
+</section>
+<section id="id2">
+<h2>价值<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>连接实时融合定位与 3DGS 场景表达</p></li>
+<li><p>为可视化展示、重建和后续具身任务提供更强表示能力</p></li>
+<li><p>为 LiDAR-3DGS 方向提供一个公开可参考的工程入口</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>开源入口<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>GitHub：<a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">https://github.com/HKUST-Aerial-Robotics/GS-LIVO</a></p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="camvox.html" class="btn btn-neutral float-left" title="CamVox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="global-lvba.html" class="btn btn-neutral float-right" title="Global-LVBA" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="liv-gaussmap.html" class="btn btn-neutral float-left" title="LIV-GaussMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../embodied/overview.html" class="btn btn-neutral float-right" title="具身智能项目总览" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
