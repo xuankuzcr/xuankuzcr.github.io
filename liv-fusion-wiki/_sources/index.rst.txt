@@ -39,7 +39,6 @@ LiDAR × Vision × Embodied Research Wiki
     :caption: 研究总览
 
     projects/overview.md
-    methodology/research_map.md
 
 .. toctree::
     :maxdepth: 1
