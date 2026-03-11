@@ -17,7 +17,8 @@
 
 ### Part 2 · XLeRobot 复现
 
-5. **XLeRobot 复现**：检验系统在真实任务中的可迁移性与工程可维护性。
+5. **机械结构&电控**：完成硬件系统搭建、板卡连接与整机联调。
+6. **遥操&ACT**：打通示教、训练、评测与真实机器人部署链路。
 
 ## 关键目标
 
@@ -35,4 +36,5 @@
 - [DP 模型训练与评测](dp-training-eval.md)
 
 ### XLeRobot 复现
-- [XLeRobot 复现](xlerobot-reproduction.md)
+- [机械结构&电控](xlerobot-mech-electrical.md)
+- [遥操&ACT](xlerobot-teleop-act.md)

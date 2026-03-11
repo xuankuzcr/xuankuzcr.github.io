@@ -18,7 +18,7 @@ LiDAR × Vision × Embodied Research Wiki
       <a class="quick-card" href="projects/overview.html">
         <span class="badge done">SLAM 主线</span>
         <h3>SLAM 与三维重建</h3>
-        <p>FAST-Calib、LIV-Handheld、CamVox、Global-LVBA、RTK-Fusion、LIV-GaussMap 等。</p>
+        <p>FAST-LIVO1/2、FAST-Calib、LIV-Handheld、CamVox、Global-LVBA、RTK-Fusion、LIV-GaussMap 等。</p>
       </a>
       <a class="quick-card" href="embodied/overview.html">
         <span class="badge ongoing">具身方向</span>
@@ -26,14 +26,6 @@ LiDAR × Vision × Embodied Research Wiki
         <p>LIV-UMI、UMI-SLAM、数据质检、DP 训练评测、XLeRobot 复现。</p>
       </a>
     </div>
-
-研究主线
---------
-
-1. **前端融合贯通**：FAST-LIVO1 / FAST-LIVO2
-2. **部署成本降低**：FAST-Calib + LIV-Handheld
-3. **全局一致性增强**：Global-LVBA + RTK-Fusion
-4. **表示与任务扩展**：LIV-GaussMap + GS-LIVO + UMI / XLeRobot
 
 .. toctree::
     :maxdepth: 1

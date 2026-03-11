@@ -5,5 +5,6 @@
 ```{toctree}
 :maxdepth: 1
 
-xlerobot-reproduction.md
+xlerobot-mech-electrical.md
+xlerobot-teleop-act.md
 ```

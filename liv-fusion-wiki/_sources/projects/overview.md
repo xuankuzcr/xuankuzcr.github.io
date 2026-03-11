@@ -93,28 +93,6 @@
 3. 如何在低成本传感器组合下逼近高端系统效果（low-cost lifelong SLAM）？
 4. 如何把几何融合系统与 UMI / VLA / Diffusion Policy 打通？
 
-## 快速入口
-
-### 多传感器标定与同步
-- [LIV-Handheld](liv-handheld.md)
-- [FAST-Calib](fast-calib.md)
-
-### 激光视觉 SLAM 系统
-- [FAST-LIVO1](fast-livo1.md)
-- [FAST-LIVO2](fast-livo2.md)
-- [CamVox](camvox.md)
-
-### 后端优化
-- [Global-LVBA](global-lvba.md)
-- [RTK-Fusion](liv-rtk-fusion.md)
-
-### LiDAR-3DGS
-- [LIV-GaussMap](liv-gaussmap.md)
-- [GS-LIVO](gs-livo.md)
-
-### 关联方向
-- [具身项目总览](../embodied/overview.md)
-
 ## 研究资产索引
 
 - 个人主页：<https://github.com/xuankuzcr/xuankuzcr.github.io>
