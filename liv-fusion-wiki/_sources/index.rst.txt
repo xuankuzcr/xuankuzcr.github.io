@@ -41,17 +41,13 @@ LiDAR × Vision × Embodied Research Wiki
     projects/overview.md
 
 .. toctree::
-    :maxdepth: 1
-    :caption: slam与三维重建项目库
+    :maxdepth: 2
+    :caption: SLAM 与三维重建项目库
 
-    projects/liv-handheld.md
-    projects/fast-calib.md
-    projects/fast-livo1.md
-    projects/fast-livo2.md
-    projects/camvox.md
-    projects/global-lvba.md
-    projects/liv-rtk-fusion.md
-    projects/liv-gaussmap.md
+    projects/sensor-sync.md
+    projects/livo-slam.md
+    projects/backend-global.md
+    projects/lidar-3dgs.md
 
 .. toctree::
     :maxdepth: 2

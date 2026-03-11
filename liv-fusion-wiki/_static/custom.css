@@ -26,6 +26,18 @@
   font-weight: 700;
 }
 
+/* 二级目录选中态：与主题中“数据与策略闭环”子项一致 */
+.wy-menu-vertical li.toctree-l2.current > a {
+  background: #c9c9c9;
+  color: grey;
+  border-right: 1px solid #c9c9c9;
+  padding: .4045em 2.427em;
+}
+
+.wy-menu-vertical li.toctree-l2.current > a:hover {
+  background: #d6d6d6;
+}
+
 .rst-content h1,
 .rst-content h2,
 .rst-content h3,

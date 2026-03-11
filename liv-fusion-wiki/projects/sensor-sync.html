@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global-LVBA &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+  <title>多传感器时空同步 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="激光视觉 RTK 融合" href="liv-rtk-fusion.html" />
-    <link rel="prev" title="CamVox" href="camvox.html" /> 
+    <link rel="next" title="LIV-Handheld" href="liv-handheld.html" />
+    <link rel="prev" title="项目总览" href="overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,7 +50,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">SLAM 与三维重建项目库</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sensor-sync.html">多传感器时空同步</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">多传感器时空同步</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="liv-handheld.html">LIV-Handheld</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-calib.html">FAST-Calib</a></li>
 </ul>
@@ -61,8 +61,8 @@
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="backend-global.html">后端与全局融合</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Global-LVBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backend-global.html">后端与全局融合</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="global-lvba.html">Global-LVBA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="liv-rtk-fusion.html">激光视觉 RTK 融合</a></li>
 </ul>
 </li>
@@ -101,10 +101,9 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item"><a href="backend-global.html">后端与全局融合</a></li>
-      <li class="breadcrumb-item active">Global-LVBA</li>
+      <li class="breadcrumb-item active">多传感器时空同步</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/projects/global-lvba.md.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../_sources/projects/sensor-sync.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -112,40 +111,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="global-lvba">
-<h1>Global-LVBA<a class="headerlink" href="#global-lvba" title="此标题的永久链接"></a></h1>
-<ul class="simple">
-<li><p><strong>类型</strong>：全局一致 LiDAR-Visual BA 后端</p></li>
-<li><p><strong>阶段</strong>：已完成 / 深化方向</p></li>
-<li><p><strong>链接</strong>：<a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>多传感器时空同步<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<p>本分支聚焦激光、视觉、惯导等传感器在真实部署中的同步、标定与采集基础设施。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="liv-handheld.html">LIV-Handheld</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fast-calib.html">FAST-Calib</a></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>Global-LVBA 是对 LIVO 前端轨迹的全局一致性补强，重点在“后处理精炼与全局收敛”。</p>
-</section>
-<section id="id2">
-<h2>核心价值<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p>提升长程轨迹一致性</p></li>
-<li><p>减少累积漂移对全局地图的影响</p></li>
-<li><p>为离线高精地图构建提供可靠后端</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>研究启发<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p>前端实时与后端全局优化不应割裂，未来要做在线-离线协同。</p></li>
-<li><p>全局优化结果应反哺前端参数与策略，形成闭环。</p></li>
-</ul>
-</section>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="camvox.html" class="btn btn-neutral float-left" title="CamVox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="liv-rtk-fusion.html" class="btn btn-neutral float-right" title="激光视觉 RTK 融合" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="overview.html" class="btn btn-neutral float-left" title="项目总览" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="liv-handheld.html" class="btn btn-neutral float-right" title="LIV-Handheld" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
