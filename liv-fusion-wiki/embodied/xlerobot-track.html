@@ -20,8 +20,8 @@
         <script src="../_static/translations.js?v=beaddf03"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="机械结构&amp;电控" href="xlerobot-mech-electrical.html" />
-    <link rel="prev" title="DP 模型训练与评测" href="dp-training-eval.html" /> 
+    <link rel="next" title="机械与电控系统" href="xlerobot-mech-electrical.html" />
+    <link rel="prev" title="具身智能总览" href="overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,7 @@
 <p class="caption" role="heading"><span class="caption-text">SLAM 与三维重建项目库</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../projects/overview.html">SLAM与重建总览</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../projects/sensor-sync.html">多传感器标定与同步</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/sensor-sync.html">多传感器同步与标定</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/liv-handheld.html">LIV-Handheld</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projects/fast-calib.html">FAST-Calib</a></li>
 </ul>
@@ -71,16 +71,16 @@
 <p class="caption" role="heading"><span class="caption-text">具身智能项目库</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">具身智能总览</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">XLeRobot 复现</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="xlerobot-mech-electrical.html">机械与电控系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xlerobot-teleop-act.html">遥操与 ACT 训练</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="data-policy-loop.html">数据与策略闭环</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="liv-umi.html">LIV-UMI 数采设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="umi-slam.html">UMI-SLAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data-replay-qc.html">数据回放与质检</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dp-training-eval.html">DP 模型训练与评测</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">XLeRobot 复现</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="xlerobot-mech-electrical.html">机械结构&amp;电控</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xlerobot-teleop-act.html">遥操&amp;ACT</a></li>
 </ul>
 </li>
 </ul>
@@ -112,10 +112,15 @@
   <section class="tex2jax_ignore mathjax_ignore" id="xlerobot">
 <h1>XLeRobot 复现<a class="headerlink" href="#xlerobot" title="此标题的永久链接"></a></h1>
 <p>本分支聚焦 XLeRobot 相关复现与工程落地。</p>
+<p>当前拆成两条并行主线：</p>
+<ol class="arabic simple">
+<li><p><strong>机械与电控系统</strong>：完成本体搭建、供电与驱动链路打通，确保平台能稳定运行。</p></li>
+<li><p><strong>遥操与 ACT 训练</strong>：完成遥操示教、数据采集、策略训练与实机验证闭环。</p></li>
+</ol>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="xlerobot-mech-electrical.html">机械结构&amp;电控</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xlerobot-teleop-act.html">遥操&amp;ACT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlerobot-mech-electrical.html">机械与电控系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xlerobot-teleop-act.html">遥操与 ACT 训练</a></li>
 </ul>
 </div>
 </section>
@@ -124,8 +129,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="dp-training-eval.html" class="btn btn-neutral float-left" title="DP 模型训练与评测" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="xlerobot-mech-electrical.html" class="btn btn-neutral float-right" title="机械结构&amp;电控" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="overview.html" class="btn btn-neutral float-left" title="具身智能总览" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="xlerobot-mech-electrical.html" class="btn btn-neutral float-right" title="机械与电控系统" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

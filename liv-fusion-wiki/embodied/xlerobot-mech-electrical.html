@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>机械结构&amp;电控 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
+  <title>机械与电控系统 &mdash; LiDAR-Vision Fusion Wiki 0.2 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -20,7 +20,7 @@
         <script src="../_static/translations.js?v=beaddf03"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="遥操&amp;ACT" href="xlerobot-teleop-act.html" />
+    <link rel="next" title="遥操与 ACT 训练" href="xlerobot-teleop-act.html" />
     <link rel="prev" title="XLeRobot 复现" href="xlerobot-track.html" /> 
 </head>
 
@@ -46,7 +46,7 @@
 <p class="caption" role="heading"><span class="caption-text">SLAM 与三维重建项目库</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../projects/overview.html">SLAM与重建总览</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../projects/sensor-sync.html">多传感器标定与同步</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../projects/sensor-sync.html">多传感器同步与标定</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/liv-handheld.html">LIV-Handheld</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projects/fast-calib.html">FAST-Calib</a></li>
 </ul>
@@ -71,16 +71,16 @@
 <p class="caption" role="heading"><span class="caption-text">具身智能项目库</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">具身智能总览</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="xlerobot-track.html">XLeRobot 复现</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">机械与电控系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xlerobot-teleop-act.html">遥操与 ACT 训练</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="data-policy-loop.html">数据与策略闭环</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="liv-umi.html">LIV-UMI 数采设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="umi-slam.html">UMI-SLAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data-replay-qc.html">数据回放与质检</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dp-training-eval.html">DP 模型训练与评测</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="xlerobot-track.html">XLeRobot 复现</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">机械结构&amp;电控</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xlerobot-teleop-act.html">遥操&amp;ACT</a></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +100,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="xlerobot-track.html">XLeRobot 复现</a></li>
-      <li class="breadcrumb-item active">机械结构&amp;电控</li>
+      <li class="breadcrumb-item active">机械与电控系统</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/embodied/xlerobot-mech-electrical.md" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -111,25 +111,31 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>机械结构&amp;电控<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
-<ul class="simple">
-<li><p><strong>定位</strong>：XLeRobot 复现中的硬件系统搭建部分</p></li>
-<li><p><strong>目标</strong>：梳理机械结构、执行器、电控板卡与整机集成关系</p></li>
-</ul>
+<h1>机械与电控系统<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<p>本页聚焦 XLeRobot 复现中的硬件系统搭建与整机联调。</p>
 <section id="id2">
-<h2>关注内容<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<ol class="arabic simple">
-<li><p>机械结构设计与装配方式</p></li>
-<li><p>电机、驱动器、电源与线束方案</p></li>
-<li><p>控制板、传感器与通信接口配置</p></li>
-<li><p>上位机与底层控制链路的联调方式</p></li>
-</ol>
+<h2>当前目标<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>完成机械结构装配与部件关系梳理</p></li>
+<li><p>打通电机、驱动器、电源与线束方案</p></li>
+<li><p>确认控制板、传感器与通信接口配置</p></li>
+<li><p>跑通上位机到整机基础动作的联调链路</p></li>
+</ul>
 </section>
 <section id="id3">
-<h2>建议展示内容<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<h2>关键任务<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<ol class="arabic simple">
+<li><p>机械结构与部件清单整理</p></li>
+<li><p>电控连接、供电安全与接口定义确认</p></li>
+<li><p>上电、通信与基础动作测试</p></li>
+<li><p>联调问题记录与稳定性修正</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>阶段产出<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>结构总览图与部件清单</p></li>
-<li><p>电控连接关系图</p></li>
+<li><p>结构总览图与 BOM 清单</p></li>
+<li><p>电控连接图与接口说明</p></li>
 <li><p>装配记录与踩坑总结</p></li>
 <li><p>上电、联调和基础动作测试结果</p></li>
 </ul>
@@ -141,7 +147,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="xlerobot-track.html" class="btn btn-neutral float-left" title="XLeRobot 复现" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="xlerobot-teleop-act.html" class="btn btn-neutral float-right" title="遥操&amp;ACT" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="xlerobot-teleop-act.html" class="btn btn-neutral float-right" title="遥操与 ACT 训练" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
