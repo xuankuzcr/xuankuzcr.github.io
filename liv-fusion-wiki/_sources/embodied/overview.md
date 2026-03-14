@@ -1,12 +1,8 @@
 # 具身智能总览
 
-<div class="hero-panel compact">
-  <p class="hero-kicker">Embodied Intelligence · Data → Policy Loop</p>
-  <h2>从融合感知到操作学习闭环</h2>
-  <p>目标不是单点算法，而是可复现的数据—训练—评测系统能力。</p>
-</div>
+从融合感知到操作学习闭环，目标不是做单点算法，而是建立可复现的数据、训练与评测系统能力。
 
-## 项目状态（卡片版）
+## 项目状态
 
 <div class="status-grid">
   <a class="status-card" href="xlerobot-mech-electrical.md">
@@ -39,27 +35,6 @@
     <span class="badge ongoing">进行中</span>
     <p>形成训练、验证和迭代的基础评测流程。</p>
   </a>
-</div>
-
-## 研究主线（Engineering + Research）
-
-<div class="timeline">
-  <div class="timeline-item">
-    <h4>Phase A · 示教采集入口搭建</h4>
-    <p>LIV-UMI：先把多模态示教采集系统搭起来，保证数据入口稳定、可复用。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase B · 时空基座与数据闭环</h4>
-    <p>UMI-SLAM + 数据回放与质检：建立示教、回放、问题定位和数据筛查的基础链路。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase C · 策略训练与评测流程</h4>
-    <p>DP 模型训练与评测：形成从数据整理到训练验证的基础评测闭环。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase D · 真实机器人落地</h4>
-    <p>机械与电控系统 + 遥操与 ACT 训练：把硬件联调、示教、训练和部署串成完整工程链路。</p>
-  </div>
 </div>
 
 ## 关键目标

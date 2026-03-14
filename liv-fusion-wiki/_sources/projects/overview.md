@@ -1,16 +1,8 @@
 # SLAM与重建总览
 
-<div class="hero-panel compact">
-  <p class="hero-kicker">LiDAR-Vision Fusion · SLAM × Reconstruction</p>
-  <h2>几何融合系统路线图</h2>
-  <p>这个页面聚焦两类内容：<strong>SLAM 主线系统</strong>与<strong>三维重建表示方向</strong>。</p>
-</div>
-
-## 一句话目标
-
 把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并持续扩展到全局优化与三维重建表示。
 
-## 项目状态（卡片版）
+## 项目状态
 
 <div class="status-grid">
   <a class="status-card" href="fast-livo1.md">
@@ -58,27 +50,6 @@
     <span class="badge done">已完成</span>
     <p>公开可复现的 LiDAR-3DGS 工程入口与系统参考。</p>
   </a>
-</div>
-
-## 研究主线（Engineering + Research）
-
-<div class="timeline">
-  <div class="timeline-item">
-    <h4>Phase A · 前端融合跑通</h4>
-    <p>FAST-LIVO1/2：建立稳定实时估计主线，保障高频可用。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase B · 部署成本降低</h4>
-    <p>FAST-Calib + LIV-Handheld：降低标定与采集门槛，提升复现效率。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase C · 全局一致性增强</h4>
-    <p>Global-LVBA + RTK-Fusion：补强长程收敛，服务大尺度重访。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase D · 表示与任务扩展</h4>
-    <p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务高保真重建与场景表示。</p>
-  </div>
 </div>
 
 ## 研究资产索引
