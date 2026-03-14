@@ -2,7 +2,7 @@
 
 建立从“实验室可运行”到“真实场景可部署”的第一代工程基线。
 
-<p class="link-row">GitHub：<a href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a><br />论文：<a href="https://arxiv.org/abs/2203.00893">https://arxiv.org/abs/2203.00893</a></p>
+<p class="link-row">GitHub：<a href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a> &nbsp;|&nbsp; arXiv：<a href="https://arxiv.org/abs/2203.00893">https://arxiv.org/abs/2203.00893</a></p>
 
 ## 项目定位
 
@@ -23,6 +23,10 @@
 <div class="video-card">
   <p class="video-lead">FAST-LIVO1 效果视频</p>
   <a class="video-thumb" href="https://www.youtube.com/watch?v=C6Pb_0W9E_g" target="_blank" rel="noopener noreferrer">
+    <span class="video-stat-badge is-loading" data-stat-url="https://img.shields.io/youtube/views/C6Pb_0W9E_g.json?style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0" aria-hidden="true">
+      <span class="video-stat-caption">播放量</span>
+      <span class="video-stat-value">...</span>
+    </span>
     <span class="video-play" aria-hidden="true"></span>
     <img src="../_static/img/fast-livo1-fig7-cover.png" alt="FAST-LIVO 论文 Fig. 7 封面图" />
     <span class="video-overlay" aria-hidden="true">
@@ -38,8 +42,12 @@
 <div class="video-card">
   <p class="video-lead">FAST-LIVO1 复现教程视频</p>
   <a class="video-thumb" href="https://www.bilibili.com/video/BV1T142197ci" target="_blank" rel="noopener noreferrer">
+    <span class="video-stat-badge is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1T142197ci&query=%24.data.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0" aria-hidden="true">
+      <span class="video-stat-caption">播放量</span>
+      <span class="video-stat-value">...</span>
+    </span>
     <span class="video-play" aria-hidden="true"></span>
-    <img src="../_static/img/fast-livo1-official-cover.jpg" alt="FAST-LIVO 复现教程视频封面" />
+    <img src="../_static/img/fast-livo1-official-cover-crop.jpg" alt="FAST-LIVO 复现教程视频封面" />
     <span class="video-overlay" aria-hidden="true">
       <span class="video-progress"></span>
       <span class="video-meta">
@@ -49,6 +57,8 @@
     </span>
   </a>
 </div>
+
+<script src="../_static/video-stats.js"></script>
 
 ## 关联项目
 

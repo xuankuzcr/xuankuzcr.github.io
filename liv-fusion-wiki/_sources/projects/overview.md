@@ -52,6 +52,27 @@
   </a>
 </div>
 
+## 研究主线
+
+<div class="timeline">
+  <div class="timeline-item">
+    <h4>Phase A · 前端融合跑通</h4>
+    <p>FAST-LIVO1/2：建立稳定实时估计主线，保障高频可用。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase B · 部署成本降低</h4>
+    <p>FAST-Calib + LIV-Handheld：降低标定与采集门槛，提升复现效率。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase C · 全局一致性增强</h4>
+    <p>Global-LVBA + RTK-Fusion：补强长程收敛，服务大尺度重访。</p>
+  </div>
+  <div class="timeline-item">
+    <h4>Phase D · 表示与任务扩展</h4>
+    <p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务高保真重建与场景表示。</p>
+  </div>
+</div>
+
 ## 研究资产索引
 
 - 个人主页：<https://github.com/xuankuzcr/xuankuzcr.github.io>

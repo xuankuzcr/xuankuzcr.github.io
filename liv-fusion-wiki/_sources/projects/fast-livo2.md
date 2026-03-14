@@ -1,10 +1,8 @@
 # FAST-LIVO2
 
-<div class="hero-panel compact">
-  <p class="hero-kicker">Mainline System · Robust · Efficient</p>
-  <h2>FAST-LIVO2：主力激光视觉惯性融合系统</h2>
-  <p>在 FAST-LIVO1 基础上，进一步强化鲁棒性、效率与工程可用性。</p>
-</div>
+在 FAST-LIVO1 基础上，进一步强化鲁棒性、效率与工程可用性。
+
+<p class="link-row">GitHub：<a href="https://github.com/hku-mars/FAST-LIVO2">https://github.com/hku-mars/FAST-LIVO2</a> &nbsp;|&nbsp; arXiv：<a href="https://arxiv.org/abs/2408.14035">https://arxiv.org/abs/2408.14035</a></p>
 
 ## 项目定位
 
@@ -20,19 +18,47 @@
 - 视觉与 LiDAR 融合更紧密，整体系统稳定性更高
 - 更适合作为后续全局优化与长期运行主线
 
-## 结果证据（建议看图 + 视频）
+## 效果展示
 
-- 多场景效果图（室内 / 室外 / 动态干扰）
-- 典型轨迹与地图结果图
-- 与上一代版本的对比展示（稳定性 / 速度 /质量）
-- Demo 视频：总览版 + 复现实验版
+<div class="video-card">
+  <p class="video-lead">FAST-LIVO2 效果视频</p>
+  <a class="video-thumb" href="https://www.bilibili.com/video/BV1Ezxge7EEi/" target="_blank" rel="noopener noreferrer">
+    <span class="video-stat-badge is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1Ezxge7EEi&query=%24.data.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0" aria-hidden="true">
+      <span class="video-stat-caption">播放量</span>
+      <span class="video-stat-value">...</span>
+    </span>
+    <span class="video-play" aria-hidden="true"></span>
+    <img src="../_static/img/fast-livo2-bilibili-cover.jpg" alt="FAST-LIVO2 Bilibili 视频封面" />
+    <span class="video-overlay" aria-hidden="true">
+      <span class="video-progress"></span>
+      <span class="video-meta">
+        <span class="video-label">HKU_MARS · Bilibili</span>
+        <span class="video-time">1:34</span>
+      </span>
+    </span>
+  </a>
+</div>
 
-## 复现入口（不在本页展开教程）
+<div class="video-card">
+  <p class="video-lead">FAST-LIVO2 复现教程视频</p>
+  <a class="video-thumb" href="https://www.bilibili.com/video/BV1g32EBDE7V/" target="_blank" rel="noopener noreferrer">
+    <span class="video-stat-badge is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1g32EBDE7V&query=%24.data.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0" aria-hidden="true">
+      <span class="video-stat-caption">播放量</span>
+      <span class="video-stat-value">...</span>
+    </span>
+    <span class="video-play" aria-hidden="true"></span>
+    <img src="../_static/img/fast-livo2-tutorial-bilibili-cover-crop.jpg" alt="FAST-LIVO2 复现教程 Bilibili 视频封面" />
+    <span class="video-overlay" aria-hidden="true">
+      <span class="video-progress"></span>
+      <span class="video-meta">
+        <span class="video-label">重建世界LAB · Bilibili</span>
+        <span class="video-time">18:55</span>
+      </span>
+    </span>
+  </a>
+</div>
 
-- GitHub（README）：<https://github.com/hku-mars/FAST-LIVO2>
-- B站建议检索关键词：`FAST-LIVO2 复现`、`激光视觉融合 复现`
-
-> 详细安装、运行、参数配置请以 GitHub README 和 B站复现教程为准。
+<script src="../_static/video-stats.js"></script>
 
 ## 关联项目
 

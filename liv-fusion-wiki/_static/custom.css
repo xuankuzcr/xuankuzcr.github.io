@@ -263,6 +263,8 @@
   overflow: hidden;
   background: #fff;
   position: relative;
+  line-height: 0;
+  box-sizing: border-box;
   transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
 }
 
@@ -272,11 +274,53 @@
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
-.video-thumb img {
+.video-thumb > img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+
+.video-stat-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f8fafc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+.video-stat-badge.is-loading {
+  color: rgba(248, 250, 252, 0.86);
+}
+
+.video-stat-badge.is-hidden {
+  display: none;
+}
+
+.video-stat-caption {
+  color: rgba(226, 232, 240, 0.92);
+}
+
+.video-stat-value {
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
 }
 
 .video-play {
@@ -332,18 +376,65 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  min-width: 0;
   color: #fff;
   font-size: 0.78rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .video-meta .video-label {
+  flex: 1;
+  min-width: 0;
   font-weight: 700;
   letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .video-meta .video-time {
+  flex-shrink: 0;
   padding: 4px 6px;
   border-radius: 6px;
   background: rgba(15, 23, 42, 0.5);
+}
+
+@media (max-width: 640px) {
+  .video-card {
+    max-width: 100%;
+  }
+
+  .video-thumb {
+    max-width: 100%;
+  }
+
+  .video-overlay {
+    padding: 22px 12px 10px;
+  }
+
+  .video-stat-badge {
+    top: 10px;
+    right: 10px;
+    min-height: 26px;
+    padding: 0 9px;
+    font-size: 0.68rem;
+  }
+
+  .video-play {
+    width: 52px;
+    height: 52px;
+  }
+
+  .video-play::before {
+    left: 22px;
+    top: 16px;
+    border-left-width: 15px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+  }
+
+  .video-meta {
+    font-size: 0.72rem;
+  }
 }
