@@ -1,10 +1,8 @@
 # FAST-LIVO1
 
-<div class="hero-panel compact">
-  <p class="hero-kicker">LIVO Baseline · Real-time · Deployable</p>
-  <h2>FAST-LIVO1：实时激光视觉惯性紧耦合里程计</h2>
-  <p>建立从“实验室可运行”到“真实场景可部署”的第一代工程基线。</p>
-</div>
+建立从“实验室可运行”到“真实场景可部署”的第一代工程基线。
+
+<p class="link-row">GitHub：<a href="https://github.com/hku-mars/FAST-LIVO">https://github.com/hku-mars/FAST-LIVO</a><br />论文：<a href="https://arxiv.org/abs/2203.00893">https://arxiv.org/abs/2203.00893</a></p>
 
 ## 项目定位
 
@@ -20,20 +18,37 @@
 - 具备跨平台部署潜力（x86 / ARM）
 - 为后续全局优化与表示扩展提供稳定前端输入
 
-## 结果证据（建议看图 + 视频）
+## 效果展示
 
-- 系统流程图（Framework）
-- 退化场景效果图（LiDAR / 视觉挑战）
-- 轨迹与点云结果图（对比或典型片段）
-- Demo 视频：建议放 90 秒总览 + 完整复现实验
+<div class="video-card">
+  <p class="video-lead">FAST-LIVO1 效果视频</p>
+  <a class="video-thumb" href="https://www.youtube.com/watch?v=C6Pb_0W9E_g" target="_blank" rel="noopener noreferrer">
+    <span class="video-play" aria-hidden="true"></span>
+    <img src="../_static/img/fast-livo1-fig7-cover.png" alt="FAST-LIVO 论文 Fig. 7 封面图" />
+    <span class="video-overlay" aria-hidden="true">
+      <span class="video-progress"></span>
+      <span class="video-meta">
+        <span class="video-label">FAST-LIVO1 Demo</span>
+        <span class="video-time">1:31</span>
+      </span>
+    </span>
+  </a>
+</div>
 
-## 复现入口（不在本页展开教程）
-
-- GitHub（README）：<https://github.com/hku-mars/FAST-LIVO>
-- 论文：<https://arxiv.org/abs/2203.00893>
-- B站建议检索关键词：`FAST-LIVO 复现`、`LIVO SLAM 复现`
-
-> 详细环境配置、运行命令、参数说明请直接看 GitHub README 与 B站复现视频。
+<div class="video-card">
+  <p class="video-lead">FAST-LIVO1 复现教程视频</p>
+  <a class="video-thumb" href="https://www.bilibili.com/video/BV1T142197ci" target="_blank" rel="noopener noreferrer">
+    <span class="video-play" aria-hidden="true"></span>
+    <img src="../_static/img/fast-livo1-official-cover.jpg" alt="FAST-LIVO 复现教程视频封面" />
+    <span class="video-overlay" aria-hidden="true">
+      <span class="video-progress"></span>
+      <span class="video-meta">
+        <span class="video-label">GundaSmart · Bilibili</span>
+        <span class="video-time">13:10</span>
+      </span>
+    </span>
+  </a>
+</div>
 
 ## 关联项目
 
