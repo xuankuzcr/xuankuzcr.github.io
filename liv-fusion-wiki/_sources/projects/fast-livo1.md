@@ -47,7 +47,7 @@
       <span class="video-stat-value">...</span>
     </span>
     <span class="video-play" aria-hidden="true"></span>
-    <img src="../_static/img/fast-livo1-official-cover-crop.jpg" alt="FAST-LIVO 复现教程视频封面" />
+    <img src="../_static/img/fast-livo1-up-cover.png" alt="FAST-LIVO 复现教程视频封面" />
     <span class="video-overlay" aria-hidden="true">
       <span class="video-progress"></span>
       <span class="video-meta">
