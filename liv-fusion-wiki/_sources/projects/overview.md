@@ -75,7 +75,7 @@
 
 ## 研究资产索引
 
-- 个人主页：<https://github.com/xuankuzcr/xuankuzcr.github.io>
+- 个人主页：<https://xuankuzcr.github.io>
 - FAST-LIVO：<https://github.com/hku-mars/FAST-LIVO>
 - FAST-LIVO2：<https://github.com/hku-mars/FAST-LIVO2>
 - FAST-Calib：<https://github.com/hku-mars/FAST-Calib>
