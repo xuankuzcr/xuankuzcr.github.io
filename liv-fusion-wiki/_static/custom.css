@@ -218,6 +218,22 @@
   font-size: 0.92rem;
 }
 
+.home-inline-footer {
+  margin: 28px 0 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--lvf-border);
+}
+
+.home-inline-footer p {
+  margin: 0;
+  color: var(--lvf-muted);
+  font-size: 0.92rem;
+}
+
+.home-inline-footer p + p {
+  margin-top: 4px;
+}
+
 .timeline {
   border-left: 3px solid #a7d9ef;
   margin: 12px 0 16px;

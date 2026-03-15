@@ -17,3 +17,17 @@
 - 减少累积漂移对全局地图的影响
 - 为离线高精地图构建提供可靠后端
 - 为 RTK-Fusion 等后续全局能力预留后端接口
+
+## 数据集
+
+<div class="video-link-group">
+  <div class="video-link-list">
+    <a class="video-link-item" href="https://drive.google.com/drive/folders/19fYG4z666hcxyP6StVXs-ZOI2cbHsU5J" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">Global-LVBA 数据集</span>
+        <span class="video-link-note">Google Drive · 轨迹优化与全局一致性实验数据</span>
+      </span>
+      <span class="video-link-views">数据集</span>
+    </a>
+  </div>
+</div>

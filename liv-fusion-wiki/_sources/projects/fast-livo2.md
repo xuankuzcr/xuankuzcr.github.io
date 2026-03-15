@@ -60,4 +60,18 @@
   </div>
 </div>
 
+## 数据集
+
+<div class="video-link-group">
+  <div class="video-link-list">
+    <a class="video-link-item" href="https://drive.google.com/drive/folders/1bf5LQ8iSxw-fD8BObZmouw7lRxNacfrA" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">FAST-LIVO2 数据集</span>
+        <span class="video-link-note">Google Drive · HKU-MaRS · 多场景实验数据</span>
+      </span>
+      <span class="video-link-views">数据集</span>
+    </a>
+  </div>
+</div>
+
 <script src="../_static/video-stats.js"></script>

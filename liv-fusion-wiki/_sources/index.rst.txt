@@ -49,5 +49,12 @@ LiDAR-Vision Fusion Wiki
     embodied/xlerobot-track.md
     embodied/data-policy-loop.md
 
+.. raw:: html
+
+    <div class="home-inline-footer">
+      <p>Copyright &copy; Chunran Zheng</p>
+      <p>LiDAR-Vision Fusion Wiki · Continuously Updated.</p>
+    </div>
+
 .. toctree::
     :hidden:
