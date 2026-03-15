@@ -96,10 +96,20 @@
 <div itemprop="articleBody">
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>SLAM与重建总览<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
-<p>把 LIVO 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并持续扩展到全局优化与三维重建表示。</p>
+<p>把激光视觉 SLAM 系统 (LIVO) 从“实验室可运行”推进到“真实场景可部署、可维护、可复现”，并持续扩展到全局优化与三维重建。</p>
 <section id="project-status">
 <h2>项目状态<a class="headerlink" href="#project-status" title="此标题的永久链接"></a></h2>
 <div class="status-grid">
+<a class="status-card" href="fast-calib.html">
+<p class="status-title">FAST-Calib</p>
+<span class="badge done">已完成</span>
+<p>快速标定工具链，降低部署门槛。</p>
+</a>
+<a class="status-card" href="liv-handheld.html">
+<p class="status-title">LIV-Handheld</p>
+<span class="badge done">已完成</span>
+<p>模块化的三维数据采集设备。</p>
+</a>
 <a class="status-card" href="fast-livo1.html">
 <p class="status-title">FAST-LIVO</p>
 <span class="badge done">已完成</span>
@@ -110,40 +120,30 @@
 <span class="badge done">已完成</span>
 <p>主力系统版本，强调稳、快与工程可用性。</p>
 </a>
-<a class="status-card" href="fast-calib.html">
-<p class="status-title">FAST-Calib</p>
+<a class="status-card" href="camvox.html">
+<p class="status-title">CamVox</p>
 <span class="badge done">已完成</span>
-<p>快速标定工具链，降低部署门槛。</p>
+<p>低成本路线参考，激光辅助视觉的 SLAM 系统。</p>
 </a>
 <a class="status-card" href="global-lvba.html">
 <p class="status-title">Global-LVBA</p>
 <span class="badge done">已完成</span>
-<p>全局一致后端优化，补强长程收敛。</p>
-</a>
-<a class="status-card" href="liv-handheld.html">
-<p class="status-title">LIV-Handheld</p>
-<span class="badge done">已完成</span>
-<p>采集与同步平台，提升实验复现效率。</p>
-</a>
-<a class="status-card" href="camvox.html">
-<p class="status-title">CamVox</p>
-<span class="badge done">已完成</span>
-<p>低成本路线参考，平衡成本与性能。</p>
+<p>全局一致后端优化，得到像素级位姿精度。</p>
 </a>
 <a class="status-card" href="liv-rtk-fusion.html">
 <p class="status-title">RTK-Fusion</p>
 <span class="badge ongoing">进行中</span>
-<p>补全全局绝对参考，增强跨场景重访稳定性。</p>
+<p>补全全局绝对参考，RTK 后处理融合方案。</p>
 </a>
 <a class="status-card" href="liv-gaussmap.html">
 <p class="status-title">LIV-GaussMap</p>
 <span class="badge done">已完成</span>
-<p>融合几何系统向高保真表示能力延展。</p>
+<p>为重建的真彩点云赋予高保真场景表征。</p>
 </a>
 <a class="status-card" href="gs-livo.html">
 <p class="status-title">GS-LIVO</p>
 <span class="badge done">已完成</span>
-<p>公开可复现的 LiDAR-3DGS 工程入口与系统参考。</p>
+<p>实时生成各向异性的 Gaussian Map 并用于定位。</p>
 </a>
 </div>
 </section>
@@ -151,20 +151,20 @@
 <h2>研究主线<a class="headerlink" href="#engineering-research" title="此标题的永久链接"></a></h2>
 <div class="timeline">
 <div class="timeline-item">
-<h4>Phase A · 前端融合跑通</h4>
-<p>FAST-LIVO / FAST-LIVO2：建立稳定实时估计主线，保障高频可用。</p>
+<h4>Phase A · 提供数据采集与标定方案</h4>
+<p>LIV-Handheld + FAST-Calib：降低采集与标定门槛，提升复现效率。</p>
 </div>
 <div class="timeline-item">
-<h4>Phase B · 部署成本降低</h4>
-<p>FAST-Calib + LIV-Handheld：降低标定与采集门槛，提升复现效率。</p>
+<h4>Phase B · 激光视觉融合定位与建图</h4>
+<p>FAST-LIVO / FAST-LIVO2：构建实时稳定高精度的 SLAM 系统。</p>
 </div>
 <div class="timeline-item">
 <h4>Phase C · 全局一致性增强</h4>
-<p>Global-LVBA + RTK-Fusion：补强长程收敛，服务大尺度重访。</p>
+<p>Global-LVBA + RTK-Fusion：降低大尺度 long-term 场景的累计误差。</p>
 </div>
 <div class="timeline-item">
 <h4>Phase D · 表示与任务扩展</h4>
-<p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务高保真重建与场景表示。</p>
+<p>LIV-GaussMap + GS-LIVO：让地图不仅用于定位，也服务于高保真重建与场景表示。</p>
 </div>
 </div>
 </section>
