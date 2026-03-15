@@ -6,7 +6,7 @@
 
 <div class="status-grid">
   <a class="status-card" href="fast-livo1.md">
-    <p class="status-title">FAST-LIVO1</p>
+    <p class="status-title">FAST-LIVO</p>
     <span class="badge done">已完成</span>
     <p>方法与工程基线，打通 LiDAR × Vision × IMU 融合主链路。</p>
   </a>
@@ -57,7 +57,7 @@
 <div class="timeline">
   <div class="timeline-item">
     <h4>Phase A · 前端融合跑通</h4>
-    <p>FAST-LIVO1/2：建立稳定实时估计主线，保障高频可用。</p>
+    <p>FAST-LIVO / FAST-LIVO2：建立稳定实时估计主线，保障高频可用。</p>
   </div>
   <div class="timeline-item">
     <h4>Phase B · 部署成本降低</h4>

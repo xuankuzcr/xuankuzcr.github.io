@@ -52,7 +52,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="livo-slam.html">激光视觉 SLAM 系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-livo2.html">FAST-LIVO2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
@@ -112,28 +112,24 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="global-lvba">
 <h1>Global-LVBA<a class="headerlink" href="#global-lvba" title="此标题的永久链接"></a></h1>
+<p>面向 LIVO 轨迹后处理精炼与全局收敛增强的全局一致后端。</p>
+<p class="link-row">GitHub：<a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p>
+<section id="id1">
+<h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：全局一致 LiDAR-Visual BA 后端</p></li>
-<li><p><strong>阶段</strong>：已完成 / 深化方向</p></li>
-<li><p><strong>链接</strong>：<a class="reference external" href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p></li>
+<li><p><strong>状态</strong>：✅ 已完成（后端深化）</p></li>
+<li><p><strong>主线位置</strong>：Phase C（全局一致性增强）</p></li>
+<li><p><strong>核心价值</strong>：对 LIVO 前端轨迹做后处理精炼与全局收敛补强，服务长程一致建图。</p></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>Global-LVBA 是对 LIVO 前端轨迹的全局一致性补强，重点在“后处理精炼与全局收敛”。</p>
 </section>
 <section id="id2">
-<h2>核心价值<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p>提升长程轨迹一致性</p></li>
 <li><p>减少累积漂移对全局地图的影响</p></li>
 <li><p>为离线高精地图构建提供可靠后端</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>研究启发<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p>前端实时与后端全局优化不应割裂，未来要做在线-离线协同。</p></li>
-<li><p>全局优化结果应反哺前端参数与策略，形成闭环。</p></li>
+<li><p>为 RTK-Fusion 等后续全局能力预留后端接口</p></li>
 </ul>
 </section>
 </section>
@@ -149,14 +145,9 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 。</p>
+    <p>Copyright &#169; Chunran Zheng</p>
   </div>
-
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
-   
-
+  <p>LiDAR-Vision Fusion Wiki · Continuously Updated.</p>
 </footer>
         </div>
       </div>

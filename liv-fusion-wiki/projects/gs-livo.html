@@ -52,7 +52,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="livo-slam.html">激光视觉 SLAM 系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-livo2.html">FAST-LIVO2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
@@ -112,21 +112,24 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="gs-livo">
 <h1>GS-LIVO<a class="headerlink" href="#gs-livo" title="此标题的永久链接"></a></h1>
+<p>把实时 LIVO 与 Gaussian Mapping 真正打通的高保真实时场景表示系统。</p>
+<p class="link-row">GitHub：<a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">https://github.com/HKUST-Aerial-Robotics/GS-LIVO</a> &nbsp;|&nbsp; arXiv：<a class="reference external" href="https://arxiv.org/abs/2501.08672">https://arxiv.org/abs/2501.08672</a></p>
+<section id="id1">
+<h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：LiDAR-Inertial-Visual Odometry + 3D Gaussian Splatting</p></li>
-<li><p><strong>阶段</strong>：开源项目 / 可复现参考</p></li>
-<li><p><strong>开源链接</strong>：<a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">https://github.com/HKUST-Aerial-Robotics/GS-LIVO</a></p></li>
+<li><p><strong>状态</strong>：✅ 已完成（开源系统参考）</p></li>
+<li><p><strong>主线位置</strong>：Phase D（表示与任务扩展）</p></li>
+<li><p><strong>核心价值</strong>：把稳健的多传感器位姿估计与 Gaussian Mapping 在线打通，形成可实时运行的 LiDAR-3DGS 系统入口。</p></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>GS-LIVO 代表了从传统几何 SLAM 向高保真场景表示继续延展的一条明确路线：先保证稳健的位姿与几何，再把这些结果服务到可渲染、可交互的 3D 表示。</p>
 </section>
 <section id="id2">
-<h2>价值<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>连接实时融合定位与 3DGS 场景表达</p></li>
-<li><p>为可视化展示、重建和后续具身任务提供更强表示能力</p></li>
-<li><p>为 LiDAR-3DGS 方向提供一个公开可参考的工程入口</p></li>
+<li><p>在线融合 LiDAR、视觉与 IMU 的 Gaussian Mapping 系统</p></li>
+<li><p>同时兼顾实时估计与高保真场景表达</p></li>
+<li><p>为 LiDAR-3DGS 方向提供公开可复现工程入口</p></li>
+<li><p>可直接服务渲染展示与后续具身任务接口</p></li>
 </ul>
 </section>
 </section>
@@ -142,14 +145,9 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 。</p>
+    <p>Copyright &#169; Chunran Zheng</p>
   </div>
-
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
-   
-
+  <p>LiDAR-Vision Fusion Wiki · Continuously Updated.</p>
 </footer>
         </div>
       </div>

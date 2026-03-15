@@ -20,7 +20,7 @@
         <script src="../_static/translations.js?v=beaddf03"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="FAST-LIVO1" href="fast-livo1.html" />
+    <link rel="next" title="FAST-LIVO" href="fast-livo1.html" />
     <link rel="prev" title="LIV-Handheld" href="liv-handheld.html" /> 
 </head>
 
@@ -52,7 +52,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="livo-slam.html">激光视觉 SLAM 系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-livo2.html">FAST-LIVO2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
@@ -112,30 +112,74 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="fast-calib">
 <h1>FAST-Calib<a class="headerlink" href="#fast-calib" title="此标题的永久链接"></a></h1>
+<p>让外参标定从“部署痛点”变成“分钟级常规流程”的基础工具链。</p>
+<p class="link-row">GitHub：<a class="reference external" href="https://github.com/hku-mars/FAST-Calib">https://github.com/hku-mars/FAST-Calib</a> &nbsp;|&nbsp; arXiv：<a class="reference external" href="https://arxiv.org/abs/2507.17210">https://arxiv.org/abs/2507.17210</a></p>
+<section id="id1">
+<h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：LiDAR-Camera 外参标定</p></li>
-<li><p><strong>阶段</strong>：已完成 / 基础工具链</p></li>
-<li><p><strong>链接</strong>：<a class="reference external" href="https://github.com/hku-mars/FAST-Calib">https://github.com/hku-mars/FAST-Calib</a></p></li>
+<li><p><strong>状态</strong>：✅ 已完成（基础工具链）</p></li>
+<li><p><strong>主线位置</strong>：Phase A（多传感器同步与标定）</p></li>
+<li><p><strong>核心价值</strong>：把 LiDAR-Camera 外参标定流程标准化，为 FAST-LIVO 系列和后续系统部署提供稳定入口。</p></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>FAST-Calib 解决的是“系统部署门槛”问题：让标定从痛点变成常规流程。</p>
 </section>
 <section id="id2">
-<h2>价值<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>快速外参标定，降低部署成本</p></li>
-<li><p>对 FAST-LIVO 系列形成直接增益</p></li>
-<li><p>让多传感器系统在工程上更可复制</p></li>
+<li><p>无需初值的快速外参标定流程</p></li>
+<li><p>同时兼容固态与机械式 LiDAR</p></li>
+<li><p>对 FAST-LIVO 系列部署有直接增益</p></li>
+<li><p>让多传感器系统在工程上更易复现与维护</p></li>
 </ul>
 </section>
 <section id="id3">
-<h2>下一步可做<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p>标定质量在线监控</p></li>
-<li><p>面向长期运行的外参漂移检测</p></li>
-<li><p>更自动化的标定健康检查报告</p></li>
-</ul>
+<h2>社区复现案例<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="video-link-group">
+  <div class="video-link-list">
+    <a class="video-link-item" href="https://www.bilibili.com/video/BV1c2keBMEgQ" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">重建世界LAB 外参标定讲解</span>
+        <span class="video-link-note">重建世界LAB · Bilibili · 17:09</span>
+      </span>
+      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1c2keBMEgQ&amp;query=%24.data.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
+    </a>
+    <a class="video-link-item" href="https://www.bilibili.com/video/BV1gvLgzPEcR" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">GundaSmart 标定与程序部署</span>
+        <span class="video-link-note">GundaSmart · Bilibili · 9:08</span>
+      </span>
+      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1gvLgzPEcR&amp;query=%24.data.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
+    </a>
+    <a class="video-link-item" href="https://www.bilibili.com/video/BV1E3rQYQERf" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">GundaSmart 内外参联合标定</span>
+        <span class="video-link-note">GundaSmart · Bilibili · 17:42</span>
+      </span>
+      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1E3rQYQERf&amp;query=%24.data.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
+    </a>
+  </div>
+</div>
+<section id="id4">
+<h2>标定数据集<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<div class="video-link-group">
+  <div class="video-link-list">
+    <a class="video-link-item" href="https://drive.google.com/drive/folders/1W87Dx3MUuPhTpCLvaavWqNUJZV03yU6L?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">单场景标定样例数据</span>
+        <span class="video-link-note">Google Drive · Mid360 / Avia / Ouster · 单场景静态采集</span>
+      </span>
+      <span class="video-link-views">数据集</span>
+    </a>
+    <a class="video-link-item" href="https://drive.google.com/drive/folders/1g__plgFqp5tsk-TY7Ioh4RXru62AdLmr?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">多场景联合标定样例数据</span>
+        <span class="video-link-note">Google Drive · Avia · 3 场景联合标定</span>
+      </span>
+      <span class="video-link-views">数据集</span>
+    </a>
+  </div>
+</div>
+<script src="../_static/video-stats.js"></script>
 </section>
 </section>
 
@@ -144,20 +188,15 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="liv-handheld.html" class="btn btn-neutral float-left" title="LIV-Handheld" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="fast-livo1.html" class="btn btn-neutral float-right" title="FAST-LIVO1" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fast-livo1.html" class="btn btn-neutral float-right" title="FAST-LIVO" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 。</p>
+    <p>Copyright &#169; Chunran Zheng</p>
   </div>
-
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
-   
-
+  <p>LiDAR-Vision Fusion Wiki · Continuously Updated.</p>
 </footer>
         </div>
       </div>

@@ -1,20 +1,19 @@
 # Global-LVBA
 
+面向 LIVO 轨迹后处理精炼与全局收敛增强的全局一致后端。
+
+<p class="link-row">GitHub：<a href="https://github.com/xuankuzcr/Global-LVBA">https://github.com/xuankuzcr/Global-LVBA</a></p>
+
+## 项目定位
+
 - **类型**：全局一致 LiDAR-Visual BA 后端
-- **阶段**：已完成 / 深化方向
-- **链接**：<https://github.com/xuankuzcr/Global-LVBA>
+- **状态**：✅ 已完成（后端深化）
+- **主线位置**：Phase C（全局一致性增强）
+- **核心价值**：对 LIVO 前端轨迹做后处理精炼与全局收敛补强，服务长程一致建图。
 
-## 我对它的定位
-
-Global-LVBA 是对 LIVO 前端轨迹的全局一致性补强，重点在“后处理精炼与全局收敛”。
-
-## 核心价值
+## 核心亮点
 
 - 提升长程轨迹一致性
 - 减少累积漂移对全局地图的影响
 - 为离线高精地图构建提供可靠后端
-
-## 研究启发
-
-- 前端实时与后端全局优化不应割裂，未来要做在线-离线协同。
-- 全局优化结果应反哺前端参数与策略，形成闭环。
+- 为 RTK-Fusion 等后续全局能力预留后端接口

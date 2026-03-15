@@ -1,16 +1,19 @@
 # GS-LIVO
 
+把实时 LIVO 与 Gaussian Mapping 真正打通的高保真实时场景表示系统。
+
+<p class="link-row">GitHub：<a href="https://github.com/HKUST-Aerial-Robotics/GS-LIVO">https://github.com/HKUST-Aerial-Robotics/GS-LIVO</a> &nbsp;|&nbsp; arXiv：<a href="https://arxiv.org/abs/2501.08672">https://arxiv.org/abs/2501.08672</a></p>
+
+## 项目定位
+
 - **类型**：LiDAR-Inertial-Visual Odometry + 3D Gaussian Splatting
-- **阶段**：开源项目 / 可复现参考
-- **开源链接**：<https://github.com/HKUST-Aerial-Robotics/GS-LIVO>
+- **状态**：✅ 已完成（开源系统参考）
+- **主线位置**：Phase D（表示与任务扩展）
+- **核心价值**：把稳健的多传感器位姿估计与 Gaussian Mapping 在线打通，形成可实时运行的 LiDAR-3DGS 系统入口。
 
-## 我对它的定位
+## 核心亮点
 
-GS-LIVO 代表了从传统几何 SLAM 向高保真场景表示继续延展的一条明确路线：
-先保证稳健的位姿与几何，再把这些结果服务到可渲染、可交互的 3D 表示。
-
-## 价值
-
-- 连接实时融合定位与 3DGS 场景表达
-- 为可视化展示、重建和后续具身任务提供更强表示能力
-- 为 LiDAR-3DGS 方向提供一个公开可参考的工程入口
+- 在线融合 LiDAR、视觉与 IMU 的 Gaussian Mapping 系统
+- 同时兼顾实时估计与高保真场景表达
+- 为 LiDAR-3DGS 方向提供公开可复现工程入口
+- 可直接服务渲染展示与后续具身任务接口

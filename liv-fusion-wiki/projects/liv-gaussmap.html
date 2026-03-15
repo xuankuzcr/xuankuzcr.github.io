@@ -52,7 +52,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="livo-slam.html">激光视觉 SLAM 系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-livo1.html">FAST-LIVO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fast-livo2.html">FAST-LIVO2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="camvox.html">CamVox</a></li>
 </ul>
@@ -112,29 +112,24 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="liv-gaussmap">
 <h1>LIV-GaussMap<a class="headerlink" href="#liv-gaussmap" title="此标题的永久链接"></a></h1>
+<p>把稳健位姿估计进一步扩展为可渲染、可交互场景表示的表示层探索。</p>
+<p class="link-row">arXiv：<a class="reference external" href="https://arxiv.org/abs/2401.14857">https://arxiv.org/abs/2401.14857</a></p>
+<section id="id1">
+<h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：LIV 融合 + Gaussian 地图表示</p></li>
-<li><p><strong>阶段</strong>：进行中 / 前沿探索</p></li>
-<li><p><strong>参考</strong>：主页中的 LIV-GaussMap 方向</p></li>
+<li><p><strong>状态</strong>：✅ 已完成（前沿方向验证）</p></li>
+<li><p><strong>主线位置</strong>：Phase D（表示与任务扩展）</p></li>
+<li><p><strong>核心价值</strong>：把 LIV 融合结果提升为高保真 3D 辐射场表示，为渲染、重建和交互任务提供统一地图接口。</p></li>
 </ul>
-<section id="id1">
-<h2>我对它的定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>LIV-GaussMap 是“几何估计系统”向“可渲染、可交互世界模型”的自然延伸。</p>
 </section>
 <section id="id2">
-<h2>研究意义<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>将状态估计与高保真表示衔接</p></li>
+<li><p>将状态估计与 3D Radiance Field 地图直接衔接</p></li>
 <li><p>支撑更强的可视化、重建和下游任务接口</p></li>
-<li><p>为 simulation / sim2real 提供桥接中间层</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>当前挑战<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<ul class="simple">
-<li><p>实时性与表示质量平衡</p></li>
-<li><p>融合误差在高保真表示中的放大效应</p></li>
-<li><p>与控制/操作任务的闭环耦合</p></li>
+<li><p>为 sim2real 与交互式场景理解提供桥接表示</p></li>
+<li><p>验证了 LIV 融合向高保真表示扩展的可行性</p></li>
 </ul>
 </section>
 </section>
@@ -150,14 +145,9 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 。</p>
+    <p>Copyright &#169; Chunran Zheng</p>
   </div>
-
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
-   
-
+  <p>LiDAR-Vision Fusion Wiki · Continuously Updated.</p>
 </footer>
         </div>
       </div>

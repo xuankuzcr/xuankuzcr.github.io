@@ -77,18 +77,48 @@
 }
 
 .hero-meta {
-  margin: 10px 0 0;
-  font-size: 0.92rem;
-  color: var(--lvf-muted);
+  margin: 14px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.hero-meta a {
-  color: var(--lvf-primary);
-  text-decoration: none;
+.hero-meta-label {
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  color: var(--lvf-text);
+  font-weight: 700;
 }
 
-.hero-meta a:hover {
-  text-decoration: underline;
+.hero-owner {
+  color: var(--lvf-primary) !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: inherit;
+  text-decoration: none !important;
+}
+
+.hero-owner:hover {
+  color: #155e75 !important;
+  text-decoration: underline !important;
+}
+
+.hero-email {
+  color: var(--lvf-primary) !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: inherit;
+  text-decoration: none !important;
+  padding-left: 12px;
+  border-left: 1px solid var(--lvf-border);
+}
+
+.hero-email:hover {
+  color: #155e75 !important;
+  text-decoration: underline !important;
 }
 
 .quick-grid {
