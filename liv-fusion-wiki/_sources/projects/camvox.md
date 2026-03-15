@@ -7,16 +7,15 @@
 ## 项目定位
 
 - **类型**：低成本 LiDAR-assisted Visual SLAM
-- **状态**：✅ 已完成（成本友好路线）
-- **主线位置**：补充路线（低成本工程参考）
-- **核心价值**：在预算受限条件下平衡精度、成本与可部署性，为 low-cost lifelong SLAM 提供现实参考基线。
+- **状态**：✅ 已完成
+- **主线位置**：Phase B（激光视觉融合定位与建图）
+- **核心价值**：针对低成本的全固态 Spad LiDAR 的激光视觉融合方案。
 
 ## 核心亮点
 
-- 利用 Livox 非重复扫描特性增强视觉 SLAM
-- 提供无靶场景下的自动 LiDAR-Camera 标定思路
-- 在低成本配置中保持可用精度与建图能力
-- 适合教学、轻量部署与快速验证
+- 全世界首次提出无靶场景下的自动 LiDAR-Camera 标定方案
+- 用 LiDAR 深度增强 RGBD-SLAM 
+- 在低成本配置中保持可用精度与稠密建图能力
 
 ## 效果展示
 
@@ -27,7 +26,9 @@
         <span class="video-link-title">CamVox</span>
         <span class="video-link-note">ISEE Group · YouTube · 2:32</span>
       </span>
-      <span class="video-link-views">1210播放</span>
+      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Freturnyoutubedislikeapi.com%2Fvotes%3FvideoId%3DAUnZNBB-uUE&query=%24.viewCount&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0">...</span>
     </a>
   </div>
 </div>
+
+<script src="../_static/video-stats.js"></script>

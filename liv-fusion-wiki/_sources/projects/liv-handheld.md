@@ -7,16 +7,15 @@
 ## 项目定位
 
 - **类型**：手持 / 机载一体化数据采集设备
-- **状态**：✅ 已完成（工程平台）
-- **主线位置**：Phase B（部署成本降低）
-- **核心价值**：把采集、同步和装配流程标准化，为 FAST-LIVO 系列和后续具身数采提供稳定入口。
+- **状态**：✅ 已完成
+- **主线位置**：Phase A（数据采集与标定方案）
+- **核心价值**：把采集、同步和装配流程标准化，为后续 SLAM 与具身数采提供稳定入口。
 
 ## 核心亮点
 
-- 手持与 UAV 两类平台共用的数采方案
-- 支持硬同步采集，降低时间对齐不确定性
+- 手持、车载与 UAV 等平台通用的模块化数采方案
+- 支持硬同步采集，将多源数据同步到一个时间基准
 - 开放 CAD、驱动和接线方案，复现门槛更低
-- 可直接作为 FAST-LIVO 与 UMI 方向的数据入口
 
 ## 社区复现案例
 
@@ -25,7 +24,7 @@
     <a class="video-link-item" href="https://www.bilibili.com/video/BV1g32EBDE7V" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
         <span class="video-link-title">三维扫描仪制作教程</span>
-        <span class="video-link-note">重建世界LAB · Bilibili · 共 5 条 · 环境 / 硬件 / 同步 / 驱动 / 标定</span>
+        <span class="video-link-note">重建世界LAB · Bilibili · 合集</span>
       </span>
       <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1g32EBDE7V&query=%24.data.ugc_season.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0">...</span>
     </a>

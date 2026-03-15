@@ -1,11 +1,6 @@
 # 多传感器同步与标定
 
-这一分支聚焦激光、视觉、惯导等传感器在真实部署中的同步、标定与采集基础设施。
+这一分支聚焦激光、视觉、惯导等传感器在真实部署中的同步、标定与采集基础设备。
 
-- **LIV-Handheld**：面向实验与外场采集的一体化平台。
-- **FAST-Calib**：降低多传感器部署门槛的快速标定工具链。
-
-## 页面入口
-
-- [LIV-Handheld](liv-handheld.md)
-- [FAST-Calib](fast-calib.md)
+- **[LIV-Handheld](liv-handheld.md)**：面向实验与外场采集的一体化平台。
+- **[FAST-Calib](fast-calib.md)**：降低多传感器部署门槛的快速标定工具链。

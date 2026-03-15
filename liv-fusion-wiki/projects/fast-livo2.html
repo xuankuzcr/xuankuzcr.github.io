@@ -105,30 +105,32 @@
 <h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：Fast, Direct LiDAR-Inertial-Visual Odometry</p></li>
-<li><p><strong>状态</strong>：✅ 已完成（主力系统）</p></li>
-<li><p><strong>主线位置</strong>：Phase A → Phase C 过渡（前端稳态 + 全局能力衔接）</p></li>
+<li><p><strong>状态</strong>：✅ 已完成</p></li>
+<li><p><strong>主线位置</strong>：Phase B（激光视觉融合定位与建图）</p></li>
 <li><p><strong>核心价值</strong>：从“可用”走向“可持续稳定部署”。</p></li>
 </ul>
 </section>
 <section id="id2">
 <h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>相比 FAST-LIVO，进一步提升复杂场景鲁棒性</p></li>
-<li><p>更强的资源利用效率，对边缘设备更友好</p></li>
-<li><p>视觉与 LiDAR 融合更紧密，整体系统稳定性更高</p></li>
-<li><p>更适合作为后续全局优化与长期运行主线</p></li>
+<li><p><strong>实时高精度重建:</strong> 系统能够实时生成照片级高精度的稠密彩色点云。更重要的是，它可以在基于ARM架构的低算力平台 (如rk3588，Jetson Orin NX，RB5等) 上实时运行。</p></li>
+<li><p><strong>极端环境下的稳定性:</strong> 可以在极度退化且无GPS信号的矿洞隧道里 (超过25min采集) 稳定建图且返回原点。另外我们还在大量激光雷达/视觉退化数据 (超过2TB) 上进行过测试，验证了其高效和鲁棒性。</p></li>
+<li><p><strong>无人机自主导航突破:</strong> FAST-LIVO2是世界上首个将激光雷达-惯性-视觉里程计 (LIVO) 系统应用于无人机自动导航的方案。它使得无人机能够在激光雷达和视觉均退化的场景中保持稳定工作。</p></li>
+<li><p><strong>航空测绘精度提升:</strong> 有效解决了航空测绘中出现的激光雷达退化或点云测量不准导致的累计误差问题 (空对地距离太远，光斑效应明显)，进而得到像素级建图结果。</p></li>
+<li><p><strong>3D场景表达的下游应用支持:</strong> 为下游应用 (如Mesh生成以及纹理贴图，深度监督的3D Gaussian Splatting等) 快速生成稠密且准确的大规模彩色点云和相机位姿。</p></li>
+<li><p><strong>实景三维扫描:</strong> 凭借非接触、高精度、高细节、高效率、大尺度等特性获取古代建筑，地貌景观等三维数据，然后导入UE5建模软件中，使得游戏 (比如黑神话悟空DLC) 中建筑在细节上能与现实世界相媲美。</p></li>
 </ul>
 </section>
 <section id="id3">
 <h2>效果展示<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
 <div class="video-link-group">
 <div class="video-link-list">
-<a class="video-link-item" href="https://www.bilibili.com/video/BV15q4y1i7sj" rel="noopener noreferrer" target="_blank">
+<a class="video-link-item" href="https://www.bilibili.com/video/BV1Ezxge7EEi" rel="noopener noreferrer" target="_blank">
 <span class="video-link-main">
 <span class="video-link-title">FAST-LIVO2</span>
-<span class="video-link-note">HKU_MaRS · Bilibili · 2:13</span>
+<span class="video-link-note">HKU_MaRS · Bilibili · 10:07</span>
 </span>
-<span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV15q4y1i7sj&amp;query=%24.data.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
+<span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1Ezxge7EEi&amp;query=%24.data.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
 </a>
 </div>
 </div>
@@ -138,10 +140,10 @@
 <div class="video-link-list">
 <a class="video-link-item" href="https://www.bilibili.com/video/BV1j8RgYvEWJ" rel="noopener noreferrer" target="_blank">
 <span class="video-link-main">
-<span class="video-link-title">FAST-LIVO2 工程系列</span>
-<span class="video-link-note">GundaSmart · Bilibili · 共 16 条 · FAST-LIVO / FAST-LIVO2 / 标定 / 同步 / 部署</span>
+<span class="video-link-title">FAST-LIVO2专题系列</span>
+<span class="video-link-note">GundaSmart · Bilibili · 合集</span>
 </span>
-<span class="video-link-views" data-stat-collection="gundasmart-slam-topic" data-stat-fallback="17万">17万播放</span>
+<span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1j8RgYvEWJ&amp;query=%24.data.ugc_season.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
 </a>
 <a class="video-link-item" href="https://www.bilibili.com/video/BV1g32EBDE7V/" rel="noopener noreferrer" target="_blank">
 <span class="video-link-main">
@@ -153,9 +155,9 @@
 <a class="video-link-item" href="https://www.bilibili.com/video/BV1W3k6BxEVD?spm_id_from=333.788.videopod.sections" rel="noopener noreferrer" target="_blank">
 <span class="video-link-main">
 <span class="video-link-title">FAST-LIVO2论文讲解</span>
-<span class="video-link-note">计算机视觉life · Bilibili · 共 31 条 · 理论 / 论文 / 实验 / 结果分析</span>
+<span class="video-link-note">计算机视觉life · Bilibili · 合集</span>
 </span>
-<span class="video-link-views is-loading" data-stat-fallback="6万" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1W3k6BxEVD&amp;query=%24.data.ugc_season.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">6万播放</span>
+<span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1W3k6BxEVD&amp;query=%24.data.ugc_season.stat.view&amp;style=flat&amp;label=%E6%92%AD%E6%94%BE%E9%87%8F&amp;color=0f172a&amp;labelColor=e2e8f0">...</span>
 </a>
 </div>
 </div>

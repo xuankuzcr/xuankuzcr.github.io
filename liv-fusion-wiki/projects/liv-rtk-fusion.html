@@ -99,12 +99,12 @@
 <div itemprop="articleBody">
 <section class="tex2jax_ignore mathjax_ignore" id="rtk">
 <h1>RTK-Fusion<a class="headerlink" href="#rtk" title="此标题的永久链接"></a></h1>
-<p>引入全局绝对参考约束，补强长程一致性与跨场景可重复部署能力。</p>
+<p>引入全局绝对参考约束，补强长程一致性。</p>
 <section id="id1">
 <h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
 <li><p><strong>类型</strong>：RTK-Fusion 融合定位 / 建图</p></li>
-<li><p><strong>状态</strong>：🚧 进行中（持续优化）</p></li>
+<li><p><strong>状态</strong>：🚧 进行中</p></li>
 <li><p><strong>主线位置</strong>：Phase C（全局一致性增强）</p></li>
 <li><p><strong>核心价值</strong>：连接“高精相对估计”与“全局绝对参考”，在 LIVO 的高频局部精度基础上引入 RTK 的低频全局约束，降低长时间运行后的漂移累积。</p></li>
 </ul>
@@ -112,19 +112,24 @@
 <section id="id2">
 <h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>在大尺度场景中提升轨迹长期一致性</p></li>
-<li><p>为回访任务和地图复用提供稳定参考坐标</p></li>
-<li><p>缩短从实验室系统到工程部署系统的距离</p></li>
+<li><p>提供 GNSS-RTK-LiDAR-IMU-Visual 的时空标定与同步方案</p></li>
+<li><p>在大尺度或 LIVO 退化场景中提升轨迹长期一致性</p></li>
+<li><p>为重定位任务和地图复用提供稳定参考坐标</p></li>
 </ul>
 </section>
 <section id="id3">
-<h2>技术要点<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<ol class="arabic simple">
-<li><p><strong>时间同步与外参标定</strong>：RTK 与 LiDAR/Camera/IMU 的时空对齐质量是上限关键。</p></li>
-<li><p><strong>约束注入策略</strong>：RTK 约束权重需动态调整，避免短时异常信号拉偏轨迹。</p></li>
-<li><p><strong>鲁棒性机制</strong>：对 RTK 跳变、遮挡、失锁需有异常检测与退化模式。</p></li>
-<li><p><strong>后端优化接口</strong>：与 LVBA / 因子图的耦合方式决定全局收敛质量。</p></li>
-</ol>
+<h2>数据集<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="video-link-group">
+<div class="video-link-list">
+<a class="video-link-item" href="https://drive.google.com/drive/folders/1fsUMNn0qgZ816zNcM7TCWYPf4QH1_1WO?usp=drive_link" rel="noopener noreferrer" target="_blank">
+<span class="video-link-main">
+<span class="video-link-title">RTK-Fusion 数据集</span>
+<span class="video-link-note">Google Drive</span>
+</span>
+<span class="video-link-views">数据集</span>
+</a>
+</div>
+</div>
 </section>
 </section>
 </div>

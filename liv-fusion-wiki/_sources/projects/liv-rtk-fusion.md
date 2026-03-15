@@ -1,23 +1,30 @@
 # RTK-Fusion
 
-引入全局绝对参考约束，补强长程一致性与跨场景可重复部署能力。
+引入全局绝对参考约束，补强长程一致性。
 
 ## 项目定位
 
 - **类型**：RTK-Fusion 融合定位 / 建图
-- **状态**：🚧 进行中（持续优化）
+- **状态**：🚧 进行中
 - **主线位置**：Phase C（全局一致性增强）
 - **核心价值**：连接“高精相对估计”与“全局绝对参考”，在 LIVO 的高频局部精度基础上引入 RTK 的低频全局约束，降低长时间运行后的漂移累积。
 
 ## 核心亮点
 
-- 在大尺度场景中提升轨迹长期一致性
-- 为回访任务和地图复用提供稳定参考坐标
-- 缩短从实验室系统到工程部署系统的距离
+- 提供 GNSS-RTK-LiDAR-IMU-Visual 的时空标定与同步方案
+- 在大尺度或 LIVO 退化场景中提升轨迹长期一致性
+- 为重定位任务和地图复用提供稳定参考坐标
 
-## 技术要点
+## 数据集
 
-1. **时间同步与外参标定**：RTK 与 LiDAR/Camera/IMU 的时空对齐质量是上限关键。
-2. **约束注入策略**：RTK 约束权重需动态调整，避免短时异常信号拉偏轨迹。
-3. **鲁棒性机制**：对 RTK 跳变、遮挡、失锁需有异常检测与退化模式。
-4. **后端优化接口**：与 LVBA / 因子图的耦合方式决定全局收敛质量。
+<div class="video-link-group">
+  <div class="video-link-list">
+    <a class="video-link-item" href="https://drive.google.com/drive/folders/1fsUMNn0qgZ816zNcM7TCWYPf4QH1_1WO?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">RTK-Fusion 数据集</span>
+        <span class="video-link-note">Google Drive</span>
+      </span>
+      <span class="video-link-views">数据集</span>
+    </a>
+  </div>
+</div>
