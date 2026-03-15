@@ -2,7 +2,5 @@
 
 这一分支聚焦从几何建图延展到高保真场景表示，让融合系统不仅可定位，也能服务重建与交互。
 
-## 页面入口
-
-- [LIV-GaussMap](liv-gaussmap.md)
-- [GS-LIVO](gs-livo.md)
+- **[LIV-GaussMap](liv-gaussmap.md)**：将激光视觉融合重建的彩色点云，升级为高保真、光度真实的场景表征。
+- **[GS-LIVO](gs-livo.md)**：实时生成并更新用八叉树管理的 3D Gaussian Map，并将其渲染出来的图像用于定位。
