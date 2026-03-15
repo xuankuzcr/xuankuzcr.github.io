@@ -25,7 +25,7 @@
     <a class="video-link-item" href="https://drive.google.com/drive/folders/19fYG4z666hcxyP6StVXs-ZOI2cbHsU5J" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
         <span class="video-link-title">Global-LVBA 数据集</span>
-        <span class="video-link-note">Google Drive · 轨迹优化与全局一致性实验数据</span>
+        <span class="video-link-note">Google Drive</span>
       </span>
       <span class="video-link-views">数据集</span>
     </a>

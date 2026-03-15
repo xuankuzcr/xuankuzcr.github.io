@@ -31,7 +31,7 @@
     </a>
     <a class="video-link-item" href="https://www.bilibili.com/video/BV1m6ZwYiEW2" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
-        <span class="video-link-title">SLAM系列之FAST-LIVO2硬件搭建与驱动安装</span>
+        <span class="video-link-title">FAST-LIVO2硬件搭建与驱动安装</span>
         <span class="video-link-note">GundaSmart · Bilibili · 11:43</span>
       </span>
       <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1m6ZwYiEW2&query=%24.data.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0">...</span>

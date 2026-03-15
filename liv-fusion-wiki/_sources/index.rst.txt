@@ -46,8 +46,8 @@ LiDAR-Vision Fusion Wiki
     :caption: 具身智能项目库
 
     embodied/overview.md
-    embodied/xlerobot-track.md
     embodied/data-policy-loop.md
+    embodied/xlerobot-track.md
 
 .. raw:: html
 

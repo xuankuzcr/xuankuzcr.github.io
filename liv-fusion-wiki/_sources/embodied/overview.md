@@ -5,16 +5,6 @@
 ## 项目状态
 
 <div class="status-grid">
-  <a class="status-card" href="xlerobot-mech-electrical.md">
-    <p class="status-title">机械与电控系统</p>
-    <span class="badge ongoing">进行中</span>
-    <p>完成机器人硬件搭建、板卡连接与整机联调。</p>
-  </a>
-  <a class="status-card" href="xlerobot-teleop-act.md">
-    <p class="status-title">遥操与 ACT 训练</p>
-    <span class="badge ongoing">进行中</span>
-    <p>打通示教、训练、评测与真实机器人部署链路。</p>
-  </a>
   <a class="status-card" href="liv-umi.md">
     <p class="status-title">LIV-UMI 数采设备</p>
     <span class="badge ongoing">进行中</span>
@@ -34,6 +24,16 @@
     <p class="status-title">DP 模型训练与评测</p>
     <span class="badge ongoing">进行中</span>
     <p>形成训练、验证和迭代的基础评测流程。</p>
+  </a>
+  <a class="status-card" href="xlerobot-mech-electrical.md">
+    <p class="status-title">机械与电控系统</p>
+    <span class="badge ongoing">进行中</span>
+    <p>完成机器人硬件搭建、板卡连接与整机联调。</p>
+  </a>
+  <a class="status-card" href="xlerobot-teleop-act.md">
+    <p class="status-title">遥操与 ACT 训练</p>
+    <span class="badge ongoing">进行中</span>
+    <p>打通示教、训练、评测与真实机器人部署链路。</p>
   </a>
 </div>
 

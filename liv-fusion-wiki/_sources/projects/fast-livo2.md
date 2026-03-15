@@ -38,24 +38,24 @@
   <div class="video-link-list">
     <a class="video-link-item" href="https://www.bilibili.com/video/BV1j8RgYvEWJ" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
-        <span class="video-link-title">GundaSmart FAST-LIVO2 工程系列</span>
+        <span class="video-link-title">FAST-LIVO2 工程系列</span>
         <span class="video-link-note">GundaSmart · Bilibili · 共 16 条 · FAST-LIVO / FAST-LIVO2 / 标定 / 同步 / 部署</span>
       </span>
       <span class="video-link-views" data-stat-collection="gundasmart-slam-topic" data-stat-fallback="17万">17万播放</span>
     </a>
+    <a class="video-link-item" href="https://www.bilibili.com/video/BV1g32EBDE7V/" target="_blank" rel="noopener noreferrer">
+      <span class="video-link-main">
+        <span class="video-link-title">三维扫描仪制作教程</span>
+        <span class="video-link-note">重建世界LAB · Bilibili · 合集</span>
+      </span>
+      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1g32EBDE7V&query=%24.data.ugc_season.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0">...</span>
+    </a>
     <a class="video-link-item" href="https://www.bilibili.com/video/BV1W3k6BxEVD?spm_id_from=333.788.videopod.sections" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
-        <span class="video-link-title">计算机视觉Life《FAST-LIVO2》合集</span>
+        <span class="video-link-title">FAST-LIVO2论文讲解</span>
         <span class="video-link-note">计算机视觉life · Bilibili · 共 31 条 · 理论 / 论文 / 实验 / 结果分析</span>
       </span>
       <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1W3k6BxEVD&query=%24.data.ugc_season.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0" data-stat-fallback="6万">6万播放</span>
-    </a>
-    <a class="video-link-item" href="https://www.bilibili.com/video/BV1g32EBDE7V/" target="_blank" rel="noopener noreferrer">
-      <span class="video-link-main">
-        <span class="video-link-title">FAST-LIVO2 环境安装与重建效果课程</span>
-        <span class="video-link-note">重建世界LAB · Bilibili · 18:55</span>
-      </span>
-      <span class="video-link-views is-loading" data-stat-url="https://img.shields.io/badge/dynamic/json.json?url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1g32EBDE7V&query=%24.data.stat.view&style=flat&label=%E6%92%AD%E6%94%BE%E9%87%8F&color=0f172a&labelColor=e2e8f0">...</span>
     </a>
   </div>
 </div>
@@ -67,7 +67,7 @@
     <a class="video-link-item" href="https://drive.google.com/drive/folders/1bf5LQ8iSxw-fD8BObZmouw7lRxNacfrA" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
         <span class="video-link-title">FAST-LIVO2 数据集</span>
-        <span class="video-link-note">Google Drive · HKU-MaRS · 多场景实验数据</span>
+        <span class="video-link-note">Google Drive</span>
       </span>
       <span class="video-link-views">数据集</span>
     </a>

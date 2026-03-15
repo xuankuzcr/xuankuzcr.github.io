@@ -234,6 +234,23 @@
   margin-top: 4px;
 }
 
+.rst-content footer div[role="contentinfo"] {
+  margin-bottom: 0;
+}
+
+.rst-content footer div[role="contentinfo"] p,
+.rst-content footer > p {
+  margin: 0;
+  color: var(--lvf-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.rst-content footer > p {
+  margin-top: 4px;
+}
+
 .timeline {
   border-left: 3px solid #a7d9ef;
   margin: 12px 0 16px;
