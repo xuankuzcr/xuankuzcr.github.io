@@ -56,7 +56,7 @@
 
 <div class="timeline">
   <div class="timeline-item">
-    <h4>Phase A · 提供数据采集与标定方案</h4>
+    <h4>Phase A · 数据采集与标定方案</h4>
     <p>LIV-Handheld + FAST-Calib：降低采集与标定门槛，提升复现效率。</p>
   </div>
   <div class="timeline-item">
