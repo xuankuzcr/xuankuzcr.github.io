@@ -16,6 +16,6 @@
 - 基于 LiDAR 点云完成高斯椭球深度与旋转的参数初始化
 - 限制高斯椭球仅在 surfel 面片上进行移动、分裂和合并，以此优化结构指标。
 
-## 流程图
+## Pipeline
 
 ![LIV-GaussMap 流程图](/liv-fusion-wiki/_static/img/projects/liv-gaussmap.jpg)
