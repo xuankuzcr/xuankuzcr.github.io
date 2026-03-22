@@ -15,3 +15,13 @@
 
 - 在线初始化和优化高斯地图   
 - 增量更新相机视野内的高斯子地图，维护连续 GPU 内存和哈希表离散内存的双向映射
+
+## 效果展示
+
+1. 在线初始化和更新 Gaussian Map
+   
+   ![GS-LIVO 在线初始化](/liv-fusion-wiki/_static/img/projects/gs-livo/online_initialization.gif)
+
+2. 高斯椭球细节
+   
+   ![GS-LIVO 高斯椭球细节](/liv-fusion-wiki/_static/img/projects/gs-livo/detail_of_ellipsoid.gif)
