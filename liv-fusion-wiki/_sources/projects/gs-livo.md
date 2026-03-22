@@ -19,9 +19,13 @@
 ## 效果展示
 
 1. 在线初始化和更新 Gaussian Map
-   
-   ![GS-LIVO 在线初始化](/liv-fusion-wiki/_static/img/projects/gs-livo/online_initialization.gif)
+
+   <video controls autoplay loop muted playsinline preload="metadata" style="width: 100%; max-width: 960px; border: 1px solid #d9e7ef; border-radius: 12px;">
+     <source src="/liv-fusion-wiki/_static/img/projects/gs-livo/online_initialization.webm" type="video/webm">
+   </video>
 
 2. 高斯椭球细节
-   
-   ![GS-LIVO 高斯椭球细节](/liv-fusion-wiki/_static/img/projects/gs-livo/detail_of_ellipsoid.gif)
+
+   <video controls autoplay loop muted playsinline preload="metadata" style="width: 100%; max-width: 960px; border: 1px solid #d9e7ef; border-radius: 12px;">
+     <source src="/liv-fusion-wiki/_static/img/projects/gs-livo/detail_of_ellipsoid.webm" type="video/webm">
+   </video>
