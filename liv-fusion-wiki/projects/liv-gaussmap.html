@@ -99,12 +99,12 @@
 <div itemprop="articleBody">
 <section class="tex2jax_ignore mathjax_ignore" id="liv-gaussmap">
 <h1>LIV-GaussMap<a class="headerlink" href="#liv-gaussmap" title="此标题的永久链接"></a></h1>
-<p>把稳健位姿估计进一步扩展为可渲染、可交互场景表示的表示层探索。</p>
+<p>激光辅助的3DGS</p>
 <p class="link-row">arXiv：<a class="reference external" href="https://arxiv.org/abs/2401.14857">https://arxiv.org/abs/2401.14857</a></p>
 <section id="id1">
 <h2>项目定位<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p><strong>类型</strong>：LIV 融合 + Gaussian 地图表示</p></li>
+<li><p><strong>类型</strong>：3DGS</p></li>
 <li><p><strong>状态</strong>：✅ 已完成</p></li>
 <li><p><strong>主线位置</strong>：Phase D（表示与任务扩展）</p></li>
 <li><p><strong>核心价值</strong>：将激光视觉融合重建的彩色点云，升级为高保真、光度真实的场景表征。</p></li>
@@ -113,15 +113,13 @@
 <section id="id2">
 <h2>核心亮点<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
 <ul class="simple">
-<li><p>将状态估计与 3D Radiance Field 地图直接衔接</p></li>
-<li><p>支撑更强的可视化、重建和下游任务接口</p></li>
-<li><p>为 sim2real 与交互式场景理解提供桥接表示</p></li>
-<li><p>验证了 LIV 融合向高保真表示扩展的可行性</p></li>
+<li><p>基于 LiDAR 点云完成高斯椭球深度与旋转的参数初始化</p></li>
+<li><p>限制高斯椭球仅在 surfel 面片上进行移动、分裂和合并，以此优化结构指标。</p></li>
 </ul>
 </section>
 <section id="id3">
-<h2>效果展示<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
-<p><img alt="LIV-GaussMap Demo" src="https://raw.githubusercontent.com/sheng00125/LIV-GaussMap/master/fig/rb.gif"/></p>
+<h2>流程图<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<p><img alt="LIV-GaussMap 流程图" src="../_static/img/projects/liv-gaussmap.jpg"/></p>
 </section>
 </section>
 </div>

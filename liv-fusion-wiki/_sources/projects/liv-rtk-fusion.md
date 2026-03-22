@@ -19,7 +19,7 @@
 
 <div class="video-link-group">
   <div class="video-link-list">
-    <a class="video-link-item" href="https://drive.google.com/drive/folders/1fsUMNn0qgZ816zNcM7TCWYPf4QH1_1WO?usp=drive_link" target="_blank" rel="noopener noreferrer">
+    <a class="video-link-item" href="" target="_blank" rel="noopener noreferrer">
       <span class="video-link-main">
         <span class="video-link-title">RTK-Fusion 数据集</span>
         <span class="video-link-note">Google Drive</span>
