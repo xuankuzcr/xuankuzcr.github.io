@@ -34,7 +34,7 @@
   </div>
 </div>
 
-## 社区复现案例与论文讲解
+## 复现案例与论文讲解
 
 <div class="video-link-group">
   <div class="video-link-list">
