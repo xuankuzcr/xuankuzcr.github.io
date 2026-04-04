@@ -46,7 +46,6 @@
     /* 页面内容可滚动设置 */
     html, body {
       height: 100%;
-      overflow-y: auto;
       overflow-x: hidden;
     }
 
@@ -80,8 +79,6 @@
     }
 
     .news-scroll-container {
-      height: 280px;
-      overflow-y: auto;
       padding: 0.8rem;
       border: 1px solid #e0e0e0;
       border-radius: 8px;
@@ -262,7 +259,7 @@
             <section class="news-section">
               <h2 id="news" class="section-title">News</h2>
               <div class="news-scroll-container scrollbar-thin scrollbar-thumb-gray">
-                <ul class="list-disc list-inside space-y-3 text-gray-800">
+                <ul class="space-y-3 text-gray-800">
                   <li class="timeline-item">
                     <span class="text-gray-600">[03/2026]</span>
                     <span class="text-yellow-500">🏆</span>
@@ -294,7 +291,7 @@
                   <li class="timeline-item">
                     <span class="text-gray-600">[05/2025]</span>
                     <span class="text-red-500">🌟</span>
-                    I was honored to be selected as Huawei's <strong>TopMinds (天才少年)</strong> <a href="images/offer_topminds.jpg" class="inline-zoom-link" data-zoom-src="images/offer_topminds.jpg">[Letter]</a>.
+                    I was honored to be selected as Huawei's <strong>TopMinds</strong> <a href="images/offer_topminds.jpg" class="inline-zoom-link" data-zoom-src="images/offer_topminds.jpg">[Letter]</a>.
                   </li>
                   <li class="timeline-item">
                     <span class="text-gray-600">[05/2025]</span>
@@ -323,12 +320,8 @@
                      Our paper "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry" is accepted for publication in <strong>Transactions on Robotics (T-RO)</strong>
                     <a href="https://arxiv.org/pdf/2408.14035">[arXiv]</a>.
                   </li>
-                     <!--<span class="text-purple-500">🎤📢🤝✅</span>-->
                 </ul>
               </div>
-                <div class="text-sm text-gray-500 mb-4 flex items-center">
-                  <i class="fa fa-mouse-pointer mr-1"></i> Scroll to view more
-                </div>
               <div id="image-zoom-modal" class="zoom-modal">
                 <span class="close-modal">&times;</span>
                 <img class="modal-content" id="zoomed-image">
