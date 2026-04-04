@@ -239,8 +239,8 @@
                      </p>
                      <p class="bio-text">
                      Beyond academia, I am passionate about open-source contributions. 
-                      My research code on GitHub has collectively accumulated over <strong>9.1k stars</strong>⭐.
-                      In particular, my first-authored <strong>FAST-LIVO series</strong> alone has surpassed <strong>6.6k stars</strong>⭐ and garnered over <strong>498k</strong> cross-platform video plays, 
+                      My research code on GitHub has collectively accumulated over <strong>10.3k stars</strong>⭐.
+                      In particular, my first-authored <strong>FAST-LIVO series</strong> alone has surpassed <strong>7.8k stars</strong>⭐ and garnered over <strong>758k</strong> cross-platform video plays, 
                       <strong>setting trends in the field</strong> and becoming a <strong>widely adopted framework</strong> in both industry and academia.
 
                     </p>
@@ -264,11 +264,21 @@
               <div class="news-scroll-container scrollbar-thin scrollbar-thumb-gray">
                 <ul class="list-disc list-inside space-y-3 text-gray-800">
                   <li class="timeline-item">
-                    <span class="text-gray-600">[01/2026]</span>
+                    <span class="text-gray-600">[03/2026]</span>
+                    <span class="text-yellow-500">🏆</span>
+                    I was honored to receive the <strong>2025 IEEE Transactions on Robotics (T-RO) King-Sun Fu Memorial Best Paper Award</strong> <a href="images/tro_best_paper.jpg" class="inline-zoom-link" data-zoom-src="images/tro_best_paper.jpg">[Email]</a>.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[12/2025]</span>
                     <span class="text-emerald-500">🔓</span>
                     Open-sourced
                     <a href="https://github.com/xuankuzcr/Global-LVBA">Global-LVBA</a>,
-                    a globally consistent LiDAR-Visual Bundle Adjustment (LVBA) system for post-refinement after LiDAR-Inertial-Visual Odometry (LIVO).
+                    a globally consistent LiDAR-Visual Bundle Adjustment (LVBA) system for post-refinement.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[09/2025]</span>
+                    <span class="text-orange-500">🚀</span>
+                    Led the algorithm team to complete the R&amp;D of the <a href="https://www.shareuav.cn/S20">SHARE S20</a> 3D scanner <strong>from scratch within three months</strong>, enabling product launch and achieving <strong>1,500+ unit sales to date</strong> <a href="images/share-s20.jpg" class="inline-zoom-link" data-zoom-src="images/share-s20.jpg">[Poster]</a>.
                   </li>
                   <li class="timeline-item">
                     <span class="text-gray-600">[06/2025]</span>
@@ -279,18 +289,23 @@
                     <span class="text-gray-600">[06/2025]</span>
                     <span class="text-purple-500">🎉</span>
                     Our paper "FAST-LIVO2 on ARM Platforms: LiDAR-Inertial-Visual Odometry with Efficient Memory and Computation" is accepted for publication in <strong>Robotics and Automation Letters (RA-L)</strong>
-                    <a href="https://arxiv.org/abs/2501.13876">[arXiv]</a>!
+                    <a href="https://arxiv.org/abs/2501.13876">[arXiv]</a>.
                   </li>
                   <li class="timeline-item">
                     <span class="text-gray-600">[05/2025]</span>
                     <span class="text-purple-500">🎉</span>
                     Our paper "GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping" is accepted for publication in <strong>Transactions on Robotics (T-RO)</strong>
-                   <a href="https://arxiv.org/pdf/2501.08672v1">[arXiv]</a>!
+                   <a href="https://arxiv.org/pdf/2501.08672v1">[arXiv]</a>.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[04/2025]</span>
+                    <span class="text-emerald-500">🔓</span>
+                    Open-sourced <a href="https://github.com/hku-mars/FAST-Calib">FAST-Calib</a>, bringing factory calibration-room capabilities into the research lab.
                   </li>
                   <li class="timeline-item">
                     <span class="text-gray-600">[03/2025]</span>
                     <span class="text-purple-500">🔥</span>
-                    FAST-LIVO2 <strong>Ranks 4th</strong>🏆on <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=8860&topArticlesDate=March%202025">IEEE T-RO's Most Popular List</a>!
+                    FAST-LIVO2 <strong>Ranks 4th</strong> 🏆 on <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=8860&topArticlesDate=March%202025">IEEE T-RO's Most Popular List</a>.
                   </li>
                   <li class="timeline-item">
                     <span class="text-gray-600">[01/2025]</span>
@@ -301,7 +316,7 @@
                     <span class="text-gray-600">[10/2024]</span>
                     <span class="text-blue-500">🎉</span>
                      Our paper "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry" is accepted for publication in <strong>Transactions on Robotics (T-RO)</strong>
-                    <a href="https://arxiv.org/pdf/2408.14035">[arXiv]</a>!
+                    <a href="https://arxiv.org/pdf/2408.14035">[arXiv]</a>.
                   </li>
                      <!--<span class="text-purple-500">🎤📢🤝✅</span>-->
                 </ul>
@@ -331,6 +346,15 @@
         img.addEventListener('click', function () {
           modal.style.display = 'block';
           modalImg.src = this.src;
+        });
+      });
+
+      const zoomLinks = document.querySelectorAll('.inline-zoom-link');
+      zoomLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          modal.style.display = 'block';
+          modalImg.src = this.dataset.zoomSrc || this.getAttribute('href');
         });
       });
 
