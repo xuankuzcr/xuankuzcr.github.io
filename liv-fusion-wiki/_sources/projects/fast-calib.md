@@ -7,6 +7,7 @@
 ## 项目定位
 
 - **类型**：LiDAR-Camera 外参标定
+- **论文发表**：IEEE Robotics and Automation Practice
 - **状态**：✅ 已完成
 - **主线位置**：Phase A（数据采集与标定方案）
 - **核心价值**：把 LiDAR-Camera 外参标定流程标准化，将产线上的标定间方案移到实验室环境中。

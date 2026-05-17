@@ -6,7 +6,7 @@
 
 <div class="status-grid">
   <a class="status-card" href="liv-umi.md">
-    <p class="status-title">LIV-UMI 数采设备</p>
+    <p class="status-title">Omni-UMI 数采设备</p>
     <span class="badge ongoing">进行中</span>
     <p>搭建稳定的多模态示教采集入口，沉淀可复用硬件与流程。</p>
   </a>
@@ -25,16 +25,6 @@
     <span class="badge ongoing">进行中</span>
     <p>形成训练、验证和迭代的基础评测流程。</p>
   </a>
-  <a class="status-card" href="xlerobot-mech-electrical.md">
-    <p class="status-title">机械与电控系统</p>
-    <span class="badge ongoing">进行中</span>
-    <p>完成机器人硬件搭建、板卡连接与整机联调。</p>
-  </a>
-  <a class="status-card" href="xlerobot-teleop-act.md">
-    <p class="status-title">遥操与 ACT 训练</p>
-    <span class="badge ongoing">进行中</span>
-    <p>打通示教、训练、评测与真实机器人部署链路。</p>
-  </a>
 </div>
 
 ## 研究主线
@@ -42,7 +32,7 @@
 <div class="timeline">
   <div class="timeline-item">
     <h4>Phase A · 示教采集入口搭建</h4>
-    <p>LIV-UMI：先把多模态示教采集系统搭起来，保证数据入口稳定、可复用。</p>
+    <p>Omni-UMI：先把多模态示教采集系统搭起来，保证数据入口稳定、可复用。</p>
   </div>
   <div class="timeline-item">
     <h4>Phase B · 时空基座与数据闭环</h4>
@@ -51,10 +41,6 @@
   <div class="timeline-item">
     <h4>Phase C · 策略训练与评测流程</h4>
     <p>DP 模型训练与评测：形成从数据整理到训练验证的基础评测闭环。</p>
-  </div>
-  <div class="timeline-item">
-    <h4>Phase D · 真实机器人落地</h4>
-    <p>机械与电控系统 + 遥操与 ACT 训练：把硬件联调、示教、训练和部署串成完整工程链路。</p>
   </div>
 </div>
 
